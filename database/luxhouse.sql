@@ -23,7 +23,7 @@ CREATE TABLE users (
   avartar nvarchar(500) DEFAULT NULL,
   phone varchar(15) NOT NULL,
   [address] nvarchar(500) DEFAULT NULL,
-  [status] bit DEFAULT 0 NULL,
+  [status] bit DEFAULT 1 NULL,
   [created_at] datetime NULL DEFAULT GETDATE(),
   [updated_at] datetime NULL DEFAULT GETDATE(),
   CONSTRAINT username UNIQUE (username),
@@ -35,7 +35,8 @@ CREATE TABLE roles (
   id int CHECK ([id] > 0) IDENTITY NOT NULL PRIMARY KEY,
   [name] nvarchar(200) NOT NULL,
   [created_at] datetime NULL DEFAULT GETDATE(),
-  [updated_at] datetime NULL DEFAULT GETDATE()
+  [updated_at] datetime NULL DEFAULT GETDATE(),
+  CONSTRAINT [name] UNIQUE ([name])
 )
 
 CREATE TABLE authorities (
@@ -56,6 +57,18 @@ CREATE TABLE categories (
   CONSTRAINT [category_code] UNIQUE ([category_code])
 )
 
+CREATE TABLE category_products (
+  id int CHECK ([id] > 0) NOT NULL IDENTITY PRIMARY KEY,
+  category_product_code nvarchar(50) NOT NULL,
+  category_product_name nvarchar(100) NOT NULL,
+  category_id int CHECK (category_id > 0) NOT NULL,
+  [image] nvarchar(500) DEFAULT NULL,
+  [created_at] datetime NULL DEFAULT GETDATE(),
+  [updated_at] datetime NULL DEFAULT GETDATE(),
+  CONSTRAINT category_product_code UNIQUE (category_product_code),
+  CONSTRAINT [FK_category_products_categories] FOREIGN KEY (category_id) REFERENCES categories ([id])
+)
+
 CREATE TABLE suppliers (
   id int CHECK ([id] > 0) NOT NULL IDENTITY PRIMARY KEY,
   supplier_code nvarchar(50) NOT NULL,
@@ -74,15 +87,16 @@ CREATE TABLE products (
   [image] nvarchar(500) NOT NULL,
   price decimal(18, 4) NOT NULL DEFAULT 0.0000,
   discription nvarchar(4000) DEFAULT NULL,
-  quantity int DEFAULT NULL,
+  quantity int DEFAULT 1 NULL,
   discontinued bit NOT NULL DEFAULT 0,
   is_featured bit NOT NULL DEFAULT 0,
   is_new bit NOT NULL DEFAULT 0,
-  category_id int CHECK (category_id > 0) DEFAULT NULL,
+  status bit NOT NULL DEFAULT 1,
+  category_product_id int CHECK (category_product_id > 0) DEFAULT NULL,
   [supplier_id] int CHECK ([supplier_id] > 0) DEFAULT NULL,
   [created_at] datetime NULL DEFAULT GETDATE(),
   [updated_at] datetime NULL DEFAULT GETDATE(),
-  CONSTRAINT [FK_products_categories] FOREIGN KEY (category_id) REFERENCES categories ([id]),
+  CONSTRAINT [FK_products_categoriy_products] FOREIGN KEY (category_product_id) REFERENCES category_products ([id]),
   CONSTRAINT [FK_products_suppliers] FOREIGN KEY ([supplier_id]) REFERENCES suppliers ([id])
 )
 
@@ -119,7 +133,8 @@ CREATE TABLE orders (
   [order_status] nvarchar(50) NOT NULL,
   [created_at] datetime NULL DEFAULT GETDATE(),
   [updated_at] datetime NULL DEFAULT GETDATE(),
-  CONSTRAINT [FK_orders_users] FOREIGN KEY ([user_id]) REFERENCES users ([id])
+  CONSTRAINT [FK_orders_users] FOREIGN KEY ([user_id]) REFERENCES users ([id]),
+  CONSTRAINT [FK_orders_payment_types] FOREIGN KEY ([payment_type_id]) REFERENCES payment_types (id)
 )
 
 CREATE TABLE order_details (
