@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="/src/main/resources/static/css/L_index.css">
-    <link rel="stylesheet" href="/src/main/resources/static/css/product.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/product-detail.css">
 
-    <title>PRODUCT</title>
+    <title>PRODUCT-DETAIL</title>
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
@@ -282,142 +282,105 @@
             </div>
         </div>
     </div>
-
-    <!-- PRODUCT -->
-    <div class="product-text">
-        TEN DOANH MUC
+    <div class="breadcrumd-1 container">
+        <!-- breadcrumd -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">Library</li>
+            </ol>
+        </nav>
     </div>
-    <div class="product-form container">
-        <div class="row">
-            <div class="cot-1 col-3">
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                                DOANH MUC 1
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <ul>
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>
-                        </div>
+    <!-- PRODUCT-DETAIL -->
+    <div class="product-detail-form container d-flex flex-wrap justify-content-center">
+        <!-- PRODUCT-DETAIL-LEFT -->
+        <div class="detail-left ">
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img class="img1" src="/src/main/resources/static/image/Catalog_Desktop.jpg" alt="shoe image">
+                        <img class="img1" src="/src/main/resources/static/image/DiningChairs_Desktop.jpg"
+                            alt="shoe image">
+                        <img class="img1" src="/src/main/resources/static/image/PONY_Table_Lamp5.jpg" alt="shoe image">
+                        <img class="img1" src="/src/main/resources/static/image/Sectionals_Desktop.jpg"
+                            alt="shoe image">
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                aria-controls="flush-collapseTwo">
-                                DOANH MUC 2
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <ul>
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="img-select">
+                    <div class="img-item">
+                        <a href="#" data-id="1">
+                            <img class="img2" src="/src/main/resources/static/image/Catalog_Desktop.jpg"
+                                alt="shoe image">
+                        </a>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                                DOANH MUC 3
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <ul>
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>
-                        </div>
+                    <div class="img-item">
+                        <a href="#" data-id="2">
+                            <img class="img2" src="/src/main/resources/static/image/DiningChairs_Desktop.jpg"
+                                alt="shoe image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="3">
+                            <img class="img2" src="/src/main/resources/static/image/PONY_Table_Lamp5.jpg"
+                                alt="shoe image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="4">
+                            <img class="img2" src="/src/main/resources/static/image/Sectionals_Desktop.jpg"
+                                alt="shoe image">
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="cot-2 col-9">
-                <select class="select_product form-select w-25" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-                <div class="product-items d-flex flex-wrap">
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
+        </div>
+        <!-- PRODUCT-DETAIL-RIGHT -->
+        <div class="detail-right">
+            <div class="right-new">NEW</div>
+            <div class="right-name">NAME</div>
+            <div class="right-price">1000$</div>
+            <div class="right-qty">
+                <div class="qty-name">Quantity</div>
+                <div class="qty-sl">
+                    <div class="counter">
+                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                        <input type="text" value="1">
+                        <span class="up" onClick='increaseCount(event, this)'>+</span>
                     </div>
                 </div>
-                <div class="pagin" aria-label="Page navigation example">
+            </div>
+            <div class="right-btn">
+                <button type="button" class="btn1">Add to cart</button>
+            </div>
+            <div class="right-according">
+                <button class="accordion1">Desciption 1</button>
+                <div class="panel">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
+                        deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
+                        consequatur architecto a magni sit tempora ea error veritatis aperiam.
+                        Illum.
+                    </p>
+                </div>
 
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
+                <button class="accordion1">Desciption 2</button>
+                <div class="panel">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
+                        deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
+                        consequatur architecto a magni sit tempora ea error veritatis aperiam.
+                        Illum.
+                    </p>
+                </div>
 
+                <button class="accordion1">Desciption 3</button>
+                <div class="panel">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
+                        deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
+                        consequatur architecto a magni sit tempora ea error veritatis aperiam.
+                        Illum.
+                    </p>
                 </div>
             </div>
         </div>
@@ -525,6 +488,7 @@
 
 
     <!-- SCRIPT -->
+    <script src="/src/main/resources/static/js/product-detail.js"></script>
     <script src="/src/main/resources/static/js/menu.js"></script>
     <script src="/src//main/resources/static/js/slideshow.js"></script>
 
@@ -545,6 +509,28 @@
                 navbar.classList.remove("sticky");
             }
         }
+    </script>
+    <!-- slick -->
+    <script>
+        const imgs = document.querySelectorAll('.img-select a');
+        const imgBtns = [...imgs];
+        let imgId = 1;
+
+        imgBtns.forEach((imgItem) => {
+            imgItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                imgId = imgItem.dataset.id;
+                slideImage();
+            });
+        });
+
+        function slideImage() {
+            const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+            document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+        }
+
+        window.addEventListener('resize', slideImage);
     </script>
 </body>
 

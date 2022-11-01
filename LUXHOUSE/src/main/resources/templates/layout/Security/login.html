@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="/src/main/resources/static/css/L_index.css">
-    <link rel="stylesheet" href="/src/main/resources/static/css/product.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/login.css">
 
-    <title>PRODUCT</title>
+    <title>LOGIN</title>
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
@@ -282,143 +282,69 @@
             </div>
         </div>
     </div>
-
-    <!-- PRODUCT -->
-    <div class="product-text">
-        TEN DOANH MUC
+    <div class="breadcrumd-1 container">
+        <!-- breadcrumd -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">Library</li>
+            </ol>
+        </nav>
     </div>
-    <div class="product-form container">
-        <div class="row">
-            <div class="cot-1 col-3">
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                                DOANH MUC 1
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <ul>
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>
+    <!-- FORM-LOGIN -->
+    <div class="login container d-flex flex-wrap justify-content-center">
+        <div class="left-login">
+            <div class="login-box">
+                <h2>SIGN IN TO YOUR ACCOUNT
+                </h2>
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="" required="">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="">
+                        <label>Password</label>
+                    </div>
+                    <div class="other-form">
+                        <div class="row justify-content-between">
+                            <div class="col-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Remember password
+                                </label>
+                            </div>
+                            <div class="col-4 rmb-pass">
+                                <a href="#">Forgot password?</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                aria-controls="flush-collapseTwo">
-                                DOANH MUC 2
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <ul>
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>
-                        </div>
+                </form>
+                <button type="button" class="btn1">SIGN IN</button>
+            </div>
+        </div>
+        <div class="right-login">
+            <div class="login-gg">
+                <div class="login-gg-lable">LOGIN WITH GOOGLE</div>
+                <div class="google-btn">
+                    <div class="google-icon-wrapper">
+                        <img class="google-icon"
+                            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                                DOANH MUC 3
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <ul>
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <p class="btn-text"><b>Sign in with google</b></p>
                 </div>
             </div>
-            <div class="cot-2 col-9">
-                <select class="select_product form-select w-25" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-                <div class="product-items d-flex flex-wrap">
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-center text_indoor_1">TEN DOANH MUC</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="pagin" aria-label="Page navigation example">
-
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <div class="dang-ky">
+                <div class="login-gg-lable">CREATE AN ACCOUNT</div>
+                <div class="dk-title">
+                    Create an account and enjoy:
+                    <ul>
+                        <li>Easier order tracking</li>
+                        <li>Speedier Checkout</li>
+                        <li>Saved payment and shipping information</li>
                     </ul>
-
                 </div>
+                <button type="button" class="btn-dk d-flex flex-wrap justify-content-center">LET'S GO</button>
             </div>
         </div>
     </div>
@@ -525,6 +451,7 @@
 
 
     <!-- SCRIPT -->
+    <script src="/src/main/resources/static/js/product-detail.js"></script>
     <script src="/src/main/resources/static/js/menu.js"></script>
     <script src="/src//main/resources/static/js/slideshow.js"></script>
 
@@ -545,6 +472,28 @@
                 navbar.classList.remove("sticky");
             }
         }
+    </script>
+    <!-- slick -->
+    <script>
+        const imgs = document.querySelectorAll('.img-select a');
+        const imgBtns = [...imgs];
+        let imgId = 1;
+
+        imgBtns.forEach((imgItem) => {
+            imgItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                imgId = imgItem.dataset.id;
+                slideImage();
+            });
+        });
+
+        function slideImage() {
+            const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+            document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+        }
+
+        window.addEventListener('resize', slideImage);
     </script>
 </body>
 

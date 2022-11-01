@@ -133,8 +133,7 @@ CREATE TABLE orders (
   [order_status] nvarchar(50) NOT NULL,
   [created_at] datetime NULL DEFAULT GETDATE(),
   [updated_at] datetime NULL DEFAULT GETDATE(),
-  CONSTRAINT [FK_orders_users] FOREIGN KEY ([user_id]) REFERENCES users ([id]),
-  CONSTRAINT [FK_orders_payment_types] FOREIGN KEY ([payment_type_id]) REFERENCES payment_types (id)
+  CONSTRAINT [FK_orders_users] FOREIGN KEY ([user_id]) REFERENCES users ([id])
 )
 
 CREATE TABLE order_details (

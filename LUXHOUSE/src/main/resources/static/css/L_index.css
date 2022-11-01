@@ -114,7 +114,7 @@ body {
     transition: all 0.4s ease;
     border: 2px solid #000;
     border-radius: 4px;
-    z-index: 10 !important;
+    z-index: 100 !important;
 }
 
 .navbar-toggler:hover {
@@ -315,6 +315,7 @@ body {
         display: grid !important;
         grid-template-columns: repeat(4, 1fr);
         padding: 0 5rem;
+
     }
 
     .navbar-nav>li {
@@ -351,7 +352,7 @@ body {
 
 /* SLIDE */
 .index_slide {
-    height: 947px;
+    height: 760px;
     z-index: 2 !important;
 }
 
@@ -842,6 +843,7 @@ body {
     text-align: center;
     top: 200px;
 }
+
 /* OUTDOOR */
 .index_outdoor {}
 

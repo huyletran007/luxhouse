@@ -1,0 +1,230 @@
+/* breadcrumd */
+.breadcrumd-1 {
+  margin-top: 50px;
+}
+
+/* product-detail-form */
+.product-detail-form {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+/* LEFT */
+.detail-left {
+  /* border: 1px solid blue; */
+  width: 500px;
+}
+
+.img1 {
+  width: 150px;
+  height: 600px;
+  display: block;
+}
+
+.img2 {
+  width: 90px;
+  height: 100px;
+  display: block;
+}
+
+.img-display {
+  overflow: hidden;
+}
+
+.img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.img-showcase img {
+  min-width: 100%;
+}
+
+.img-select {
+  display: flex;
+}
+
+.img-item {
+  margin: 0.3rem;
+}
+
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3) {
+  margin-right: 0;
+}
+
+.img-item:hover {
+  opacity: 0.8;
+}
+
+/* RIGHT */
+.detail-right {
+  /* border: 1px solid rebeccapurple; */
+  width: 500px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.right-new {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.right-name {
+  font-size: 50px;
+  font-family: 'Winter Moments';
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.right-price {
+  font-size: 18px;
+
+}
+
+.qty-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.counter {
+  margin: auto;
+  display: flex;
+}
+
+.counter input {
+  width: 50px;
+  border: 0;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  appearance: none;
+  outline: 0;
+}
+
+.counter span {
+  display: block;
+  font-size: 25px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #fcfcfc;
+  user-select: none;
+  background-color: black;
+}
+
+/* BTN */
+.btn1 {
+  display: inline-block;
+  padding: 13px 20px;
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  font: 12px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-indent: 2px;
+  text-transform: uppercase;
+  transition: color 0.1s linear 0.05s;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.btn1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  color: #000 !important;
+  z-index: 1;
+  opacity: 0;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
+}
+
+.btn1::after {
+  transition: border 0.1s linear 0.05s;
+}
+
+.btn1 {
+  position: relative;
+  z-index: 2;
+  color: rgb(0, 0, 0);
+}
+
+.btn1:hover {
+  color: #000000;
+}
+
+.btn1:hover {
+  color: #ffffff;
+  transition: color 0.1s linear 0s;
+  background-color: black;
+}
+
+.btn1:hover::before {
+  top: 0;
+  height: 100%;
+  opacity: 1;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
+  color: #000000;
+}
+
+.btn1:hover::after {
+  border-color: #000000;
+  transition: border 0.1s linear 0s;
+}
+
+/* According */
+.right-according {
+  margin-top: 10px;
+}
+
+.accordion1 {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+/* Add a symbol to each button to indicate whether the collapsible content is open or closed */
+.accordion1:after {
+  content: "\02795";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 10px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion1:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  /* display: none; */
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}

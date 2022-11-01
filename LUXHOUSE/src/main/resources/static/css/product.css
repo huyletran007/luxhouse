@@ -5,11 +5,10 @@
     font-family: 'Winter Moments', sans-serif !important;
     letter-spacing: 4px;
     font-weight: bold;
-    font-size: 45px;
+    font-size: 40px;
 }
 .product-form{
     border: 2px solid red;
-    height: 700px;
     width: 100%;
 }
 .cot-1{
@@ -19,5 +18,25 @@
 
 .cot-2{
     border: 1px solid blueviolet;
-    height: 700px;
+
+}
+.select_product{
+    margin-left: auto;
+    
+}
+
+/* list product */
+
+.product-items-list{
+    border: 1px solid red;
+    width: 250px;
+    height: 440px;
+    display: flex;
+    margin-top: 10px;
+}
+
+/* PAGabcIN */
+.pagin{
+   margin: 10px auto;
+   max-width:30%;
 }
