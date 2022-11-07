@@ -136,7 +136,7 @@
 }
 
 /* right */
-.right-login {
+.right-login-1 {
   /* border: 1px solid rgb(0, 0, 0);
   border-style: dashed; */
   width: 500px;
@@ -155,7 +155,7 @@
 }
 
 /* BTN */
-.btn-dk {
+.btn-dk-1 {
   display: inline-block;
   padding: 13px 20px;
   text-decoration: none;
@@ -176,7 +176,7 @@
   font-weight: bold;
 }
 
-.btn-dk::before {
+.btn-dk-1::before {
   content: "";
   display: block;
   position: absolute;
@@ -190,27 +190,27 @@
   transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
 }
 
-.btn-dk::after {
+.btn-dk-1::after {
   transition: border 0.1s linear 0.05s;
 }
 
-.btn-dk {
+.btn-dk-1 {
   position: relative;
   z-index: 2;
   color: rgb(255, 255, 255);
 }
 
-.btn-dk:hover {
+.btn-dk-1:hover {
   color: #ffffff;
 }
 
-.btn-dk:hover {
+.btn-dk-1:hover {
   color: #000000;
   transition: color 0.1s linear 0s;
   background-color: rgb(255, 255, 255);
 }
 
-.btn-dk:hover::before {
+.btn-dk-1:hover::before {
   top: 0;
   height: 100%;
   opacity: 1;
@@ -218,7 +218,7 @@
   color: #ffffff;
 }
 
-.btn-dk:hover::after {
+.btn-dk-1:hover::after {
   border-color: #ffffff;
   transition: border 0.1s linear 0s;
 }
