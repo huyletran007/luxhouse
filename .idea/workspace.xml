@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50ffb330-c4f1-456d-928c-9e34d68afc9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/static/css/L_index.css" beforeDir="false" afterPath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/static/css/L_index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/templates/layout/Security/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/templates/layout/Security/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/templates/layout/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/templates/layout/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/templates/layout/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/templates/layout/product-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/templates/layout/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/LUXHOUSE/src/main/resources/templates/layout/product.html" afterDir="false" />
-    </list>
+    <list default="true" id="50ffb330-c4f1-456d-928c-9e34d68afc9c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,14 +18,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/FPT POLY/ki 7/THUCTAP/git hub/luxhouse&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/tamnt/Desktop/luxhouse/LUXHOUSE"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="luxhouse" />
@@ -57,10 +51,22 @@
       <updated>1666065751668</updated>
       <workItem from="1666065754852" duration="108000" />
       <workItem from="1667526746889" duration="128000" />
+      <workItem from="1667857745657" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

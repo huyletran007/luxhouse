@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/main/resources/static/css/L_index.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/cart-detail.css">
+
+    <title>CART-DETAIL</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!-- Boostrap 5 -->
+    <link href="/src/main/resources/static/css/bootstrap5.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+
+    <!-- Slide-show -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet'
+        href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic'>
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+    <!-- Font -->
+
+
+</head>
+
+<body>
+    <!-- Start Header -->
+    <div class="index_header">
+        <div id="sticky">
+            <div class="header_a">
+                <div class="row align-items-start text-center align-items-center">
+                    <div class="col-3">
+                        <div class="home">
+                            <!---->
+                            <div class="brand-and-icon">
+                                <button type="button" class="navbar-toggler">
+                                    <i class="fas fa-bars" style="font-size: 40px;"></i>
+                                </button>
+                            </div>
+                            <!---->
+                        </div>
+                        <a href="#@" class="navbar-collapse" id="text_1">INSPIRATION</a>
+                    </div>
+                    <div class="col-6" style="font-family: proxima-nova,Arial,sans-serif;">
+                        <a href="#" id="text_2">LUXHOUSE</a>
+                    </div>
+                    <div class="col-3">
+                        <div class="row d-flex">
+                            <div class="col-1">
+                                <button class="search"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg></button>
+                            </div>
+                            <div class="col-1">
+                                $
+                            </div>
+                            <div class="col-1">
+                                <div class="dropdown-user">
+                                    <button class="user-drop"><i class="far fa-user user-drop"></i></button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Đăng nhập</a>
+                                        <a href="#">Dẵng xuất</a>
+                                        <a href="#">Kiểm tra đơn hàng</a>
+                                        <a href="#">Tài khoản</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="main-wrapper">
+                                    <div class="card-wrapper">
+                                        <div class="icon-section">
+                                            <div class='cart-wrapper'>
+                                                <div class="cart">
+                                                    <button class="btn-cart" id="cart">
+                                                        <ion-icon name="cart-outline"></ion-icon>
+                                                    </button>
+                                                </div>
+                                                <div class="cart-badge"><span id="cart-count">3</span></div>
+                                                <div class="box" id="box">
+                                                    <ion-icon name="cube-outline"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- start cart -->
+                                <div class="container">
+                                    <div class="shopping-cart">
+                                        <div class="shopping-cart-header">
+                                            <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                                            <div class="shopping-cart-total">
+                                                <span class="lighter-text">Total:</span>
+                                                <span class="main-color-text">$2,229.97</span>
+                                            </div>
+                                        </div>
+                                        <!--end shopping-cart-header -->
+
+                                        <ul class="shopping-cart-items">
+                                            <li class="clearfix">
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg"
+                                                    alt="item1" />
+                                                <span class="item-name">Sony DSC-RX100M III</span>
+                                                <span class="item-price">$849.99</span>
+                                                <span class="item-quantity">Quantity: 01</span>
+                                            </li>
+
+                                            <li class="clearfix">
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg"
+                                                    alt="item1" />
+                                                <span class="item-name">KS Automatic Mechanic...</span>
+                                                <span class="item-price">$1,249.99</span>
+                                                <span class="item-quantity">Quantity: 01</span>
+                                            </li>
+
+                                            <li class="clearfix">
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg"
+                                                    alt="item1" />
+                                                <span class="item-name">Kindle, 6" Glare-Free To...</span>
+                                                <span class="item-price">$129.99</span>
+                                                <span class="item-quantity">Quantity: 01</span>
+                                            </li>
+                                        </ul>
+
+                                        <a href="#" class="button">View cart</a>
+                                    </div>
+                                    <!--end shopping-cart -->
+                                </div>
+                                <!-- end cart -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="main-wrapper">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="navbar-collapse" id="navbar-center">
+                        <ul class="navbar-nav">
+                            <li>
+                                <a href="#">home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu-link">
+                                    electronics
+                                    <span class="drop-icon">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </span>
+                                </a>
+                                <div class="sub-menu">
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h4>top categories</h4>
+                                        <ul>
+                                            <li><a href="#">cell phones & accessories</a></li>
+                                            <li><a href="#">smart tv</a></li>
+                                            <li><a href="#">computer & laptops</a></li>
+                                            <li><a href="#">digital cameras</a></li>
+                                            <li><a href="#">video games & accessories</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h4>other categories</h4>
+                                        <ul>
+                                            <li><a href="#">iphones</a></li>
+                                            <li><a href="#">speakers</a></li>
+                                            <li><a href="#">samsung devices</a></li>
+                                            <li><a href="#">audio & headphones</a></li>
+                                            <li><a href="#">vehicles electronics & GPS</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h2>all essential devices and tools for home</h2>
+                                        <button type="button" class="btn">shop here</button>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <img src="images/car.png" alt="product image">
+                                    </div>
+                                    <!-- end of item -->
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="#" class="menu-link">
+                                    fashion
+                                    <span class="drop-icon">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </span>
+                                </a>
+                                <div class="sub-menu">
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h4>top categories</h4>
+                                        <ul>
+                                            <li><a href="#">men's clothing</a></li>
+                                            <li><a href="#">women's clothing</a></li>
+                                            <li><a href="#">men's shoes</a></li>
+                                            <li><a href="#">women's shoes</a></li>
+                                            <li><a href="#">clothing deals</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h4>other categories</h4>
+                                        <ul>
+                                            <li><a href="#">fine jewelry</a></li>
+                                            <li><a href="#">fashion jewelry</a></li>
+                                            <li><a href="#">men's accessories</a></li>
+                                            <li><a href="#">handbags & bags</a></li>
+                                            <li><a href="#">kid's clothing</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h2>stylish and modern fashion clothing</h2>
+                                        <button type="button" class="btn">shop here</button>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <img src="images/cloth.png" alt="product image">
+                                    </div>
+                                    <!-- end of item -->
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="#" class="menu-link">
+                                    health & beauty
+                                    <span class="drop-icon">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </span>
+                                </a>
+                                <div class="sub-menu">
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h4>top categories</h4>
+                                        <ul>
+                                            <li><a href="#">makeup</a></li>
+                                            <li><a href="#">health care</a></li>
+                                            <li><a href="#">fragrance</a></li>
+                                            <li><a href="#">hair care & stylings</a></li>
+                                            <li><a href="#">manicure & pedicure</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h4>other categories</h4>
+                                        <ul>
+                                            <li><a href="#">skin care</a></li>
+                                            <li><a href="#">vitamins</a></li>
+                                            <li><a href="#">vision care</a></li>
+                                            <li><a href="#">oral care</a></li>
+                                            <li><a href="#">shaving & hair removal</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h2>the latest product is here</h2>
+                                        <button type="button" class="btn">shop here</button>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <img src="images/gymn.png" alt="product image">
+                                    </div>
+                                    <!-- end of item -->
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="#" class="menu-link">
+                                    sports
+                                    <span class="drop-icon">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </span>
+                                </a>
+                                <div class="sub-menu">
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h4>top categories</h4>
+                                        <ul>
+                                            <li><a href="#">cycling</a></li>
+                                            <li><a href="#">outdoor sports</a></li>
+                                            <li><a href="#">hunting</a></li>
+                                            <li><a href="#">fishing</a></li>
+                                            <li><a href="#">fitness & yoga</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h4>other categories</h4>
+                                        <ul>
+                                            <li><a href="#">tennis</a></li>
+                                            <li><a href="#">swimming</a></li>
+                                            <li><a href="#">winter sports</a></li>
+                                            <li><a href="#">fitness technology</a></li>
+                                            <li><a href="#">sports wear</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <h2>gear up for sports & adventures</h2>
+                                        <button type="button" class="btn">shop here</button>
+                                    </div>
+                                    <!-- end of item -->
+                                    <!-- item -->
+                                    <div class="sub-menu-item">
+                                        <img src="images/helmet.png" alt="product image">
+                                    </div>
+                                    <!-- end of item -->
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="#">deals</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start main -->
+    <div class="cart-detail-title container">
+        <!-- breadcrumd -->
+        <div>SHOPPING CART</div>
+    </div>
+    <!-- Start PRODUCT-DETAIL -->
+    <div class="cart-detail-form container d-flex flex-wrap justify-content-center">
+        <!-- LEFT -->
+        <div class="cart-detail-left">
+            <div class="cart-left-title">DETAIL</div>
+
+            <!-- Start -->
+            <div class="cart-left-form">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">PRODUCT</th>
+                            <th style="text-align: center;">PRICE</th>
+                            <th style="text-align: center;">QTY</th>
+                            <th style="text-align: right;">TOTALL PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="row d-flex flex-wrap row-cols-auto cart-product-left">
+                                    <div class="col"><img
+                                            src="https://www.serenaandlily.com/dw/image/v2/AASD_PRD/on/demandware.static/-/Sites-masterCatalog_SerenaandLily/default/dw5478edb1/hi-res/Rug_Tulum_Rug_8x10_Detail_MV_0244_Crop_SH.jpg?sw=100&sh=125&sm=fit&strip=false"
+                                            alt="" height="125px" width="100px"></div>
+                                    <div class="col cart-product-mota">
+                                        <div class="cart-product-mota-name">name</div>
+                                        <div class="cart-product-mota-id">id-product</div>
+                                        <button class="cart-product-mota-btn-remove">remove</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart-product-price" style="text-align: center;">$1000</td>
+                            <td>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-number"
+                                            data-type="minus" data-field="">
+                                            -
+                                        </button>
+                                    </span>
+                                    <input type="text" id="quantity" name="quantity"
+                                        class="form-control input-number quantity-cart" value="3" min="1" max="100">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-number"
+                                            data-type="plus" data-field="">
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                            </td>
+                            <td style="text-align: right;">$1000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End -->
+
+            <!-- Start -->
+            <div class="cart-left-form">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">PRODUCT</th>
+                            <th style="text-align: center;">PRICE</th>
+                            <th style="text-align: center;">QTY</th>
+                            <th style="text-align: right;">TOTALL PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="row d-flex flex-wrap row-cols-auto cart-product-left">
+                                    <div class="col"><img
+                                            src="https://www.serenaandlily.com/dw/image/v2/AASD_PRD/on/demandware.static/-/Sites-masterCatalog_SerenaandLily/default/dw5478edb1/hi-res/Rug_Tulum_Rug_8x10_Detail_MV_0244_Crop_SH.jpg?sw=100&sh=125&sm=fit&strip=false"
+                                            alt="" height="125px" width="100px"></div>
+                                    <div class="col cart-product-mota">
+                                        <div class="cart-product-mota-name">name</div>
+                                        <div class="cart-product-mota-id">id-product</div>
+                                        <button class="cart-product-mota-btn-remove">remove</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart-product-price" style="text-align: center;">$1000</td>
+                            <td>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-number"
+                                            data-type="minus" data-field="">
+                                            -
+                                        </button>
+                                    </span>
+                                    <input type="text" id="quantity" name="quantity"
+                                        class="form-control input-number quantity-cart" value="3" min="1" max="100">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-number"
+                                            data-type="plus" data-field="">
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                            </td>
+                            <td style="text-align: right;">$1000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End -->
+
+            <!-- Start -->
+            <div class="cart-left-form">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">PRODUCT</th>
+                            <th style="text-align: center;">PRICE</th>
+                            <th style="text-align: center;">QTY</th>
+                            <th style="text-align: right;">TOTALL PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="row d-flex flex-wrap row-cols-auto cart-product-left">
+                                    <div class="col"><img
+                                            src="https://www.serenaandlily.com/dw/image/v2/AASD_PRD/on/demandware.static/-/Sites-masterCatalog_SerenaandLily/default/dw5478edb1/hi-res/Rug_Tulum_Rug_8x10_Detail_MV_0244_Crop_SH.jpg?sw=100&sh=125&sm=fit&strip=false"
+                                            alt="" height="125px" width="100px"></div>
+                                    <div class="col cart-product-mota">
+                                        <div class="cart-product-mota-name">name</div>
+                                        <div class="cart-product-mota-id">id-product</div>
+                                        <button class="cart-product-mota-btn-remove">remove</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart-product-price" style="text-align: center;">$1000</td>
+                            <td>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-number"
+                                            data-type="minus" data-field="">
+                                            -
+                                        </button>
+                                    </span>
+                                    <input type="text" id="quantity" name="quantity"
+                                        class="form-control input-number quantity-cart" value="3" min="1" max="100">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-number"
+                                            data-type="plus" data-field="">
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                            </td>
+                            <td style="text-align: right;">$1000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End -->
+
+        </div>
+        <!-- RIGHT -->
+        <div class="cart-detail-right"></div>
+    </div>
+    <div class="container"><a class="continue-shop" href="#">< CONTINUE SHOPPING</a></div>
+    <!-- End PRODUCT-DETAIL -->
+    <!-- End main -->
+
+    <!-- Start FOOTER -->
+    <footer class="index_footer">
+        FOOTER
+        <div class="container bottom_border">
+            <div class="row">
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                    <!--headin5_amrc-->
+                    <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+                    <p><i class="fa fa-phone"></i> +91-9999878398 </p>
+                    <p><i class="fa fa fa-envelope"></i> info@example.com </p>
+
+
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="http://webenlance.com">Image Rectoucing</a></li>
+                        <li><a href="http://webenlance.com">Clipping Path</a></li>
+                        <li><a href="http://webenlance.com">Hollow Man Montage</a></li>
+                        <li><a href="http://webenlance.com">Ebay & Amazon</a></li>
+                        <li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
+                        <li><a href="http://webenlance.com">Image Cropping</a></li>
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="http://webenlance.com">Remove Background</a></li>
+                        <li><a href="http://webenlance.com">Shadows & Mirror Reflection</a></li>
+                        <li><a href="http://webenlance.com">Logo Design</a></li>
+                        <li><a href="http://webenlance.com">Vectorization</a></li>
+                        <li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
+                        <li><a href="http://webenlance.com">Image Cropping</a></li>
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                    <!--headin5_amrc ends here-->
+
+                    <ul class="footer_ul2_amrc">
+                        <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                            <p>Lorem Ipsum is simply dummy text of the printing...<a
+                                    href="#">https://www.lipsum.com/</a></p>
+                        </li>
+                        <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                            <p>Lorem Ipsum is simply dummy text of the printing...<a
+                                    href="#">https://www.lipsum.com/</a></p>
+                        </li>
+                        <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                            <p>Lorem Ipsum is simply dummy text of the printing...<a
+                                    href="#">https://www.lipsum.com/</a></p>
+                        </li>
+                    </ul>
+                    <!--footer_ul2_amrc ends here-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <ul class="foote_bottom_ul_amrc">
+                <li><a href="http://webenlance.com">Home</a></li>
+                <li><a href="http://webenlance.com">About</a></li>
+                <li><a href="http://webenlance.com">Services</a></li>
+                <li><a href="http://webenlance.com">Pricing</a></li>
+                <li><a href="http://webenlance.com">Blog</a></li>
+                <li><a href="http://webenlance.com">Contact</a></li>
+            </ul>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+
+            <ul class="social_footer_ul">
+                <li><a href="http://webenlance.com"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+    </footer>
+    <!-- End FOOTER -->
+
+
+
+
+
+
+
+
+    <!-- SCRIPT -->
+    <script src="/src/main/resources/static/js/cart.js"></script>
+    <script src="/src/main/resources/static/js/product-detail.js"></script>
+    <script src="/src/main/resources/static/js/menu.js"></script>
+    <script src="/src//main/resources/static/js/detail-cart.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+        var navbar = document.getElementById("sticky");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <!-- slick -->
+    <script>
+        const imgs = document.querySelectorAll('.img-select a');
+        const imgBtns = [...imgs];
+        let imgId = 1;
+
+        imgBtns.forEach((imgItem) => {
+            imgItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                imgId = imgItem.dataset.id;
+                slideImage();
+            });
+        });
+
+        function slideImage() {
+            const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+            document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+        }
+
+        window.addEventListener('resize', slideImage);
+    </script>
+</body>
+
+</html>

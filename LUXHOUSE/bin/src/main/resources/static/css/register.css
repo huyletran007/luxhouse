@@ -1,0 +1,251 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+/* breadcrumd */
+.breadcrumd-1 {
+  margin-top: 50px;
+}
+
+/* LOGIN */
+.login {
+  width: 100%;
+}
+
+/* left */
+.left-login {
+  width: 500px;
+}
+
+.login-box {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family: Winter Moments;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+  top: -20px;
+  left: 0;
+  color: #000000;
+  font-size: 12px;
+}
+
+/* BTN */
+.btn1 {
+  display: inline-block;
+  padding: 13px 20px;
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  font: 12px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-indent: 2px;
+  text-transform: uppercase;
+  transition: color 0.1s linear 0.05s;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.btn1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  color: #000 !important;
+  z-index: 1;
+  opacity: 0;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
+}
+
+.btn1::after {
+  transition: border 0.1s linear 0.05s;
+}
+
+.btn1 {
+  position: relative;
+  z-index: 2;
+  color: rgb(0, 0, 0);
+}
+
+.btn1:hover {
+  color: #000000;
+}
+
+.btn1:hover {
+  color: #ffffff;
+  transition: color 0.1s linear 0s;
+  background-color: black;
+}
+
+.btn1:hover::before {
+  top: 0;
+  height: 100%;
+  opacity: 1;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
+  color: #000000;
+}
+
+.btn1:hover::after {
+  border-color: #000000;
+  transition: border 0.1s linear 0s;
+}
+
+.other-form {
+  font-size: 13px;
+}
+
+/* right */
+.right-login-1 {
+  /* border: 1px solid rgb(0, 0, 0);
+  border-style: dashed; */
+  width: 500px;
+  margin-top: 10px;
+}
+
+.login-gg {
+  padding: 30px;
+}
+
+.dk-title {
+  font-weight: 500;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* BTN */
+.btn-dk-1 {
+  display: inline-block;
+  padding: 13px 20px;
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  font: 12px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-indent: 2px;
+  text-transform: uppercase;
+  transition: color 0.1s linear 0.05s;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid white;
+  font-weight: bold;
+}
+
+.btn-dk-1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  color: #000 !important;
+  z-index: 1;
+  opacity: 0;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
+}
+
+.btn-dk-1::after {
+  transition: border 0.1s linear 0.05s;
+}
+
+.btn-dk-1 {
+  position: relative;
+  z-index: 2;
+  color: rgb(255, 255, 255);
+}
+
+.btn-dk-1:hover {
+  color: #ffffff;
+}
+
+.btn-dk-1:hover {
+  color: #000000;
+  transition: color 0.1s linear 0s;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-dk-1:hover::before {
+  top: 0;
+  height: 100%;
+  opacity: 1;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
+  color: #ffffff;
+}
+
+.btn-dk-1:hover::after {
+  border-color: #ffffff;
+  transition: border 0.1s linear 0s;
+}
+
+.dang-ky {
+  position: relative;
+  text-align: center;
+}
+
+.dang-ky img {
+  filter: brightness(40%);
+}
+
+.login-gg-lable {
+  margin: 0 0 15px;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: Winter Moments;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 4px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

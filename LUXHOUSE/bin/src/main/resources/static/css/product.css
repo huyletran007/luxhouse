@@ -1,0 +1,97 @@
+/* START PRODUCT-FORM */
+.product-text {
+    margin-top: 45px;
+    text-align: center;
+    font-family: 'Winter Moments', sans-serif !important;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.product-form {
+    border: 2px solid red;
+    width: 100%;
+}
+
+.cot-1 {
+    border: 1px solid blue;
+    height: 700px;
+}
+
+.cot-2 {
+    border: 1px solid blueviolet;
+
+}
+
+.select_product {
+    margin-left: auto;
+
+}
+
+/* list product */
+
+.product-items-list {
+    border: 1px solid red;
+    width: 250px;
+    display: flex;
+    margin-top: 10px;
+}
+
+.product-cate-1 {
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.product-item {
+    text-decoration: none;
+}
+
+.product-item img{
+    height: 410px;
+    width: 250px;
+}
+
+.product_name {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: black;
+    text-decoration: none !important;
+}
+
+.product_price {
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: black;
+}
+
+.product-cate-2 ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product-cate-2 li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.product-cate-2 li a:hover {
+    padding-left: 14px;
+    opacity: 0.9;
+}
+
+/* PAGabcIN */
+.pagin-product {
+    margin: 10px auto;
+    max-width: 30%;
+}
+
+.page-link {
+    color: black !important;
+}
+
+.page-link:hover {
+    background-color: gray;
+}
+
+/* END PRODUCT-FORM */
