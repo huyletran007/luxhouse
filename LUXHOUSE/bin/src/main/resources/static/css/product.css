@@ -1,0 +1,23 @@
+/* PRODUCT-FORM */
+.product-text{
+    margin-top: 45px;
+    text-align: center;
+    font-family: 'Winter Moments', sans-serif !important;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 45px;
+}
+.product-form{
+    border: 2px solid red;
+    height: 700px;
+    width: 100%;
+}
+.cot-1{
+    border: 1px solid blue;
+    height: 700px;
+}
+
+.cot-2{
+    border: 1px solid blueviolet;
+    height: 700px;
+}
