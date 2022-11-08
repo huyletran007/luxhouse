@@ -2079,6 +2079,7 @@ footer p {
   
   /* BTN */
   .btn-dk {
+    border: 1px solid black;
     display: inline-block;
     padding: 13px 20px;
     text-decoration: none;
