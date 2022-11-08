@@ -6,34 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-<<<<<<< HEAD
-    <link rel="stylesheet" href="/src/main/resources/static/css/L_index.css">
-    <link rel="stylesheet" href="/src/main/resources/static/css/product.css">
-
-    <title>PRODUCT</title>
-=======
     <link rel="stylesheet" href="/src/main/resources/static/css/main.min.css">
-    <!-- <link rel="stylesheet" href="/src/main/resources/static/c ss/product.css"> -->
 
-    <title>PRODUCT</title>
+    <title>PRODUCT-DETAIL</title>
     <link rel="website icon" type="png" href="/src/main/resources/static/logo/icon-logo.png">
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-<<<<<<< HEAD
-
-    <!-- Boostrap 5 -->
-    <link href="/src/main/resources/static/css/bootstrap5.css" rel="stylesheet">
-    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
-=======
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <!-- Boostrap 5 -->
     <link href="/src/main/resources/static/css/bootstrap5.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
 
     <!-- Slide-show -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -51,18 +36,10 @@
     <!-- Font -->
 
 
-<<<<<<< HEAD
-</head>
-
-<body>
-    <!-- Header -->
-=======
-
 </head>
 
 <body>
     <!-- Start Header -->
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
     <div class="index_header">
         <div id="sticky">
             <div class="header_a">
@@ -83,18 +60,89 @@
                         <a href="#" id="text_2">LUXHOUSE</a>
                     </div>
                     <div class="col-3">
-                        <div class="row">
+                        <div class="row d-flex">
                             <div class="col-1">
-                                #
+                                <button class="search"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg></button>
                             </div>
                             <div class="col-1">
                                 $
                             </div>
                             <div class="col-1">
-                                %
+                                <div class="dropdown-user">
+                                    <button class="user-drop"><i class="far fa-user user-drop"></i></button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Đăng nhập</a>
+                                        <a href="#">Dẵng xuất</a>
+                                        <a href="#">Kiểm tra đơn hàng</a>
+                                        <a href="#">Tài khoản</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-1">
-                                %
+                                <div class="main-wrapper">
+                                    <div class="card-wrapper">
+                                        <div class="icon-section">
+                                            <div class='cart-wrapper'>
+                                                <div class="cart">
+                                                    <button class="btn-cart" id="cart">
+                                                        <ion-icon name="cart-outline"></ion-icon>
+                                                    </button>
+                                                </div>
+                                                <div class="cart-badge"><span id="cart-count">3</span></div>
+                                                <div class="box" id="box">
+                                                    <ion-icon name="cube-outline"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- start cart -->
+                                <div class="container">
+                                    <div class="shopping-cart">
+                                        <div class="shopping-cart-header">
+                                            <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                                            <div class="shopping-cart-total">
+                                                <span class="lighter-text">Total:</span>
+                                                <span class="main-color-text">$2,229.97</span>
+                                            </div>
+                                        </div>
+                                        <!--end shopping-cart-header -->
+
+                                        <ul class="shopping-cart-items">
+                                            <li class="clearfix">
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg"
+                                                    alt="item1" />
+                                                <span class="item-name">Sony DSC-RX100M III</span>
+                                                <span class="item-price">$849.99</span>
+                                                <span class="item-quantity">Quantity: 01</span>
+                                            </li>
+
+                                            <li class="clearfix">
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg"
+                                                    alt="item1" />
+                                                <span class="item-name">KS Automatic Mechanic...</span>
+                                                <span class="item-price">$1,249.99</span>
+                                                <span class="item-quantity">Quantity: 01</span>
+                                            </li>
+
+                                            <li class="clearfix">
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg"
+                                                    alt="item1" />
+                                                <span class="item-name">Kindle, 6" Glare-Free To...</span>
+                                                <span class="item-price">$129.99</span>
+                                                <span class="item-quantity">Quantity: 01</span>
+                                            </li>
+                                        </ul>
+
+                                        <a href="#" class="button">View cart</a>
+                                    </div>
+                                    <!--end shopping-cart -->
+                                </div>
+                                <!-- end cart -->
                             </div>
                         </div>
                     </div>
@@ -103,14 +151,11 @@
             <!---->
             <div class="main-wrapper">
                 <nav class="navbar navbar-expand-lg">
-
-
                     <div class="navbar-collapse" id="navbar-center">
                         <ul class="navbar-nav">
                             <li>
                                 <a href="#">home</a>
                             </li>
-
                             <li>
                                 <a href="#" class="menu-link">
                                     electronics
@@ -304,150 +349,116 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-
-    <!-- PRODUCT -->
-=======
     <!-- End Header -->
 
-    <!-- Start Main -->
-    <!-- Start PRODUCT -->
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
-    <div class="product-text">
-        TEN DOANH MUC
+    <!-- Start main -->
+    <div class="breadcrumd-1 container">
+        <!-- breadcrumd -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">Library</li>
+            </ol>
+        </nav>
     </div>
-    <div class="product-form container">
-        <div class="row">
-            <div class="cot-1 col-3">
-<<<<<<< HEAD
-                1 of 3
-            </div>
-            <div class="cot-2 col-9">
-                Variable width content
+    <!-- Start PRODUCT-DETAIL -->
+    <div class="product-detail-form container d-flex flex-wrap justify-content-center">
+        <!-- PRODUCT-DETAIL-LEFT -->
+        <div class="detail-left ">
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img class="img1" src="/src/main/resources/static/image/Catalog_Desktop.jpg" alt="shoe image">
+                        <img class="img1" src="/src/main/resources/static/image/DiningChairs_Desktop.jpg"
+                            alt="shoe image">
+                        <img class="img1" src="/src/main/resources/static/image/PONY_Table_Lamp5.jpg" alt="shoe image">
+                        <img class="img1" src="/src/main/resources/static/image/Sectionals_Desktop.jpg"
+                            alt="shoe image">
+                    </div>
+                </div>
+                <div class="img-select">
+                    <div class="img-item">
+                        <a href="#" data-id="1">
+                            <img class="img2" src="/src/main/resources/static/image/Catalog_Desktop.jpg"
+                                alt="shoe image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="2">
+                            <img class="img2" src="/src/main/resources/static/image/DiningChairs_Desktop.jpg"
+                                alt="shoe image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="3">
+                            <img class="img2" src="/src/main/resources/static/image/PONY_Table_Lamp5.jpg"
+                                alt="shoe image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="4">
+                            <img class="img2" src="/src/main/resources/static/image/Sectionals_Desktop.jpg"
+                                alt="shoe image">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- FOOTER -->
-=======
-                <button class="accordion1 product-cate-1">Category-1</button>
-                <div class="panel product-cate-2">
-                    <ul>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                    </ul>
-                </div>
-                <button class="accordion1 product-cate-1">Category-1</button>
-                <div class="panel product-cate-2">
-                    <ul>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                    </ul>
-                </div>
-                <button class="accordion1 product-cate-1">Category-1</button>
-                <div class="panel product-cate-2">
-                    <ul>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                    </ul>
+        <!-- PRODUCT-DETAIL-RIGHT -->
+        <div class="detail-right">
+            <div class="right-new">NEW</div>
+            <div class="right-name">NAME</div>
+            <div class="right-price">1000$</div>
+            <div class="right-qty">
+                <div class="qty-name">Quantity</div>
+                <div class="qty-sl">
+                    <div class="counter">
+                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                        <input type="text" value="1">
+                        <span class="up" onClick='increaseCount(event, this)'>+</span>
+                    </div>
                 </div>
             </div>
-            <div class="cot-2 col-9">
-                <select class="select_product form-select w-25" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">Theo tên</option>
-                    <option value="2">Theo giá tăng</option>
-                    <option value="3">Theo giá giảm</option>
-                    <option value="4">Theo sản phẩm mới</option>
-                </select>
-                <div class="product-items d-flex flex-wrap">
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="product-item">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-left product_name">TEN DOANH MUC</div>
-                            <div class="text-left product_price">$100-$200</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="product-item">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-left product_name">TEN DOANH MUC</div>
-                            <div class="text-left product_price">$100-$200</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="product-item">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-left product_name">TEN DOANH MUC</div>
-                            <div class="text-left product_price">$100-$200</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="product-item">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-left product_name">TEN DOANH MUC</div>
-                            <div class="text-left product_price">$100-$200</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="product-item">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-left product_name">TEN DOANH MUC</div>
-                            <div class="text-left product_price">$100-$200</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="product-item">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-left product_name">TEN DOANH MUC</div>
-                            <div class="text-left product_price">$100-$200</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="product-item">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-left product_name">TEN DOANH MUC</div>
-                            <div class="text-left product_price">$100-$200</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="product-item">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-left product_name">TEN DOANH MUC</div>
-                            <div class="text-left product_price">$100-$200</div>
-                        </a>
-                    </div>
-                    <div class="product-items-list mx-auto">
-                        <a href="#" class="product-item">
-                            <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
-                            <div class="text-left product_name">TEN DOANH MUC</div>
-                            <div class="text-left product_price">$100-$200</div>
-                        </a>
-                    </div>
+            <div class="right-btn">
+                <button type="button" class="btn1" id="add-btn">Add to cart</button>
+            </div>
+            <div class="right-according">
+                <button class="accordion1">Desciption 1</button>
+                <div class="panel">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
+                        deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
+                        consequatur architecto a magni sit tempora ea error veritatis aperiam.
+                        Illum.
+                    </p>
                 </div>
-                <div class="pagin pagin-product" aria-label="Page navigation example">
 
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
+                <button class="accordion1">Desciption 2</button>
+                <div class="panel">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
+                        deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
+                        consequatur architecto a magni sit tempora ea error veritatis aperiam.
+                        Illum.
+                    </p>
+                </div>
 
+                <button class="accordion1">Desciption 3</button>
+                <div class="panel">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
+                        deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
+                        consequatur architecto a magni sit tempora ea error veritatis aperiam.
+                        Illum.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End PRODUCT -->
-    <!-- End Main -->
+    <!-- End PRODUCT-DETAIL -->
+    <!-- End main -->
 
     <!-- Start FOOTER -->
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
     <footer class="index_footer">
         FOOTER
         <div class="container bottom_border">
@@ -540,10 +551,7 @@
             <!--social_footer_ul ends here-->
         </div>
     </footer>
-<<<<<<< HEAD
-=======
     <!-- End FOOTER -->
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
 
 
 
@@ -553,36 +561,15 @@
 
 
     <!-- SCRIPT -->
-<<<<<<< HEAD
-=======
     <script src="/src/main/resources/static/js/stick.js"></script>
-    <script src="/src/main/resources/static/js/product-detail.js"></script>
     <script src="/src/main/resources/static/js/cart.js"></script>
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
+    <script src="/src/main/resources/static/js/product-detail.js"></script>
     <script src="/src/main/resources/static/js/menu.js"></script>
     <script src="/src//main/resources/static/js/slideshow.js"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
-<<<<<<< HEAD
-    <script>
-        window.onscroll = function () {
-            myFunction()
-        };
-        var navbar = document.getElementById("sticky");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
-=======
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
 </body>
 
 </html>
