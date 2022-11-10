@@ -54,8 +54,8 @@ public class Orders implements Serializable {
     @Column(name = "ship_district", columnDefinition = "nvarchar(150) not null")
     private String shipDistrict;
 
-    @Column(name = "ship_fee", columnDefinition = "decimal(18,4) DEFAULT '0.0000' not null")
-    private String shipFee;
+    @Column(name = "shipping_fee", columnDefinition = "decimal(18,4) not null")
+    private Double shipFee;	
     
     @ManyToOne
     @JoinColumn(name = "payment_type_id")

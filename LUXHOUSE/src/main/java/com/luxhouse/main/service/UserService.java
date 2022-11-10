@@ -60,4 +60,5 @@ public interface UserService {
 
     <S extends Users> S save(S entity);
 
+    
 }

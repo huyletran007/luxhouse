@@ -59,7 +59,7 @@ public class Products implements Serializable{
     private Boolean status;
     
     @ManyToOne
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "category_product_id")
     private CategoryProducts categoryProducts;
     
     @ManyToOne
