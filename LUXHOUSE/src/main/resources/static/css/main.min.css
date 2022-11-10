@@ -137,7 +137,7 @@ body {
 .navbar-collapse {
     overflow-y: scroll;
     display: none;
-    
+
 }
 
 .navbar-nav>li>a {
@@ -392,7 +392,7 @@ body {
     background-color: white;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
     z-index: 11;
-    top: 20px;
+    top: 17px;
     left: -10px;
 }
 
@@ -579,80 +579,80 @@ body {
 
 @keyframes add-to-cart-animation {
     0% {
-      top: 20%;
-      left: -30%;
-      opacity: 0;
+        top: 20%;
+        left: -30%;
+        opacity: 0;
     }
-  
+
     25% {
-      top: -20%;
-      left: 50%;
-      opacity: 1;
+        top: -20%;
+        left: 50%;
+        opacity: 1;
     }
-  
+
     50% {
-      top: 0%;
-      left: 70%;
+        top: 0%;
+        left: 70%;
     }
-  
+
     75% {
-      top: 35%;
-      left: 50%;
+        top: 35%;
+        left: 50%;
     }
-  
+
     100% {
-      top: 35%;
-      left: 50%;
-      opacity: 0;
+        top: 35%;
+        left: 50%;
+        opacity: 0;
     }
-  }
-  
-  .main-wrapper .icon-section .cart-wrapper .box.add-box {
+}
+
+.main-wrapper .icon-section .cart-wrapper .box.add-box {
     animation: add-to-cart-animation 1s ease-in-out;
-  }
-  
-  @keyframes remove-from-cart-animation {
+}
+
+@keyframes remove-from-cart-animation {
     0% {
-      top: 35%;
-      left: 50%;
-      opacity: 0;
+        top: 35%;
+        left: 50%;
+        opacity: 0;
     }
-  
+
     25% {
-      top: 35%;
-      left: 50%;
+        top: 35%;
+        left: 50%;
     }
-  
+
     50% {
-      top: 0%;
-      left: 70%;
-      opacity: 1;
+        top: 0%;
+        left: 70%;
+        opacity: 1;
     }
-  
+
     75% {
-      top: -20%;
-      left: 50%;
-      opacity: 1;
+        top: -20%;
+        left: 50%;
+        opacity: 1;
     }
-  
+
     100% {
-      top: 20%;
-      left: -30%;
-      opacity: 0;
+        top: 20%;
+        left: -30%;
+        opacity: 0;
     }
-  }
-  
-  .main-wrapper .icon-section .cart-wrapper .box.remove-box {
+}
+
+.main-wrapper .icon-section .cart-wrapper .box.remove-box {
     animation: remove-from-cart-animation 1s ease-in-out;
-  }
-  
-  .main-wrapper .button-section {
+}
+
+.main-wrapper .button-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .main-wrapper .button-section div {
+}
+
+.main-wrapper .button-section div {
     min-width: 145px;
     max-width: 145px;
     text-align: center;
@@ -664,12 +664,12 @@ body {
     margin: 0px 5px;
     background: var(--primary-color);
     color: var(--primary-contrast);
-  }
-  
-  .main-wrapper .button-section div#remove-btn {
+}
+
+.main-wrapper .button-section div#remove-btn {
     background: var(--warning-color);
     color: var(--warning-contrast);
-  }
+}
 
 /* SLIDE */
 .index_slide {
@@ -1643,100 +1643,100 @@ footer p {
 /* breadcrumd */
 .breadcrumd-1 {
     margin-top: 50px;
-  }
-  
-  /* product-detail-form */
-  .product-detail-form {
+}
+
+/* product-detail-form */
+.product-detail-form {
     /* border: 1px solid red; */
     width: 100%;
-  }
-  
-  /* LEFT */
-  .detail-left {
+}
+
+/* LEFT */
+.detail-left {
     /* border: 1px solid blue; */
     width: 500px;
-  }
-  
-  .img1 {
+}
+
+.img1 {
     width: 150px;
     height: 600px;
     display: block;
-  }
-  
-  .img2 {
+}
+
+.img2 {
     width: 90px;
     height: 100px;
     display: block;
-  }
-  
-  .img-display {
+}
+
+.img-display {
     overflow: hidden;
-  }
-  
-  .img-showcase {
+}
+
+.img-showcase {
     display: flex;
     width: 100%;
     transition: all 0.5s ease;
-  }
-  
-  .img-showcase img {
+}
+
+.img-showcase img {
     min-width: 100%;
-  }
-  
-  .img-select {
+}
+
+.img-select {
     display: flex;
-  }
-  
-  .img-item {
+}
+
+.img-item {
     margin: 0.3rem;
-  }
-  
-  .img-item:nth-child(1),
-  .img-item:nth-child(2),
-  .img-item:nth-child(3) {
+}
+
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3) {
     margin-right: 0;
-  }
-  
-  .img-item:hover {
+}
+
+.img-item:hover {
     opacity: 0.8;
-  }
-  
-  /* RIGHT */
-  .detail-right {
+}
+
+/* RIGHT */
+.detail-right {
     /* border: 1px solid rebeccapurple; */
     width: 500px;
     padding-left: 20px;
     padding-top: 10px;
-  }
-  
-  .right-new {
+}
+
+.right-new {
     font-weight: bold;
     text-decoration: underline;
-  }
-  
-  .right-name {
+}
+
+.right-name {
     font-size: 50px;
     font-family: 'Winter Moments';
     font-weight: bold;
     letter-spacing: 5px;
-  }
-  
-  .right-price {
+}
+
+.right-price {
     font-size: 18px;
-  
-  }
-  
-  .qty-name {
+
+}
+
+.qty-name {
     font-size: 18px;
     margin-top: 10px;
-  }
-  
-  .counter {
+}
+
+.counter {
     margin: auto;
     display: flex;
-  }
-  
-  .counter input {
+}
+
+.counter input {
     width: 50px;
     border: 0;
     line-height: 30px;
@@ -1746,9 +1746,9 @@ footer p {
     color: rgb(0, 0, 0);
     appearance: none;
     outline: 0;
-  }
-  
-  .counter span {
+}
+
+.counter span {
     display: block;
     font-size: 25px;
     padding: 0 10px;
@@ -1756,10 +1756,10 @@ footer p {
     color: #fcfcfc;
     user-select: none;
     background-color: black;
-  }
-  
-  /* BTN */
-  .btn1 {
+}
+
+/* BTN */
+.btn1 {
     display: inline-block;
     padding: 13px 20px;
     text-decoration: none;
@@ -1773,9 +1773,9 @@ footer p {
     transition: color 0.1s linear 0.05s;
     margin-top: 10px;
     width: 100%;
-  }
-  
-  .btn1::before {
+}
+
+.btn1::before {
     content: "";
     display: block;
     position: absolute;
@@ -1787,47 +1787,47 @@ footer p {
     z-index: 1;
     opacity: 0;
     transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
-  }
-  
-  .btn1::after {
+}
+
+.btn1::after {
     transition: border 0.1s linear 0.05s;
-  }
-  
-  .btn1 {
+}
+
+.btn1 {
     position: relative;
     z-index: 2;
     color: rgb(0, 0, 0);
-  }
-  
-  .btn1:hover {
+}
+
+.btn1:hover {
     color: #000000;
-  }
-  
-  .btn1:hover {
+}
+
+.btn1:hover {
     color: #ffffff;
     transition: color 0.1s linear 0s;
     background-color: black;
-  }
-  
-  .btn1:hover::before {
+}
+
+.btn1:hover::before {
     top: 0;
     height: 100%;
     opacity: 1;
     transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
     color: #000000;
-  }
-  
-  .btn1:hover::after {
+}
+
+.btn1:hover::after {
     border-color: #000000;
     transition: border 0.1s linear 0s;
-  }
-  
-  /* According */
-  .right-according {
+}
+
+/* According */
+.right-according {
     margin-top: 10px;
-  }
-  
-  .accordion1 {
+}
+
+.accordion1 {
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -1838,59 +1838,60 @@ footer p {
     outline: none;
     font-size: 16px;
     transition: 0.4s;
-  }
-  
-  /* Add a symbol to each button to indicate whether the collapsible content is open or closed */
-  .accordion1:after {
+}
+
+/* Add a symbol to each button to indicate whether the collapsible content is open or closed */
+.accordion1:after {
     content: "\02795";
     /* Unicode character for "plus" sign (+) */
     font-size: 10px;
     color: #777;
     float: right;
     margin-left: 5px;
-  }
-  
-  .active:after {
+}
+
+.active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active,
-  .accordion1:hover {
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion1:hover {
     background-color: #ccc;
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
     padding: 0 18px;
     background-color: white;
     /* display: none; */
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
-  }
+}
+
 /* End PRODUCT-DETAIL */
 
 /* START LOGIN */
 /* LOGIN */
 .login {
     width: 100%;
-  }
-  
-  /* left */
-  .left-login {
+}
+
+/* left */
+.left-login {
     width: 500px;
-  }
-  
-  .login-box {
+}
+
+.login-box {
     width: 450px;
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
-  }
-  
-  .login-box h2 {
+}
+
+.login-box h2 {
     margin: 0 0 30px;
     padding: 0;
     color: rgb(0, 0, 0);
@@ -1898,13 +1899,13 @@ footer p {
     font-family: Winter Moments;
     font-weight: bold;
     letter-spacing: 4px;
-  }
-  
-  .login-box .user-box {
+}
+
+.login-box .user-box {
     position: relative;
-  }
-  
-  .login-box .user-box input {
+}
+
+.login-box .user-box input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -1914,9 +1915,9 @@ footer p {
     border-bottom: 1px solid rgb(0, 0, 0);
     outline: none;
     background: transparent;
-  }
-  
-  .login-box .user-box label {
+}
+
+.login-box .user-box label {
     position: absolute;
     top: 0;
     left: 0;
@@ -1925,18 +1926,18 @@ footer p {
     color: rgb(0, 0, 0);
     pointer-events: none;
     transition: .5s;
-  }
-  
-  .login-box .user-box input:focus~label,
-  .login-box .user-box input:valid~label {
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
     top: -20px;
     left: 0;
     color: #000000;
     font-size: 12px;
-  }
-  
-  /* BTN */
-  .btn1 {
+}
+
+/* BTN */
+.btn1 {
     display: inline-block;
     padding: 13px 20px;
     text-decoration: none;
@@ -1950,9 +1951,9 @@ footer p {
     transition: all 0.5s ease;
     margin-top: 10px;
     width: 100%;
-  }
-  
-  .btn1::before {
+}
+
+.btn1::before {
     content: "";
     display: block;
     position: absolute;
@@ -1964,57 +1965,57 @@ footer p {
     z-index: 1;
     opacity: 0;
     transition: all 0.5s ease;
-  }
-  
-  .btn1::after {
+}
+
+.btn1::after {
     transition: all 0.5s ease;
-  }
-  
-  .btn1 {
+}
+
+.btn1 {
     position: relative;
     z-index: 2;
     color: rgb(0, 0, 0);
-  }
-  
-  .btn1:hover {
+}
+
+.btn1:hover {
     color: #000000;
-  }
-  
-  .btn1:hover {
+}
+
+.btn1:hover {
     color: #ffffff;
     transition: color 0.1s linear 0s;
     background-color: black;
-  }
-  
-  .btn1:hover::before {
+}
+
+.btn1:hover::before {
     top: 0;
     height: 100%;
     opacity: 1;
     transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
     color: #000000;
-  }
-  
-  .btn1:hover::after {
+}
+
+.btn1:hover::after {
     border-color: #000000;
     transition: border 0.1s linear 0s;
-  }
-  
-  .other-form {
+}
+
+.other-form {
     font-size: 13px;
-  }
-  
-  /* right */
-  .right-login {
+}
+
+/* right */
+.right-login {
     border: 1px solid rgb(0, 0, 0);
     border-style: dashed;
     width: 500px;
-  }
-  
-  .login-gg {
+}
+
+.login-gg {
     padding: 30px;
-  }
-  
-  .login-gg-lable {
+}
+
+.login-gg-lable {
     margin: 0 0 15px;
     padding: 0;
     color: rgb(0, 0, 0);
@@ -2023,9 +2024,9 @@ footer p {
     font-weight: bold;
     font-size: 25px;
     letter-spacing: 4px;
-  }
-  
-  .google-btn {
+}
+
+.google-btn {
     margin-left: auto;
     margin-right: auto;
     width: 300px;
@@ -2033,9 +2034,9 @@ footer p {
     background-color: #4285f4;
     border-radius: 2px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
-  }
-  
-  .google-btn .google-icon-wrapper {
+}
+
+.google-btn .google-icon-wrapper {
     position: absolute;
     margin-top: 1px;
     margin-left: 1px;
@@ -2043,42 +2044,42 @@ footer p {
     height: 40px;
     border-radius: 2px;
     background-color: #fff;
-  }
-  
-  .google-btn .google-icon {
+}
+
+.google-btn .google-icon {
     position: absolute;
     margin-top: 11px;
     margin-left: 11px;
     width: 18px;
     height: 18px;
-  }
-  
-  .google-btn .btn-text {
+}
+
+.google-btn .btn-text {
     float: right;
     margin: 11px 51px 0 0;
     color: #fff;
     font-size: 14px;
     letter-spacing: 2px;
     font-family: "Roboto";
-  }
-  
-  .google-btn:hover {
+}
+
+.google-btn:hover {
     box-shadow: 0 0 6px #4285f4;
-  }
-  
-  .google-btn:active {
+}
+
+.google-btn:active {
     background: #1669F2;
-  }
-  
-  .dk-title {
+}
+
+.dk-title {
     font-weight: 500;
     width: 250px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  /* BTN */
-  .btn-dk {
+}
+
+/* BTN */
+.btn-dk {
     border: 1px solid black;
     display: inline-block;
     padding: 13px 20px;
@@ -2096,9 +2097,9 @@ footer p {
     width: 380px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .btn-dk::before {
+}
+
+.btn-dk::before {
     content: "";
     display: block;
     position: absolute;
@@ -2110,40 +2111,41 @@ footer p {
     z-index: 1;
     opacity: 0;
     transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
-  }
-  
-  .btn-dk::after {
+}
+
+.btn-dk::after {
     transition: border 0.1s linear 0.05s;
-  }
-  
-  .btn-dk {
+}
+
+.btn-dk {
     position: relative;
     z-index: 2;
     color: rgb(0, 0, 0);
-  }
-  
-  .btn-dk:hover {
+}
+
+.btn-dk:hover {
     color: #000000;
-  }
-  
-  .btn-dk:hover {
+}
+
+.btn-dk:hover {
     color: #ffffff;
     transition: color 0.1s linear 0s;
     background-color: black;
-  }
-  
-  .btn-dk:hover::before {
+}
+
+.btn-dk:hover::before {
     top: 0;
     height: 100%;
     opacity: 1;
     transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
     color: #000000;
-  }
-  
-  .btn-dk:hover::after {
+}
+
+.btn-dk:hover::after {
     border-color: #000000;
     transition: border 0.1s linear 0s;
-  }
+}
+
 /* END LOGIN */
 
 /* START REGISTER */
@@ -2152,21 +2154,21 @@ footer p {
     border-style: dashed; */
     width: 500px;
     margin-top: 10px;
-  }
-  
-  .login-gg {
+}
+
+.login-gg {
     padding: 30px;
-  }
-  
-  .dk-title {
+}
+
+.dk-title {
     font-weight: 500;
     width: 250px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  /* BTN */
-  .btn-dk-1 {
+}
+
+/* BTN */
+.btn-dk-1 {
     display: inline-block;
     padding: 13px 20px;
     text-decoration: none;
@@ -2185,9 +2187,9 @@ footer p {
     margin-right: auto;
     border: 1px solid white;
     font-weight: bold;
-  }
-  
-  .btn-dk-1::before {
+}
+
+.btn-dk-1::before {
     content: "";
     display: block;
     position: absolute;
@@ -2199,51 +2201,51 @@ footer p {
     z-index: 1;
     opacity: 0;
     transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
-  }
-  
-  .btn-dk-1::after {
+}
+
+.btn-dk-1::after {
     transition: border 0.1s linear 0.05s;
-  }
-  
-  .btn-dk-1 {
+}
+
+.btn-dk-1 {
     position: relative;
     z-index: 2;
     color: rgb(255, 255, 255);
-  }
-  
-  .btn-dk-1:hover {
+}
+
+.btn-dk-1:hover {
     color: #ffffff;
-  }
-  
-  .btn-dk-1:hover {
+}
+
+.btn-dk-1:hover {
     color: #000000;
     transition: color 0.1s linear 0s;
     background-color: rgb(255, 255, 255);
-  }
-  
-  .btn-dk-1:hover::before {
+}
+
+.btn-dk-1:hover::before {
     top: 0;
     height: 100%;
     opacity: 1;
     transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
     color: #ffffff;
-  }
-  
-  .btn-dk-1:hover::after {
+}
+
+.btn-dk-1:hover::after {
     border-color: #ffffff;
     transition: border 0.1s linear 0s;
-  }
-  
-  .dang-ky {
+}
+
+.dang-ky {
     position: relative;
     text-align: center;
-  }
-  
-  .dang-ky img {
+}
+
+.dang-ky img {
     filter: brightness(40%);
-  }
-  
-  .login-gg-lable-dk {
+}
+
+.login-gg-lable-dk {
     margin: 0 0 15px;
     padding: 0;
     color: rgb(255, 255, 255);
@@ -2252,14 +2254,15 @@ footer p {
     font-weight: bold;
     font-size: 25px;
     letter-spacing: 4px;
-  }
-  
-  .centered {
+}
+
+.centered {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
+
 /* END REGISTER */
 
 /* START PRODUCT-FORM */
@@ -2310,7 +2313,7 @@ footer p {
     text-decoration: none;
 }
 
-.product-item img{
+.product-item img {
     height: 410px;
     width: 250px;
 }
@@ -2359,3 +2362,177 @@ footer p {
 }
 
 /* END PRODUCT-FORM */
+
+/* START CART DETAIL */
+/* CART - DETAIL */
+/* breadcrumd */
+.cart-detail-title {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+.cart-detail-form {
+    margin-top: 20px;
+}
+
+/* LEFT */
+.cart-detail-left {
+    width: 800px;
+    background-color: #f3eeeb;
+}
+
+.table-cart-detail {}
+
+.cart-left-title {
+    font-size: 20px;
+    padding: 5px 30px;
+    font-weight: 500;
+    font-family: arial, sans-serif;
+}
+
+.cart-left-form {
+    background-color: white;
+    margin: 5px 25px;
+    padding: 5px 25px;
+    margin-bottom: 20px;
+}
+
+.cart-left-form table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.cart-left-form table th {
+    border-bottom: 1px solid black !important;
+    font-weight: bold;
+}
+
+.cart-left-form table td,
+th {
+    text-align: left;
+    padding: 8px;
+    vertical-align: top
+}
+
+.cart-left-form table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.cart-product-mota {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cart-product-mota-name {
+    margin-bottom: 10px;
+}
+
+.cart-product-mota-id {
+    margin-bottom: 29px;
+}
+
+.cart-product-mota-btn-remove {
+    background-color: white;
+    padding: 10px;
+    font-weight: 1000;
+    font-size: 12px;
+    transition: all 0.5s ease;
+}
+
+.cart-product-mota-btn-remove:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.cart-product-price {}
+
+.quantity-cart {
+    width: 0px !important;
+    text-align: center;
+}
+
+/* RIGHT */
+.cart-detail-right .cart-summary {
+    width: 300px;
+    background-color: #f3eeeb;
+    margin-left: 20px;
+}
+
+.cart-summary {
+    padding: 10px 20px;
+}
+
+.summary-subtotal-main {
+    border-bottom: 1px solid black;
+}
+
+.summary-subtotal-main div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.summary-subtotal-name,
+.summary-ship-name,
+.summary-total-name,
+.summary-tax-name {
+    font-weight: 600 !important;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-style: normal;
+    size: 10px !important;
+}
+
+.summary-total-main {
+    border-bottom: 1px solid black;
+}
+
+.summary-total-main div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.cart-total {
+    padding: 10px 20px;
+}
+
+.summary-title {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.summary-paypal-checkout,
+.summary-paypal-paypal {
+    height: 35px;
+    width: 100%;
+    transition: all 0.5s ease;
+    background-color: white;
+    font-weight: bold;
+}
+
+.summary-paypal-main .orSum {
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.summary-paypal-checkout:hover,
+.summary-paypal-paypal:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+
+.continue-shop {
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+/* END CART DETAIL */

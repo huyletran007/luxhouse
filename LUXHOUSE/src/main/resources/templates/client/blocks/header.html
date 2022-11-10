@@ -35,8 +35,7 @@
                                 <button class="user-drop"><i class="far fa-user user-drop"></i></button>
                                 <div class="dropdown-content">
                                     <a th:if="${UserDataRoot == null}" href="/users/login">Đăng nhập</a>
-                                    <a th:if="${UserDataRoot == null}" href="/users/register">Đăng ký</a>
-                                    <a th:if="${UserDataRoot != null}" href="#">Dẵng xuất</a>
+                                    <a th:if="${UserDataRoot != null}" href="#">Đăng xuất</a>
                                     <a href="#">Kiểm tra đơn hàng</a>
                                     <a th:if="${UserDataRoot != null}" href="#">Tài khoản</a>
                                 </div>
@@ -98,7 +97,7 @@
                                         </li>
                                     </ul>
 
-                                    <a href="#" class="button">View cart</a>
+                                    <a href="/OrderDetail" class="button">View cart</a>
                                 </div>
                                 <!--end shopping-cart -->
                             </div>
