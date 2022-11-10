@@ -137,4 +137,6 @@ public class CategoryProductServiceImpl implements CategoryProductService {
     public <S extends CategoryProducts> boolean exists(Example<S> example) {
         return categoryProductRepository.exists(example);
     }
+
+
 }

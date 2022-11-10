@@ -58,4 +58,5 @@ public interface CategoryProductService {
     <S extends CategoryProducts> long count(Example<S> example);
 
     <S extends CategoryProducts> boolean exists(Example<S> example);
+
 }

@@ -16,7 +16,6 @@ public class CategoryProductController {
 
     @Autowired
     CategoryProductService categoryProductService;
-
     /**
      * Api get all CategoryProducts
      * 
