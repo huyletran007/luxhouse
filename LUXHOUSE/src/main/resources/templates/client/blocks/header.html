@@ -116,37 +116,27 @@
                         <li>
                             <a href="/home">home</a>
                         </li>
-                        <li>
-                            <a href="#" class="menu-link">
-                                electronics
+                        <li th:each="c:${cates}">
+                            <a href="@{|/product/list?cid=${c.id}}|}" class="menu-link">
+                                [[${c.categoryName}]]
                                 <span class="drop-icon">
-                                    <i class="fas fa-chevron-down"></i>
-                                </span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </span>
                             </a>
                             <div class="sub-menu">
                                 <!-- item -->
                                 <div class="sub-menu-item">
                                     <h4>top categories</h4>
                                     <ul>
-                                        <li><a href="#">cell phones & accessories</a></li>
-                                        <li><a href="#">smart tv</a></li>
-                                        <li><a href="#">computer & laptops</a></li>
-                                        <li><a href="#">digital cameras</a></li>
-                                        <li><a href="#">video games & accessories</a></li>
+                                        <li th:each="cp:${cate_pro}">
+<!--                                            <div th:text="${cp.categoryProductName}"></div>-->
+                                            <a href="#">[[${cp.categoryProductName}]]</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <!-- end of item -->
                                 <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h4>other categories</h4>
-                                    <ul>
-                                        <li><a href="#">iphones</a></li>
-                                        <li><a href="#">speakers</a></li>
-                                        <li><a href="#">samsung devices</a></li>
-                                        <li><a href="#">audio & headphones</a></li>
-                                        <li><a href="#">vehicles electronics & GPS</a></li>
-                                    </ul>
-                                </div>
+
                                 <!-- end of item -->
                                 <!-- item -->
                                 <div class="sub-menu-item">
@@ -162,143 +152,7 @@
                             </div>
                         </li>
 
-                        <li>
-                            <a href="#" class="menu-link">
-                                fashion
-                                <span class="drop-icon">
-                                    <i class="fas fa-chevron-down"></i>
-                                </span>
-                            </a>
-                            <div class="sub-menu">
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h4>top categories</h4>
-                                    <ul>
-                                        <li><a href="#">men's clothing</a></li>
-                                        <li><a href="#">women's clothing</a></li>
-                                        <li><a href="#">men's shoes</a></li>
-                                        <li><a href="#">women's shoes</a></li>
-                                        <li><a href="#">clothing deals</a></li>
-                                    </ul>
-                                </div>
-                                <!-- end of item -->
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h4>other categories</h4>
-                                    <ul>
-                                        <li><a href="#">fine jewelry</a></li>
-                                        <li><a href="#">fashion jewelry</a></li>
-                                        <li><a href="#">men's accessories</a></li>
-                                        <li><a href="#">handbags & bags</a></li>
-                                        <li><a href="#">kid's clothing</a></li>
-                                    </ul>
-                                </div>
-                                <!-- end of item -->
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h2>stylish and modern fashion clothing</h2>
-                                    <button type="button" class="btn">shop here</button>
-                                </div>
-                                <!-- end of item -->
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <img src="images/cloth.png" alt="product image">
-                                </div>
-                                <!-- end of item -->
-                            </div>
-                        </li>
 
-                        <li>
-                            <a href="#" class="menu-link">
-                                health & beauty
-                                <span class="drop-icon">
-                                    <i class="fas fa-chevron-down"></i>
-                                </span>
-                            </a>
-                            <div class="sub-menu">
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h4>top categories</h4>
-                                    <ul>
-                                        <li><a href="#">makeup</a></li>
-                                        <li><a href="#">health care</a></li>
-                                        <li><a href="#">fragrance</a></li>
-                                        <li><a href="#">hair care & stylings</a></li>
-                                        <li><a href="#">manicure & pedicure</a></li>
-                                    </ul>
-                                </div>
-                                <!-- end of item -->
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h4>other categories</h4>
-                                    <ul>
-                                        <li><a href="#">skin care</a></li>
-                                        <li><a href="#">vitamins</a></li>
-                                        <li><a href="#">vision care</a></li>
-                                        <li><a href="#">oral care</a></li>
-                                        <li><a href="#">shaving & hair removal</a></li>
-                                    </ul>
-                                </div>
-                                <!-- end of item -->
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h2>the latest product is here</h2>
-                                    <button type="button" class="btn">shop here</button>
-                                </div>
-                                <!-- end of item -->
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <img src="images/gymn.png" alt="product image">
-                                </div>
-                                <!-- end of item -->
-                            </div>
-                        </li>
-
-                        <li>
-                            <a href="#" class="menu-link">
-                                sports
-                                <span class="drop-icon">
-                                    <i class="fas fa-chevron-down"></i>
-                                </span>
-                            </a>
-                            <div class="sub-menu">
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h4>top categories</h4>
-                                    <ul>
-                                        <li><a href="#">cycling</a></li>
-                                        <li><a href="#">outdoor sports</a></li>
-                                        <li><a href="#">hunting</a></li>
-                                        <li><a href="#">fishing</a></li>
-                                        <li><a href="#">fitness & yoga</a></li>
-                                    </ul>
-                                </div>
-                                <!-- end of item -->
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h4>other categories</h4>
-                                    <ul>
-                                        <li><a href="#">tennis</a></li>
-                                        <li><a href="#">swimming</a></li>
-                                        <li><a href="#">winter sports</a></li>
-                                        <li><a href="#">fitness technology</a></li>
-                                        <li><a href="#">sports wear</a></li>
-                                    </ul>
-                                </div>
-                                <!-- end of item -->
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <h2>gear up for sports & adventures</h2>
-                                    <button type="button" class="btn">shop here</button>
-                                </div>
-                                <!-- end of item -->
-                                <!-- item -->
-                                <div class="sub-menu-item">
-                                    <img src="images/helmet.png" alt="product image">
-                                </div>
-                                <!-- end of item -->
-                            </div>
-                        </li>
 
                         <li>
                             <a href="#">deals</a>

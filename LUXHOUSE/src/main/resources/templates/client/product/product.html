@@ -6,31 +6,21 @@
     <div class="product-form container">
         <div class="row">
             <div class="cot-1 col-3">
-                <button class="accordion1 product-cate-1">Category-1</button>
-                <div class="panel product-cate-2">
-                    <ul>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                    </ul>
+                <div th:each="c:${cates}">
+                    <button class="accordion1 product-cate-1">[[${c.categoryName}]]</button>
+                    <div class="panel product-cate-2">
+                        <ul>
+                            <li><a href="#">Category-2</a></li>
+                            <li><a href="#">Category-2</a></li>
+                            <li><a href="#">Category-2</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <button class="accordion1 product-cate-1">Category-1</button>
-                <div class="panel product-cate-2">
-                    <ul>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                    </ul>
-                </div>
-                <button class="accordion1 product-cate-1">Category-1</button>
-                <div class="panel product-cate-2">
-                    <ul>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                        <li><a href="#">Category-2</a></li>
-                    </ul>
-                </div>
+
             </div>
+
+
+
             <div class="cot-2 col-9">
                 <select class="select_product form-select w-25" aria-label="Default select example">
                     <option selected>Open this select menu</option>
