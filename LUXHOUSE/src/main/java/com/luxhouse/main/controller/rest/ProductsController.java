@@ -1,5 +1,6 @@
 package com.luxhouse.main.controller.rest;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +37,29 @@ public class ProductsController {
     public List<Products> getAllProducts() {
 
         return productsService.findAll();
+    }
+    
+    /** Api get all Products 
+     * 
+     * - GET Method: __/get
+     * - Return(JSON): item
+     * 
+     * */
+    @GetMapping("/get/{start}/{total}") // api get all Products
+    public List<Products> getPageProducts(@PathVariable int start, @PathVariable int total) {
+        
+        List<Products> list = productsService.findAll();
+        Collections.reverse(list);
+        int toStart = start*total;
+        // 12
+        // start-total
+        // 0-5 : toStart = 0*5, toIndex = toStart+total = 5 
+        // 1-5 : toStart = 1*5, toIndex = toStart+total = 10
+        // 2-5 : toStart = 2*5, toIndex = toStart+total = 15 => 12
+        int toIndex = total + toStart;
+        toIndex = toIndex > list.size() ? list.size() : toIndex;
+        
+        return list.subList(toStart, toIndex);
     }
 
     /**
