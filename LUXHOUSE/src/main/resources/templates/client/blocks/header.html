@@ -13,7 +13,7 @@
                         </div>
                         <!---->
                     </div>
-                    <a href="/products/all" class="navbar-collapse" id="text_1">INSPIRATION</a>
+                    <a href="/products" class="navbar-collapse" id="text_1">INSPIRATION</a>
                 </div>
                 <div class="col-6" style="font-family: proxima-nova,Arial,sans-serif;">
                     <a href="/home" id="text_2">LUXHOUSE</a>
@@ -34,10 +34,10 @@
                             <div class="dropdown-user">
                                 <button class="user-drop"><i class="far fa-user user-drop">[[${#request.remoteUser}]]</i></button>
                                 <div class="dropdown-content">
-                                    <a th:if="${UserDataRoot == null}" href="/users/login">Ä�Äƒng nháº­p</a>
-                                    <a th:if="${UserDataRoot != null}" href="#">Ä�Äƒng xuáº¥t</a>
-                                    <a href="#">Kiá»ƒm tra Ä‘Æ¡n hÃ ng</a>
-                                    <a th:if="${UserDataRoot != null}" href="#">TÃ i khoáº£n</a>
+                                    <a th:if="${UserDataRoot == null}" href="/auth/login">Đăng nhập</a>
+                                    <a th:if="${UserDataRoot != null}" href="#">Đăng xuất</a>
+                                    <a href="#">Kiểm tra đơn hàng</a>
+                                    <a th:if="${UserDataRoot != null}" href="#">Tài khoản</a>
                                 </div>
                             </div>
                         </div>

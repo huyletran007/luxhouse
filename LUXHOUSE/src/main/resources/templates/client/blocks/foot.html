@@ -1,16 +1,26 @@
-    <!-- SCRIPT -->
-    <script src="/js/stick.js"></script>
-    <script src="/js/main.min.js"></script>
-    <script src="/js/simpleFetch.js"></script>
-    <script src="/js/product-detail.js"></script>
-    <script src="/js/base.js"></script>
-    <script src="/js/config.js"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-    </script>
-    
-    <script th:each="jsLink : ${content.jsList}" th:src="${jsLink}"></script>
+<!-- SCRIPT -->
+<script src="/js/stick.js"></script>
+<script src="/js/main.min.js"></script>
+<script src="/js/simpleFetch.js"></script>
+<script src="/js/product-detail.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/config.js"></script>
+
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous">
+	
+</script>
+
+<script th:each="jsLink : ${content.jsList}" th:src="${jsLink}"></script>
+
+<style>
+.active:after{
+content: '' !important;
+}
+</style>
 </body>
 
 </html>
