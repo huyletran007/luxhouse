@@ -74,15 +74,15 @@ public class UsersController {
      * - Return(JSON): item
      * 
      */
-    @GetMapping("/get/{id}")
-    public Users getShopVoucher(@PathVariable Long id) {
-        Optional<Users> itemUsers = usersService.findById(id);
-        if (itemUsers.isPresent()) {
-            return itemUsers.get();
-        }
-
-        return null;
-    }
+//    @GetMapping("/get/{id}")
+//    public Users getShopVoucher(@PathVariable Long id) {
+//        Optional<Users> itemUsers = usersService.findById(id);
+//        if (itemUsers.isPresent()) {
+//            return itemUsers.get();
+//        }
+//
+//        return null;
+//    }
 
     /**
      * Api add item to Users
@@ -108,13 +108,13 @@ public class UsersController {
      * - Return(JSON): item
      * 
      */
-    @PutMapping("/update")
-    public Users updateUsers(@RequestBody Users Users) {
-
-        usersService.save(Users);
-
-        return usersService.findById(Users.getId()).get();
-    }
+//    @PutMapping("/update")
+//    public Users updateUsers(@RequestBody Users Users) {
+//
+//        usersService.save(Users);
+//
+//        return usersService.findById(Users.getId()).get();
+//    }
 
     /**
      * Api delete item
@@ -123,13 +123,13 @@ public class UsersController {
      * - Return(JSON): item
      * 
      */
-    @DeleteMapping("/delete/{id}")
-    public Users deleteUsers(@PathVariable Long id) {
-
-        Users item = usersService.findById(id).get();
-
-        usersService.delete(item);
-
-        return item;
-    }
+//    @DeleteMapping("/delete/{id}")
+//    public Users deleteUsers(@PathVariable Long id) {
+//
+//        Users item = usersService.findById(id).get();
+//
+//        usersService.delete(item);
+//
+//        return item;
+//    }
 }

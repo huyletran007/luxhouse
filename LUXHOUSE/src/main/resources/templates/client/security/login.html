@@ -1,10 +1,11 @@
 <!-- Start FORM-LOGIN -->
+
     <div class="login container d-flex flex-wrap justify-content-center" style="margin-top: 100px; margin-bottom: 100px;">
         <div class="left-login">
             <div class="login-box">
                 <h2>SIGN IN TO YOUR ACCOUNT
                 </h2>
-                <form>
+                <form th:action="@{/security/login}" method="post">
                     <div class="user-box">
                         <input type="text" name="" required="">
                         <label>Username</label>
@@ -26,8 +27,12 @@
                             </div>
                         </div>
                     </div>
+                    <div>
+                    	<i th:text="${message}"></i>
+                    </div>
+                    <button type="submit" class="btn1">SIGN IN</button>
                 </form>
-                <button type="button" class="btn1">SIGN IN</button>
+                
             </div>
         </div>
         <div class="right-login">
