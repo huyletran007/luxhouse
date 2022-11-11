@@ -1,0 +1,12 @@
+.search{
+    width: 390px;
+    border-color: none !important;
+}
+
+[type=search]{
+    outline-offset: 0px !important;
+}
+
+.w-100 {
+    width: 80%!important;
+}
