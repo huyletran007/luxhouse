@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-/* PRODUCT-FORM */
-.product-text{
-=======
 /* START PRODUCT-FORM */
 .product-text {
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
     margin-top: 45px;
     text-align: center;
     font-family: 'Winter Moments', sans-serif !important;
     letter-spacing: 4px;
     font-weight: bold;
-<<<<<<< HEAD
-    font-size: 45px;
-}
-.product-form{
-    border: 2px solid red;
-    height: 700px;
-    width: 100%;
-}
-.cot-1{
-=======
     font-size: 40px;
 }
 
@@ -29,17 +14,10 @@
 }
 
 .cot-1 {
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
     border: 1px solid blue;
     height: 700px;
 }
 
-<<<<<<< HEAD
-.cot-2{
-    border: 1px solid blueviolet;
-    height: 700px;
-}
-=======
 .cot-2 {
     border: 1px solid blueviolet;
 
@@ -117,4 +95,3 @@
 }
 
 /* END PRODUCT-FORM */
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c

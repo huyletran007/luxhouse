@@ -44,7 +44,7 @@ public interface UserService {
 
     void flush();
 
-    Optional<Users> findById(Long id);
+    Users findByUsername(String username);
 
     <S extends Users> List<S> saveAll(Iterable<S> entities);
 

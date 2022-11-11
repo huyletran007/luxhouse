@@ -55,10 +55,7 @@ public class UserServiceImpl implements UserService{
         return userRepository.saveAll(entities);
     }
 
-    @Override
-    public Optional<Users> findById(Long id) {
-        return userRepository.findById(id);
-    }
+    
 
     @Override
     public void flush() {
@@ -139,6 +136,12 @@ public class UserServiceImpl implements UserService{
     public void deleteAll() {
         userRepository.deleteAll();
     }
+
+	@Override
+	public Users findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return userRepository.findByUsername(username);
+	}
 
     
 }

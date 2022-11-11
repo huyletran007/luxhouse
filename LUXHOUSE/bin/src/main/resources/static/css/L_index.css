@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-<<<<<<< HEAD
-=======
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
 
 /* font */
 @font-face {
@@ -19,8 +16,6 @@
     src: local('Winter Moments'), url('https://fonts.cdnfonts.com/s/49315/WinterMoments.woff') format('woff');
 }
 
-<<<<<<< HEAD
-=======
 :root {
     --font: "Poppins", sans-serif;
     --bg-color: #e8e8e8;
@@ -31,7 +26,6 @@
     --warning-contrast: #ffffff;
 }
 
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
 * {
     box-sizing: border-box;
     padding: 0;
@@ -141,10 +135,7 @@ body {
 .navbar-collapse {
     overflow-y: scroll;
     display: none;
-<<<<<<< HEAD
-=======
     
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
 }
 
 .navbar-nav>li>a {
@@ -336,10 +327,7 @@ body {
         display: grid !important;
         grid-template-columns: repeat(4, 1fr);
         padding: 0 5rem;
-<<<<<<< HEAD
-=======
 
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
     }
 
     .navbar-nav>li {
@@ -374,11 +362,6 @@ body {
     }
 }
 
-<<<<<<< HEAD
-/* SLIDE */
-.index_slide {
-    height: 947px;
-=======
 /* SEARCH */
 .search {
     pointer-events: auto;
@@ -691,7 +674,6 @@ body {
     position: relative;
     height: 750px;
     margin-bottom: 350px;
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
     z-index: 2 !important;
 }
 
@@ -1182,10 +1164,7 @@ body {
     text-align: center;
     top: 200px;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 19365c2c1204862d527c0af22de474358e7e373c
 /* OUTDOOR */
 .index_outdoor {}
 

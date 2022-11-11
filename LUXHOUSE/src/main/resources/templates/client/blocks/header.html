@@ -32,12 +32,12 @@
                         </div>
                         <div class="col-1">
                             <div class="dropdown-user">
-                                <button class="user-drop"><i class="far fa-user user-drop"></i></button>
+                                <button class="user-drop"><i class="far fa-user user-drop">[[${#request.remoteUser}]]</i></button>
                                 <div class="dropdown-content">
-                                    <a th:if="${UserDataRoot == null}" href="/users/login">Đăng nhập</a>
-                                    <a th:if="${UserDataRoot != null}" href="#">Đăng xuất</a>
-                                    <a href="#">Kiểm tra đơn hàng</a>
-                                    <a th:if="${UserDataRoot != null}" href="#">Tài khoản</a>
+                                    <a th:if="${UserDataRoot == null}" href="/users/login">Ä�Äƒng nháº­p</a>
+                                    <a th:if="${UserDataRoot != null}" href="#">Ä�Äƒng xuáº¥t</a>
+                                    <a href="#">Kiá»ƒm tra Ä‘Æ¡n hÃ ng</a>
+                                    <a th:if="${UserDataRoot != null}" href="#">TÃ i khoáº£n</a>
                                 </div>
                             </div>
                         </div>

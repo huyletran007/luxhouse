@@ -2538,8 +2538,30 @@ th {
 /* END CART DETAIL */
 
 /*START PROFILE*/
+@media (min-width: 1200px){
+    .container {
+        max-width: 2000px !important;
+    }
+}
+
 .profile{
-    width: 1200px;
+    /*width: 1200px;*/
+
+
+
+}
+
+
+.profile h6{
+     font-size: 20px;
+ }
+
+.profile p{
+    font-size: 25px;
+}
+
+.card-block h6{
+    font-size: 25px;
 }
 
 .padding-profile {
@@ -2555,7 +2577,8 @@ th {
     -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
     box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
     border: none;
-    margin-bottom: 30px;
+    margin: 10px auto;
+    width: 95%;
 }
 
 .m-r-0 {
@@ -2577,8 +2600,12 @@ th {
 
 .user-profile {
     padding: 20px 0;
+    height: 500px;
+    font-size: 50px !important;
 }
-
+.user-profile h6{
+    font-size: 50px !important;
+}
 .card-block {
     padding: 1.25rem;
 }
