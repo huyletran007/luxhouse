@@ -9,7 +9,7 @@ const loadProduct = (data) => {
     let html = ``
     data.forEach(e => {
         html += /*html*/ `<div class="product-items-list mx-auto">
-        <a href="#" class="product-item">
+        <a href="${_URL_MAIN}/products/${e.id}" class="product-item">
             <img src="/image/${e.image}" class="img-fluid" alt="">
             <div class="text-left product_name">${e.productName}</div>
             <div class="text-left product_price">${formatVND(e.price)}</div>
@@ -77,3 +77,62 @@ const genderProduct = (page) => {
         .catch(err => console.log(err))
 }
 genderProduct(currentPage)
+
+
+// const loadProductDetail = (data) => {
+//     let wrapProduct = _$('#product-detail-js')
+//     let html = ``
+//     data.forEach(e => {
+//         html += /*html*/ `<div class="right-new">NEW</div>
+//         <div class="right-name">${e.productName}</div>
+//         <div class="right-price">1000$</div>
+//         <div class="right-qty">
+//             <div class="qty-name">Quantity</div>
+//             <div class="qty-sl">
+//                 <div class="counter">
+//                     <span class="down" onClick='decreaseCount(event, this)'>-</span>
+//                     <input type="text" value="1">
+//                     <span class="up" onClick='increaseCount(event, this)'>+</span>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="right-btn">
+//             <button type="button" class="btn1" id="add-btn">Add to cart</button>
+//         </div>
+//         <div class="right-according">
+//             <button class="accordion1">Desciption 1</button>
+//             <div class="panel">
+//                 <p>
+//                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
+//                     deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
+//                     consequatur architecto a magni sit tempora ea error veritatis aperiam.
+//                     Illum.
+//                 </p>
+//             </div>
+
+//             <button class="accordion1">Desciption 2</button>
+//             <div class="panel">
+//                 <p>
+//                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
+//                     deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
+//                     consequatur architecto a magni sit tempora ea error veritatis aperiam.
+//                     Illum.
+//                 </p>
+//             </div>
+
+//             <button class="accordion1">Desciption 3</button>
+//             <div class="panel">
+//                 <p>
+//                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
+//                     deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
+//                     consequatur architecto a magni sit tempora ea error veritatis aperiam.
+//                     Illum.
+//                 </p>
+//             </div>
+//         </div>`
+//     })
+//     wrapProduct.innerHTML = html
+// }
+// http.get(`http://localhost:8080/Product/get/${value.id}`)
+//         .then(data => loadProductDetail(data))
+//         .catch(err => console.log(err))

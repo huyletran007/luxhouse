@@ -1,5 +1,10 @@
 package com.luxhouse.main.controller.client;
 
-public class ProductDetailController {
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/product")
+public class ProductDetailController extends com.luxhouse.main.controller.Controller{
 
 }
