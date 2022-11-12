@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.domain.Users;
 import com.luxhouse.main.repository.UserRepository;
 import com.luxhouse.main.service.UserService;
@@ -54,8 +55,6 @@ public class UserServiceImpl implements UserService{
     public <S extends Users> List<S> saveAll(Iterable<S> entities) {
         return userRepository.saveAll(entities);
     }
-
-    
 
     @Override
     public void flush() {
@@ -141,6 +140,18 @@ public class UserServiceImpl implements UserService{
     public Optional<Users> findByUsername(String username) {
         // TODO Auto-generated method stub
         return userRepository.findByUsername(username);
+    }
+
+    @Override
+    public Optional<Users> findByEmail(String email) {
+        // TODO Auto-generated method stub
+        return userRepository.findByEmail(email);
+    }
+
+    @Override
+    public Optional<Users> findById(Long id) {
+        // TODO Auto-generated method stub
+        return userRepository.findById(id);
     }
 
 

@@ -36,9 +36,9 @@
                                 <button class="user-drop"><i class="far fa-user user-drop"></i></button>
                                 <div class="dropdown-content">
                                     <a th:if="${#request.remoteUser == null}" href="/users/login">Đăng nhập</a>
+                                    <a th:if="${#request.remoteUser != null}" href="/account/profile">Tài khoản</a>
                                     <a th:if="${#request.remoteUser != null}" href="/account/logout">Đăng xuất</a>
                                     <a href="#">Kiểm tra đơn hàng</a>
-                                    <a th:if="${#request.remoteUser != null}" href="/account/profile">Tài khoản</a>
                                 </div>
                             </div>
                         </div>

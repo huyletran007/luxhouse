@@ -61,6 +61,7 @@ public interface ProductImagesService {
 
     <S extends ProductImages> S save(S entity);
 
+    List<ProductImages> selectsByProductId(Long id);
     
 
 }

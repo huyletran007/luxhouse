@@ -43,7 +43,7 @@ public class UserController extends com.luxhouse.main.controller.Controller {
     @GetMapping("/register")
     public String layoutRegister_free(Model model) {
         dataLayoutMaster.setView("client/security/sign-up");
-        dataLayoutMaster.setJsList(Arrays.asList(""));
+        dataLayoutMaster.setJsList(Arrays.asList("/js/security/sign-up.js"));
 
         objsDataLayout.put("key", "value");
 

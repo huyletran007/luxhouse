@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.domain.Users;
 import com.luxhouse.main.service.UserService;
 
@@ -36,6 +37,40 @@ public class UsersController {
     public List<Users> getAllUsers() {
 
         return usersService.findAll();
+    }
+    
+    /**
+     * Api get item by id in Products
+     * 
+     * - GET Method: __/get/{id}
+     * - Return(JSON): item
+     * 
+     */
+    @GetMapping("/get/{id}")
+    public Users getIdUser(@PathVariable Long id) {
+        Optional<Users> idUser = usersService.findById(id);
+        if (idUser.isPresent()) {
+            return idUser.get();
+        }
+
+        return null;
+    }
+    
+    /**
+     * Api get item by id in Products
+     * 
+     * - GET Method: __/get/{id}
+     * - Return(JSON): item
+     * 
+     */
+    @GetMapping("/get/username/{username}")
+    public Users getEmailUser(@PathVariable String username) {
+        Optional<Users> idUserName = usersService.findByUsername(username);
+        if (idUserName.isPresent()) {
+            return idUserName.get();
+        }
+
+        return null;
     }
 
     /**
@@ -108,13 +143,13 @@ public class UsersController {
      * - Return(JSON): item
      * 
      */
-//    @PutMapping("/update")
-//    public Users updateUsers(@RequestBody Users Users) {
-//
-//        usersService.save(Users);
-//
-//        return usersService.findById(Users.getId()).get();
-//    }
+    @PutMapping("/update")
+    public Users updateUsers(@RequestBody Users Users) {
+
+        usersService.save(Users);
+
+        return usersService.findById(Users.getId()).get();
+    }
 
     /**
      * Api delete item

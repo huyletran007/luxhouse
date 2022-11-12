@@ -21,7 +21,7 @@ public class AccountController extends com.luxhouse.main.controller.Controller{
     @GetMapping("/profile")
     public String layout(Model model) {
         dataLayoutMaster.setView("client/account/profile");
-        dataLayoutMaster.setJsList(Arrays.asList(""));
+        dataLayoutMaster.setJsList(Arrays.asList("/js/security/profile.js"));
 
         objsDataLayout.put("key", "value");
 

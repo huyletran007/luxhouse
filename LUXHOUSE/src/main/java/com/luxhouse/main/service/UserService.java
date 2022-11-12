@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
+import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.domain.Users;
 
 public interface UserService {
@@ -43,8 +44,12 @@ public interface UserService {
     <S extends Users> S saveAndFlush(S entity);
 
     void flush();
-
+    
+    Optional<Users> findById(Long id);
+    
     Optional<Users> findByUsername(String username);
+    
+    Optional<Users> findByEmail(String email);
 
     <S extends Users> List<S> saveAll(Iterable<S> entities);
 

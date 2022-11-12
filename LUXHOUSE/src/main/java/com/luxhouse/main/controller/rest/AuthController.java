@@ -22,6 +22,7 @@ import com.luxhouse.main.repository.UserRepository;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -44,22 +45,28 @@ public class AuthController {
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
         Map<String, String> map = new HashMap<>();
-        map.put("data", "User signed-in successfully!.");
+        map.put("data", "User signed-in successfully!");
         return map;
         // {"data":""}
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<?> registerUser(@RequestBody SignUpDTO signUpDto) {
+    public Map<String, String> registerUser(@RequestBody SignUpDTO signUpDto) {
 
         // add check for username exists in a DB
         if (userRepository.existsByUsername(signUpDto.getUsername())) {
-            return new ResponseEntity<>("Username is already taken!", HttpStatus.BAD_REQUEST);
+//            return new ResponseEntity<>("Username is already taken!", HttpStatus.BAD_REQUEST);
+            Map<String, String> map = new HashMap<>();
+            map.put("data", "Username is already taken!.");
+            return map;
         }
 
         // add check for email exists in DB
         if (userRepository.existsByEmail(signUpDto.getEmail())) {
-            return new ResponseEntity<>("Email is already taken!", HttpStatus.BAD_REQUEST);
+//            return new ResponseEntity<>("Email is already taken!", HttpStatus.BAD_REQUEST);
+            Map<String, String> map = new HashMap<>();
+            map.put("data", "Email is already taken!.");
+            return map;
         }
 
         // create user object
@@ -75,7 +82,10 @@ public class AuthController {
 
         userRepository.save(user);
 
-        return new ResponseEntity<>("User registered successfully", HttpStatus.OK);
+//        return new ResponseEntity<>("User registered successfully", HttpStatus.OK);
+        Map<String, String> map = new HashMap<>();
+        map.put("data", "User signed-in successfully!");
+        return map;
 
     }
 }

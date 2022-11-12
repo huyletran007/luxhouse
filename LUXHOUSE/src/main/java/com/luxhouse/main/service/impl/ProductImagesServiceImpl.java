@@ -140,7 +140,11 @@ public class ProductImagesServiceImpl implements ProductImagesService{
         productImagesRepository.deleteAll();
     }
 
-    
+    @Override
+    public List<ProductImages> selectsByProductId(Long id) {
+        // TODO Auto-generated method stub
+        return productImagesRepository.selectsByProductId(id);
+    }
     
     
 }

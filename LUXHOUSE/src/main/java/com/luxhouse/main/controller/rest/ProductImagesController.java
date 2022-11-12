@@ -1,5 +1,6 @@
 package com.luxhouse.main.controller.rest;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -83,6 +84,16 @@ public class ProductImagesController {
         }
 
         return null;
+    }
+    
+    @GetMapping("/get/productid/{id}")
+    public List<ProductImages> getByProductId(@PathVariable Long id) {
+        List<ProductImages> itemProductImages = productImagesService.selectsByProductId(id);
+        if(!itemProductImages.isEmpty()) {
+            return itemProductImages;
+        } 
+        
+        return Arrays.asList(new ProductImages());
     }
 
     /**
