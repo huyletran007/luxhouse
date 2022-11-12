@@ -13,7 +13,7 @@ public class AuthPfController extends com.luxhouse.main.controller.Controller{
     @GetMapping("/login")
     public String layout(Model model) {
         dataLayoutMaster.setView("client/security/login");
-        dataLayoutMaster.setJsList(Arrays.asList(""));
+        dataLayoutMaster.setJsList(Arrays.asList("/js/security/login.js"));
 
         objsDataLayout.put("key", "value");
 

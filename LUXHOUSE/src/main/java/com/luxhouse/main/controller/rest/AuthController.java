@@ -20,6 +20,8 @@ import com.luxhouse.main.model.SignUpDTO;
 import com.luxhouse.main.repository.RoleRepository;
 import com.luxhouse.main.repository.UserRepository;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -36,12 +38,15 @@ public class AuthController {
     private PasswordEncoder passwordEncoder;
 
     @PostMapping("/signin")
-    public ResponseEntity<String> authenticateUser(@RequestBody LoginDTO loginDto) {
+    public Map<String, String> authenticateUser(@RequestBody LoginDTO loginDto) {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 loginDto.getUsernameOrEmail(), loginDto.getPassword()));
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        return new ResponseEntity<>("User signed-in successfully!.", HttpStatus.OK);
+        Map<String, String> map = new HashMap<>();
+        map.put("data", "User signed-in successfully!.");
+        return map;
+        // {"data":""}
     }
 
     @PostMapping("/signup")

@@ -32,12 +32,13 @@
                         </div>
                         <div class="col-1">
                             <div class="dropdown-user">
-                                <button class="user-drop"><i class="far fa-user user-drop">[[${#request.remoteUser}]]</i></button>
+                                <!-- [[${#request.remoteUser}]] -->
+                                <button class="user-drop"><i class="far fa-user user-drop"></i></button>
                                 <div class="dropdown-content">
-                                    <a th:if="${UserDataRoot == null}" href="/auth/login">Đăng nhập</a>
-                                    <a th:if="${UserDataRoot != null}" href="#">Đăng xuất</a>
+                                    <a th:if="${#request.remoteUser == null}" href="/users/login">Đăng nhập</a>
+                                    <a th:if="${#request.remoteUser != null}" href="/account/logout">Đăng xuất</a>
                                     <a href="#">Kiểm tra đơn hàng</a>
-                                    <a th:if="${UserDataRoot != null}" href="/account/profile">Tài khoản</a>
+                                    <a th:if="${#request.remoteUser != null}" href="/account/profile">Tài khoản</a>
                                 </div>
                             </div>
                         </div>
@@ -162,5 +163,5 @@
         </div>
     </div>
 </div>
-<input th:if="${UserDataRoot}" type="hidden" id="idCustomer" th:value="${UserDataRoot.id}">
+<!-- <input th:if="${#request.remoteUser}" type="hidden" id="idCustomer" th:value="${#request.remoteUser.id}"> -->
 <!-- End Header -->

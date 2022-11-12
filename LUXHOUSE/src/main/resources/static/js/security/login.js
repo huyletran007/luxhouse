@@ -8,17 +8,8 @@ const login = () => {
     }
 
     http.post('http://localhost:8080/api/auth/signin', data)
-        .then(data => handleLogin(data))
-        .alert('ok')
+        .then(data => {
+            window.location.href = 'http://localhost:8080/account/profile'
+        })
         .catch(err => console.log(err))
-
-    // let handleLogin = (data) => {
-    //     // alert('ok')
-    //     if(data.return != '') {
-    //         alert('ok')
-    //         window.location.href = '/account/profile'
-    //     } else {
-    //         Swal.fire("Message", data.error, "error")
-    //     }
-    // }
 }

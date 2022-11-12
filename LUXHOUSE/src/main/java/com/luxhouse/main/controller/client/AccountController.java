@@ -35,7 +35,7 @@ public class AccountController extends com.luxhouse.main.controller.Controller{
     @GetMapping("/logout")
     public String logout() {
         
-        sessionService.remove("userLogin");
+        sessionService.remove("remoteUser");
         return "redirect:/";
     }
 }

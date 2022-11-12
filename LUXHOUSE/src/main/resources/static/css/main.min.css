@@ -2538,11 +2538,11 @@ th {
 /* END CART DETAIL */
 
 /*START PROFILE*/
-@media (min-width: 1200px){
+/* @media (min-width: 1200px){
     .container {
         max-width: 2000px !important;
     }
-}
+} */
 
 .profile{
     /*width: 1200px;*/
