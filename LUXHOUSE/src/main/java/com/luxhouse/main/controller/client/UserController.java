@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/users")
 public class UserController extends com.luxhouse.main.controller.Controller {
+    
+    
     @GetMapping("/login")
     public String layoutLogin(Model model) {
         dataLayoutMaster.setView("client/security/login");
-        dataLayoutMaster.setJsList(Arrays.asList(""));
+        dataLayoutMaster.setJsList(Arrays.asList("/js/security/login.js"));
 
-        objsDataLayout.put("key", "value");
 
         dataLayoutMaster.setObjs(objsDataLayout);
 
@@ -23,6 +24,21 @@ public class UserController extends com.luxhouse.main.controller.Controller {
 
         return clientLayout;
     }
+    
+ // Login form with error  
+    @RequestMapping("/login-error")  
+    public String loginError(Model model) {  
+        dataLayoutMaster.setView("client/security/login");
+        model.addAttribute("loginError", true);  
+        
+        objsDataLayout.put("key", "value");
+        
+        dataLayoutMaster.setObjs(objsDataLayout);
+
+        model.addAttribute(__CONTENT__, dataLayoutMaster);
+        
+        return clientLayout;  
+    }  
 
     @GetMapping("/register")
     public String layoutRegister_free(Model model) {

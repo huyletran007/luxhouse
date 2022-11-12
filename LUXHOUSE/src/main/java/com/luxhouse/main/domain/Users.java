@@ -3,16 +3,9 @@ package com.luxhouse.main.domain;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -34,7 +27,7 @@ public class Users implements Serializable {
     @Column(columnDefinition = "varchar(50) not null")
     private String username;
 
-    @Column(columnDefinition = "varchar(50) not null")
+    @Column(columnDefinition = "varchar(MAX) not null")
     private String password;
 
     @Column(columnDefinition = "nvarchar(100) not null")
@@ -64,15 +57,19 @@ public class Users implements Serializable {
 
     @Temporal(TemporalType.DATE)
     private Date updated_at;
-    
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "authorities", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    private Set<Roles> roles;
+
     @JsonIgnore
     @OneToMany(mappedBy = "users")
     private List<Authorities> authorities;
-    
+
     @JsonIgnore
     @OneToMany(mappedBy = "users")
     private List<ProductReviews> productReviews;
-    
+
     @JsonIgnore
     @OneToMany(mappedBy = "users")
     private List<Orders> orders;

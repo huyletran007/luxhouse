@@ -2,7 +2,7 @@ package com.luxhouse.main.service.impl;
 
 
 import com.luxhouse.main.domain.Roles;
-import com.luxhouse.main.repository.RoleRespository;
+import com.luxhouse.main.repository.RoleRepository;
 import com.luxhouse.main.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -17,7 +17,7 @@ import java.util.Optional;
 @Service
 public class RoleServiceImpl implements RoleService {
     @Autowired
-    RoleRespository roleRespository;
+    RoleRepository roleRespository;
 
     @Override
     public List<Roles> findAll() {

@@ -37,7 +37,7 @@
                                     <a th:if="${UserDataRoot == null}" href="/auth/login">Đăng nhập</a>
                                     <a th:if="${UserDataRoot != null}" href="#">Đăng xuất</a>
                                     <a href="#">Kiểm tra đơn hàng</a>
-                                    <a th:if="${UserDataRoot != null}" href="#">Tài khoản</a>
+                                    <a th:if="${UserDataRoot != null}" href="/account/profile">Tài khoản</a>
                                 </div>
                             </div>
                         </div>
@@ -162,4 +162,5 @@
         </div>
     </div>
 </div>
+<input th:if="${UserDataRoot}" type="hidden" id="idCustomer" th:value="${UserDataRoot.id}">
 <!-- End Header -->

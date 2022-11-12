@@ -1,64 +1,64 @@
 <!-- Start FORM-LOGIN -->
 
-    <div class="login container d-flex flex-wrap justify-content-center" style="margin-top: 100px; margin-bottom: 100px;">
-        <div class="left-login">
-            <div class="login-box">
-                <h2>SIGN IN TO YOUR ACCOUNT
-                </h2>
-                <form th:action="@{/security/login}" method="post">
-                    <div class="user-box">
-                        <input type="text" name="" required="">
-                        <label>Username</label>
-                    </div>
-                    <div class="user-box">
-                        <input type="password" name="" required="">
-                        <label>Password</label>
-                    </div>
-                    <div class="other-form">
-                        <div class="row justify-content-between">
-                            <div class="col-5">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Remember password
-                                </label>
-                            </div>
-                            <div class="col-4 rmb-pass">
-                                <a href="#">Forgot password?</a>
-                            </div>
+<div class="login container d-flex flex-wrap justify-content-center" style="margin-top: 100px; margin-bottom: 100px;">
+    <div class="left-login">
+        <div class="login-box">
+            <h2>SIGN IN TO YOUR ACCOUNT
+            </h2>
+            <div>
+                <div class="user-box">
+                    <input type="text" name="usernameOrEmail" id="usernameOrEmail" required="">
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="password" id="password" required="">
+                    <label>Password</label>
+                </div>
+                <div class="other-form">
+                    <div class="row justify-content-between">
+                        <div class="col-5">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Remember password
+                            </label>
+                        </div>
+                        <div class="col-4 rmb-pass">
+                            <a href="#">Forgot password?</a>
                         </div>
                     </div>
-                    <div>
-                    	<i th:text="${message}"></i>
-                    </div>
-                    <button type="submit" class="btn1">SIGN IN</button>
-                </form>
-                
-            </div>
-        </div>
-        <div class="right-login">
-            <div class="login-gg">
-                <div class="login-gg-lable">LOGIN WITH GOOGLE</div>
-                <div class="google-btn">
-                    <div class="google-icon-wrapper">
-                        <img class="google-icon"
-                            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
-                    </div>
-                    <p class="btn-text"><b>Sign in with google</b></p>
                 </div>
-            </div>
-            <div class="dang-ky">
-                <div class="login-gg-lable">CREATE AN ACCOUNT</div>
-                <div class="dk-title">
-                    Create an account and enjoy:
-                    <ul>
-                        <li>Easier order tracking</li>
-                        <li>Speedier Checkout</li>
-                        <li>Saved payment and shipping information</li>
-                    </ul>
+                <div>
+                    <i th:text="${message}"></i>
                 </div>
-                <a type="button" class="btn-dk d-flex flex-wrap justify-content-center" href="/users/register">LET'S GO</a>
+                <button class="btn1 btn" onclick="login()" style="border: 1px solid black;">SIGN IN</button>
             </div>
+            <p th:if="${loginError}" class="error">Wrong user or password</p>
         </div>
     </div>
-    <!-- End FORM-LOGIN -->
-    <!-- End main -->
+    <div class="right-login">
+        <div class="login-gg">
+            <div class="login-gg-lable">LOGIN WITH GOOGLE</div>
+            <div class="google-btn">
+                <div class="google-icon-wrapper">
+                    <img class="google-icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                </div>
+                <p class="btn-text"><b>Sign in with google</b></p>
+            </div>
+        </div>
+        <div class="dang-ky">
+            <div class="login-gg-lable">CREATE AN ACCOUNT</div>
+            <div class="dk-title">
+                Create an account and enjoy:
+                <ul>
+                    <li>Easier order tracking</li>
+                    <li>Speedier Checkout</li>
+                    <li>Saved payment and shipping information</li>
+                </ul>
+            </div>
+            <a type="button" class="btn-dk d-flex flex-wrap justify-content-center" href="/users/register">LET'S GO</a>
+        </div>
+    </div>
+</div>
+<!-- End FORM-LOGIN -->
+<!-- End main -->

@@ -15,9 +15,9 @@ GO
 CREATE TABLE users (
   id bigint CHECK ([id] > 0) IDENTITY NOT NULL PRIMARY KEY,
   username varchar(50) NOT NULL,
-  [password] varchar(50) NOT NULL,
+  [password] varchar(MAX) NOT NULL,
   fullname nvarchar(100) NOT NULL,
-  gender bit NOT NULL DEFAULT 0,
+  gender bit NULL DEFAULT 0,
   email nvarchar(100) NOT NULL,
   dob datetime DEFAULT NULL,
   avartar nvarchar(500) DEFAULT NULL,

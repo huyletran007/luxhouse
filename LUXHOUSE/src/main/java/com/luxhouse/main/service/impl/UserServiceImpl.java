@@ -137,11 +137,12 @@ public class UserServiceImpl implements UserService{
         userRepository.deleteAll();
     }
 
-	@Override
-	public Users findByUsername(String username) {
-		// TODO Auto-generated method stub
-		return userRepository.findByUsername(username);
-	}
+    @Override
+    public Optional<Users> findByUsername(String username) {
+        // TODO Auto-generated method stub
+        return userRepository.findByUsername(username);
+    }
+
 
     
 }

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/auth")
-public class AuthController extends com.luxhouse.main.controller.Controller{
+public class AuthPfController extends com.luxhouse.main.controller.Controller{
     @GetMapping("/login")
     public String layout(Model model) {
         dataLayoutMaster.setView("client/security/login");
