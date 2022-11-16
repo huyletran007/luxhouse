@@ -22,26 +22,23 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "prduct_reviews")
-public class ProductReviews implements Serializable{
+@Table(name = "cart_product_users")
+public class CartUsers implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Products products;
+    @Column(name="quantity",columnDefinition="Decimal(18,4) default '0.0000'")
+    private Double quantity;
     
     @ManyToOne
     @JoinColumn(name = "user_id")
     private Users users;
     
-    @Column(columnDefinition="float not null")
-    private Double rating;
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Products products;
     
-    @Column(columnDefinition="nvarchar(500) not null")
-    private String comment;
-
     @Temporal(TemporalType.DATE)
     private Date created_at = new Date();
     

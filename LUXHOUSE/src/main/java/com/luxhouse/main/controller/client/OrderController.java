@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/")
 public class OrderController extends com.luxhouse.main.controller.Controller {
-    @GetMapping("/OrderDetail")
+    @GetMapping("/CartDetail")
     public String layout(Model model) {
-        dataLayoutMaster.setView("client/order/order-detail");
-        dataLayoutMaster.setJsList(Arrays.asList(""));
+        dataLayoutMaster.setView("client/cart/cart-detail");
+        dataLayoutMaster.setJsList(Arrays.asList("/js/cart/cart-detail.js","/js/detail-cart.js"));
 
         objsDataLayout.put("key", "value");
 

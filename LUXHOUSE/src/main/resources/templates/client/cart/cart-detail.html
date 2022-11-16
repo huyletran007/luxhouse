@@ -1,0 +1,111 @@
+<!-- Start main -->
+<div class="cart-detail-title container">
+    <!-- breadcrumd -->
+    <div>SHOPPING CART</div>
+</div>
+<!-- Start PRODUCT-DETAIL -->
+<div class="cart-detail-form container d-flex flex-wrap justify-content-center">
+    <!-- LEFT -->
+    <div class="cart-detail-left">
+        <div class="cart-left-title">DETAIL</div>
+
+        <div id="loadDataCart-js"></div>
+        <style>
+            .cart-product-mota-name {
+                width: 130px;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+        </style>
+        <!-- Start -->
+        <!-- <div class="cart-left-form">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">PRODUCT</th>
+                            <th style="text-align: center;">PRICE</th>
+                            <th style="text-align: center;">QTY</th>
+                            <th style="text-align: right;">TOTALL PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="row d-flex flex-wrap row-cols-auto cart-product-left">
+                                    <div class="col"><img
+                                            src="https://www.serenaandlily.com/dw/image/v2/AASD_PRD/on/demandware.static/-/Sites-masterCatalog_SerenaandLily/default/dw5478edb1/hi-res/Rug_Tulum_Rug_8x10_Detail_MV_0244_Crop_SH.jpg?sw=100&sh=125&sm=fit&strip=false"
+                                            alt="" height="125px" width="100px"></div>
+                                    <div class="col cart-product-mota">
+                                        <div class="cart-product-mota-name">name</div>
+                                        <div class="cart-product-mota-id">id-product</div>
+                                        <button class="cart-product-mota-btn-remove" onclick="removeCart()" type="button">remove</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart-product-price" style="text-align: center;">$1000</td>
+                            <td>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-number"
+                                            data-type="minus" data-field="">
+                                            -
+                                        </button>
+                                    </span>
+                                    <input type="text" id="quantity" name="quantity"
+                                        class="form-control input-number quantity-cart" value="3" min="1" max="100">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-number"
+                                            data-type="plus" data-field="">
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                            </td>
+                            <td style="text-align: right;">$1000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+        <!-- End -->
+
+
+
+    </div>
+    <!-- RIGHT -->
+    <div class="cart-detail-right">
+        <div class="cart-summary">
+            <div class="summary-title">SUMMARY</div>
+            <div class="summary-subtotal-main">
+                <div class="summary-subtotal d-flex flex-wrap justify-content-between">
+                    <div class="summary-subtotal-name float-left">SUBTOTAL:</div>
+                    <div class="summary-subtotal-price float-right" id="subTotal">0</div>
+                </div>
+                <div class="summary-ship d-flex flex-wrap justify-content-between">
+                    <div class="summary-ship-name float-left">SHIP:</div>
+                    <div class="summary-ship-price float-right">--</div>
+                </div>
+                <div class="summary-tax d-flex flex-wrap justify-content-between">
+                    <div class="summary-tax-name float-left">TAX:</div>
+                    <div class="summary-tax-price float-right">--</div>
+                </div>
+            </div>
+
+            <div class="summary-total-main">
+                <div class="summary-total d-flex flex-wrap justify-content-between">
+                    <div class="summary-total-name float-left">ESTIMATED TOTAL:</div>
+                    <div class="summary-total-price float-right" id="estiameTotal">0</div>
+                </div>
+            </div>
+
+            <div class="summary-paypal-main">
+                <button class="summary-paypal-checkout" onclick="removeCart()">CHECKOUT NOW</button>
+                <div class="orSum">or</div>
+                <button class="summary-paypal-paypal">PAYPAL</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container"><a class="continue-shop" href="/products">
+        < CONTINUE SHOPPING</a> </div> <!-- End PRODUCT-DETAIL -->
+            <!-- End main -->

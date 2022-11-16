@@ -1,5 +1,5 @@
 <!-- Start Header -->
-<div class="index_header">
+<div class="index_header" ng-app = "myApp" ng-controller = "myController">
     <div id="sticky">
         <div class="header_a">
             <div class="row align-items-start text-center align-items-center">
@@ -52,7 +52,7 @@
                                                     <ion-icon name="cart-outline"></ion-icon>
                                                 </button>
                                             </div>
-                                            <div class="cart-badge"><span id="cart-count">3</span></div>
+                                            <div class="cart-badge"><span id="cart-count" class="totalQty">0</span></div>
                                             <div class="box" id="box">
                                                 <ion-icon name="cube-outline"></ion-icon>
                                             </div>
@@ -64,24 +64,24 @@
                             <div class="container">
                                 <div class="shopping-cart">
                                     <div class="shopping-cart-header">
-                                        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                                        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge" id="totalQty">0</span>
                                         <div class="shopping-cart-total">
                                             <span class="lighter-text">Total:</span>
-                                            <span class="main-color-text">$2,229.97</span>
+                                            <span class="main-color-text" id="totalPrice">0</span>
                                         </div>
                                     </div>
                                     <!--end shopping-cart-header -->
 
-                                    <ul class="shopping-cart-items">
-                                        <li class="clearfix">
+                                    <ul class="shopping-cart-items" id="cart-user-load">
+                                        <!-- <li class="clearfix">
                                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg"
                                                 alt="item1" />
                                             <span class="item-name">Sony DSC-RX100M III</span>
                                             <span class="item-price">$849.99</span>
                                             <span class="item-quantity">Quantity: 01</span>
-                                        </li>
+                                        </li> -->
 
-                                        <li class="clearfix">
+                                        <!-- <li class="clearfix">
                                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg"
                                                 alt="item1" />
                                             <span class="item-name">KS Automatic Mechanic...</span>
@@ -95,10 +95,10 @@
                                             <span class="item-name">Kindle, 6" Glare-Free To...</span>
                                             <span class="item-price">$129.99</span>
                                             <span class="item-quantity">Quantity: 01</span>
-                                        </li>
+                                        </li> -->
                                     </ul>
 
-                                    <a href="/OrderDetail" class="button">View cart</a>
+                                    <a href="/CartDetail" class="button">View cart</a>
                                 </div>
                                 <!--end shopping-cart -->
                             </div>
@@ -128,15 +128,25 @@
                                 <div class="sub-menu-item">
                                     <h4>top categories</h4>
                                     <ul>
-                                        <li th:each="cp:${cate_pro}">
-<!--                                            <div th:text="${cp.categoryProductName}"></div>-->
-                                            <a href="#">[[${cp.categoryProductName}]]</a>
-                                        </li>
+                                        <li><a href="#">cell phones & accessories</a></li>
+                                        <li><a href="#">smart tv</a></li>
+                                        <li><a href="#">computer & laptops</a></li>
+                                        <li><a href="#">digital cameras</a></li>
+                                        <li><a href="#">video games & accessories</a></li>
                                     </ul>
                                 </div>
                                 <!-- end of item -->
                                 <!-- item -->
-
+                                <div class="sub-menu-item">
+                                    <h4>other categories</h4>
+                                    <ul>
+                                        <li><a href="#">iphones</a></li>
+                                        <li><a href="#">speakers</a></li>
+                                        <li><a href="#">samsung devices</a></li>
+                                        <li><a href="#">audio & headphones</a></li>
+                                        <li><a href="#">vehicles electronics & GPS</a></li>
+                                    </ul>
+                                </div>
                                 <!-- end of item -->
                                 <!-- item -->
                                 <div class="sub-menu-item">
@@ -162,6 +172,7 @@
             </nav>
         </div>
     </div>
+    <div style="display: none;" id="userId">[[${#request.remoteUser}]]</div>
 </div>
 <!-- <input th:if="${#request.remoteUser}" type="hidden" id="idCustomer" th:value="${#request.remoteUser.id}"> -->
 <!-- End Header -->

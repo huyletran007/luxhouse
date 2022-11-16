@@ -44,10 +44,10 @@ public class Suppliers implements Serializable{
     private String image;
     
     @Temporal(TemporalType.DATE)
-    private Date created_at;
+    private Date created_at = new Date();
 
     @Temporal(TemporalType.DATE)
-    private Date updated_at;
+    private Date updated_at = new Date();
     
     @JsonIgnore
     @OneToMany(mappedBy = "suppliers")

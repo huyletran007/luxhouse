@@ -19,7 +19,6 @@
                     <div th:each="p: ${content.objs.productImages}">
                         <img class="img1" th:src="@{|/image/${p.image}|}" alt="Furniture" style="width: auto;">
                     </div>
-                    <!-- <img class="img1" th:src="@{${'/image/' + content.objs.productImages}}" alt="Furniture"> -->
                 </div>
             </div>
             <div class="img-select">
@@ -31,29 +30,17 @@
                 <div th:each="p, rowStat: ${content.objs.productImages}">
                     <div class="img-item">
                         <a href="#" th:attr="data-id=${rowStat.index + 2}">
-                            <img class="img2" th:src="@{|/image/${p.image}|}"
-                                alt="Furniture" style="width: auto;">
+                            <img class="img2" th:src="@{|/image/${p.image}|}" alt="Furniture" style="width: auto;">
                         </a>
                     </div>
                 </div>
-                <!-- <div class="img-item">
-                    <a href="#" data-id="2">
-                        <img class="img2" th:src="@{${'/image/' + content.objs.products.image}}" alt="shoe image">
-                    </a>
-                </div>
-                <div class="img-item">
-                    <a href="#" data-id="4">
-                        <img class="img2" th:src="@{${'/image/' + content.objs.products.image}}"
-                            alt="shoe image">
-                    </a>
-                </div> -->
             </div>
         </div>
     </div>
     <!-- PRODUCT-DETAIL-RIGHT -->
     <div class="detail-right" id="product-detail-js">
-        <div class="right-new" >NEW</div>
-        
+        <div class="right-new">NEW</div>
+        <div class="right-name" style="display: none;" id="productId">[[${content.objs.products.id}]]</div>
         <div class="right-name">[[${content.objs.products.productName}]]</div>
         <div class="right-price">[[${#numbers.formatDecimal(content.objs.products.price,0,'COMMA',0,'POINT')}]] đ</div>
         <div class="right-qty">
@@ -61,22 +48,19 @@
             <div class="qty-sl">
                 <div class="counter">
                     <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                    <input type="text" value="1">
+                    <input type="text" value="1" id="quantityP">
                     <span class="up" onClick='increaseCount(event, this)'>+</span>
                 </div>
             </div>
         </div>
         <div class="right-btn">
-            <button type="button" class="btn1" id="add-btn">Add to cart</button>
+        <button type="button" class="btn1" id="add-btn" onclick="addProductToCart()">Add to cart</button>
         </div>
         <div class="right-according">
             <button class="accordion1">Desciption 1</button>
             <div class="panel">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet
-                    deleniti id, tenetur ullam ipsam vitae sunt, laudantium temporibus
-                    consequatur architecto a magni sit tempora ea error veritatis aperiam.
-                    Illum.
+                    [[${content.objs.products.id}]]
                 </p>
             </div>
 
@@ -101,6 +85,7 @@
             </div>
         </div>
     </div>
+    <div id="idProduct-js" style="display: none;">[[${content.objs.products.id}]]</div>
 </div>
 <!-- End PRODUCT-DETAIL -->
 <!-- End main -->

@@ -63,11 +63,11 @@ public class UsersController {
      * - Return(JSON): item
      * 
      */
-    @GetMapping("/get/username/{username}")
-    public Users getEmailUser(@PathVariable String username) {
-        Optional<Users> idUserName = usersService.findByUsername(username);
-        if (idUserName.isPresent()) {
-            return idUserName.get();
+    @GetMapping("/get/users/{id}")
+    public Users getEmailUser(@PathVariable Long id) {
+        Optional<Users> idUserId = usersService.findById(id);
+        if (idUserId.isPresent()) {
+            return idUserId.get();
         }
 
         return null;

@@ -2454,7 +2454,7 @@ th {
 
 /* RIGHT */
 .cart-detail-right .cart-summary {
-    width: 300px;
+    width: 320px;
     background-color: #f3eeeb;
     margin-left: 20px;
 }
@@ -2481,6 +2481,11 @@ th {
     text-transform: uppercase;
     font-style: normal;
     size: 10px !important;
+}
+
+.summary-total-price,
+.summary-subtotal-price {
+    font-size: 14px;
 }
 
 .summary-total-main {
@@ -2594,8 +2599,8 @@ th {
 }
 
 .bg-c-lite-green {
-    background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f));
-    background: linear-gradient(to right, #ee5a6f, #f29263);
+    background: -webkit-gradient(linear, left top, right top, from(#ddc8b6), to(#ffd6b4));
+    background: linear-gradient(to right, #ffd18bd8, #ffd8b4);
 }
 
 .user-profile {

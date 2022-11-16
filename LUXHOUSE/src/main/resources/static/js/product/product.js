@@ -16,7 +16,11 @@ const loadProduct = (data) => {
         </a>
     </div>`
     })
-    wrapProduct.innerHTML = html
+    if(data.length > 0){
+        
+
+        wrapProduct.innerHTML = html
+    }
 }
 
 const loadPages = (totalProduct) => {

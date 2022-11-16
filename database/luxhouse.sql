@@ -43,6 +43,8 @@ CREATE TABLE authorities (
   [id] bigint CHECK ([id] > 0) NOT NULL IDENTITY PRIMARY KEY,
   [user_id] bigint CHECK ([user_id] > 0) NOT NULL,
   [role_id] int CHECK ([role_id] > 0) NOT NULL,
+  [created_at] datetime NULL DEFAULT GETDATE(),
+  [updated_at] datetime NULL DEFAULT GETDATE()
   CONSTRAINT [FK_Authorities_Users] FOREIGN KEY ([user_id]) REFERENCES users ([id]),
   CONSTRAINT [FK_Authorities_Roles] FOREIGN KEY ([role_id]) REFERENCES roles ([id]),
 )
@@ -104,7 +106,20 @@ CREATE TABLE product_images (
   id bigint CHECK ([id] > 0) NOT NULL IDENTITY PRIMARY KEY,
   product_id bigint CHECK (product_id > 0) NOT NULL,
   [image] nvarchar(500) NOT NULL,
+  [created_at] datetime NULL DEFAULT GETDATE(),
+  [updated_at] datetime NULL DEFAULT GETDATE(),
   CONSTRAINT [FK_product_images_products] FOREIGN KEY (product_id) REFERENCES products ([id])
+)
+
+CREATE TABLE cart_product_users (
+id bigint CHECK ([id] > 0) NOT NULL IDENTITY PRIMARY KEY,
+quantity Decimal(18,4) default '0.0000' NULL,
+product_id bigint CHECK (product_id > 0) NOT NULL,
+user_id bigint CHECK (user_id > 0) NOT NULL,
+[created_at] datetime NULL DEFAULT GETDATE(),
+[updated_at] datetime NULL DEFAULT GETDATE(),
+CONSTRAINT [FK_cart_product_users_users] FOREIGN KEY (user_id) REFERENCES users ([id]),
+CONSTRAINT [FK_cart_product_users_products] FOREIGN KEY (product_id) REFERENCES products ([id])
 )
 
 CREATE TABLE payment_types (
@@ -142,6 +157,8 @@ CREATE TABLE order_details (
   [product_id] bigint CHECK ([product_id] > 0) NOT NULL,
   quantity int NOT NULL,
   price decimal(18, 4) NOT NULL DEFAULT 0.0000,
+  [created_at] datetime NULL DEFAULT GETDATE(),
+  [updated_at] datetime NULL DEFAULT GETDATE(),
   CONSTRAINT [FK_order_details_orders] FOREIGN KEY (order_id) REFERENCES orders ([id]),
   CONSTRAINT [FK_order_details_products] FOREIGN KEY ([product_id]) REFERENCES products ([id])
 )

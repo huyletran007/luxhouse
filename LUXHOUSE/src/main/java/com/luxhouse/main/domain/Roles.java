@@ -34,10 +34,10 @@ public class Roles implements Serializable{
     private String name;
     
     @Temporal(TemporalType.DATE)
-    private Date created_at;
+    private Date created_at = new Date();
     
     @Temporal(TemporalType.DATE)
-    private Date updated_at;
+    private Date updated_at = new Date();
     
     @JsonIgnore
     @OneToMany(mappedBy = "roles")

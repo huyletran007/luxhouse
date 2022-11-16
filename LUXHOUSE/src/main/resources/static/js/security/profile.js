@@ -58,6 +58,6 @@ const loadProfile = (data) => {
 }
 
 let userProfile = _$('.userProfile-js').innerHTML
-http.get(`http://localhost:8080/Users/get/username/${userProfile}`)
+http.get(`http://localhost:8080/Users/get/${userProfile}`)
     .then(data => loadProfile(data))
     .catch(err => console.log(err))

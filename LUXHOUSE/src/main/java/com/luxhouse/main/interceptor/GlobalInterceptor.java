@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Component
-public class GlobalInterceptor implements HandlerInterceptor{
+public class GlobalInterceptor implements HandlerInterceptor {
 
     @Autowired
     CategoryService categoryService;
@@ -22,7 +22,7 @@ public class GlobalInterceptor implements HandlerInterceptor{
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
             ModelAndView modelAndView) throws Exception {
-        request.setAttribute("cates",categoryService.findAll());
-        request.setAttribute("cate_pro",categoryProductService.findAll());
+        request.setAttribute("cates", categoryService.findAll());
+        request.setAttribute("cate_pro", categoryProductService.findAll());
     }
 }

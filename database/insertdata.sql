@@ -2,7 +2,8 @@
 
 INSERT INTO roles(name) VALUES
 ('Adminitrator'),
-('Users')
+('Users'),
+('Guest')
 
 INSERT INTO suppliers(supplier_code, supplier_name, decription) VALUES
 ('TP',N'Tien Phu Interior Co., Ltd',N'+84 901 557 218, +84 901 557 219'),

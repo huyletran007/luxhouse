@@ -67,10 +67,10 @@ public class Products implements Serializable{
     private Suppliers suppliers;
     
     @Temporal(TemporalType.DATE)
-    private Date created_at;
+    private Date created_at = new Date();
     
     @Temporal(TemporalType.DATE)
-    private Date updated_at;
+    private Date updated_at = new Date();
     
     @JsonIgnore
     @OneToMany(mappedBy = "products")
@@ -82,5 +82,5 @@ public class Products implements Serializable{
     
     @JsonIgnore
     @OneToMany(mappedBy = "products")
-    private List<OrderDetails> orderDetails;
+    private List<CartUsers> cartUsers;
 }
