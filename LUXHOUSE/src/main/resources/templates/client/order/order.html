@@ -1,10 +1,376 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<div class="container my-5">
+    <form action="controller" method="get" class="d-md-flex d-sm-block justify-content-between"><input
+            type="hidden" name="command" value="select-orders">
+        <h1 class="h5 align-self-center col-3">Search Order</h1>
+        <div class="btn-group align-self-center ">
+            <input type="search" name="searchBy" class="search">
+            <input type="submit" value="Search" class="btn btn-outline-dark ">
+        </div>
+    </form>
+    <div
+            class="d-md-flex d-none justify-content-md-between justify-content-sm-center align-content-center border-bottom border-2 my-2 bg-dark text-light p-3 rounded-3">
+        <div class="col-2 text-sm-center text-md-start align-self-center">
+            <h1 class="h5 fw-bold">Order ID</h1>
+        </div>
+        <div class="col-2 align-self-center">
+            <h1 class="h5 fw-bold">Created</h1>
+        </div>
+        <div class="col-3 align-self-center">
+            <h1 class="h5 fw-bold">Customer</h1>
+        </div>
+        <div class="col-2 align-self-center">
+            <h1 class="h5 fw-bold">Price</h1>
+        </div>
+        <div class="col-2 align-self-center">
+            <h1 class="h5 fw-bold">Show details</h1>
+        </div>
 
-</body>
-</html>
+    </div>
+    <div
+            class="d-md-flex d-sm-block justify-content-md-between justify-content-sm-center text-center border-bottom border-2 my-2 bg-light p-2 rounded-3">
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">2F456DA</h1>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">04/12/2021 3:15:24:299</h1>
+        </div>
+        <div class="col-md-3 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">Robert Tailor Hamonovych</h1>
+        </div>
+
+
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <p>100000000000</p>
+        </div>
+
+
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2"><a
+                class="btn btn-outline-dark w-100" id="myBtn">Details</a>
+
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="container mt-5 mb-5">
+
+                        <div class="row d-flex justify-content-center">
+
+                            <div class="col-md-8">
+
+                                <div class="card">
+
+
+                                    <div class="text-left logo p-2 px-5">
+
+                                        <img src="https://i.imgur.com/2zDU056.png" width="50">
+
+
+                                    </div>
+
+                                    <div class="invoice p-5">
+
+                                        <h5>Your order Confirmed!</h5>
+
+                                        <span class="font-weight-bold d-block mt-4">Hello, Chris</span>
+                                        <span>You order has been confirmed and will be shipped in next two
+                                                days!</span>
+
+                                        <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
+
+                                            <table class="table table-borderless">
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="py-2">
+
+                                                            <span class="d-block text-muted">Order Date</span>
+                                                            <span>12 Jan,2018</span>
+
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="py-2">
+
+                                                            <span class="d-block text-muted">Order No</span>
+                                                            <span>MT12332345</span>
+
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="py-2">
+
+                                                            <span class="d-block text-muted">Payment</span>
+                                                            <span><img
+                                                                    src="https://img.icons8.com/color/48/000000/mastercard.png"
+                                                                    width="20"/></span>
+
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="py-2">
+
+                                                                    <span class="d-block text-muted">Shiping
+                                                                        Address</span>
+                                                            <span>414 Advert Avenue, NY,USA</span>
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+
+                                            </table>
+
+
+                                        </div>
+
+
+                                        <div class="product border-bottom table-responsive">
+
+                                            <table class="table table-borderless">
+
+                                                <tbody>
+                                                <tr>
+                                                    <td width="20%">
+
+                                                        <img src="https://i.imgur.com/u11K1qd.jpg" width="90">
+
+                                                    </td>
+
+                                                    <td width="60%">
+                                                        <span class="font-weight-bold">Men's Sports cap</span>
+                                                        <div class="product-qty">
+                                                            <span class="d-block">Quantity:1</span>
+                                                            <span>Color:Dark</span>
+
+                                                        </div>
+                                                    </td>
+                                                    <td width="20%">
+                                                        <div class="text-right">
+                                                            <span class="font-weight-bold">$67.50</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td width="20%">
+
+                                                        <img src="https://i.imgur.com/SmBOua9.jpg" width="70">
+
+                                                    </td>
+
+                                                    <td width="60%">
+                                                                <span class="font-weight-bold">Men's Collar
+                                                                    T-shirt</span>
+                                                        <div class="product-qty">
+                                                            <span class="d-block">Quantity:1</span>
+                                                            <span>Color:Orange</span>
+
+                                                        </div>
+                                                    </td>
+                                                    <td width="20%">
+                                                        <div class="text-right">
+                                                            <span class="font-weight-bold">$77.50</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+
+                                            </table>
+
+
+                                        </div>
+
+
+                                        <div class="row d-flex justify-content-end">
+
+                                            <div class="col-md-5">
+
+                                                <table class="table table-borderless">
+
+                                                    <tbody class="totals">
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="text-left">
+
+                                                                <span class="text-muted">Subtotal</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-right">
+                                                                <span>$168.50</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="text-left">
+
+                                                                <span class="text-muted">Shipping Fee</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-right">
+                                                                <span>$22</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="text-left">
+
+                                                                <span class="text-muted">Tax Fee</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-right">
+                                                                <span>$7.65</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="text-left">
+
+                                                                <span class="text-muted">Discount</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-right">
+                                                                <span class="text-success">$168.50</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                    <tr class="border-top border-bottom">
+                                                        <td>
+                                                            <div class="text-left">
+
+                                                                <span class="font-weight-bold">Subtotal</span>
+
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-right">
+                                                                <span class="font-weight-bold">$238.50</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    </tbody>
+
+                                                </table>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <p>We will be sending shipping confirmation email when the item shipped
+                                            successfully!</p>
+                                        <p class="font-weight-bold mb-0">Thanks for shopping with us!</p>
+                                        <span>Nike Team</span>
+
+
+                                    </div>
+
+
+                                    <div class="d-flex justify-content-between footer p-3">
+
+                                        <span>Need Help? visit our <a href="#"> help center</a></span>
+                                        <span>12 June, 2020</span>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div
+            class="d-md-flex d-sm-block justify-content-md-between justify-content-sm-center text-center border-bottom border-2 my-2 bg-light p-2 rounded-3">
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">D2903WE</h1>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">03/09/2021 3:15:24:299</h1>
+        </div>
+        <div class="col-md-3 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">Jason Tailor Hamonovych</h1>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <p>100000000000</p>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2"><a
+                class="btn btn-outline-dark w-100" href="#">Details</a></div>
+
+    </div>
+    <div
+            class="d-md-flex d-sm-block justify-content-md-between justify-content-sm-center text-center border-bottom border-2 my-2 bg-light p-2 rounded-3">
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">5463783D</h1>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">19/10/2021 3:34:24:299</h1>
+        </div>
+        <div class="col-md-3 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">Mike Orley Hemington</h1>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <p>100000000000</p>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2"><a
+                class="btn btn-outline-dark w-100" href="#">Details</a></div>
+
+    </div>
+    <div
+            class="d-md-flex d-sm-block justify-content-md-between justify-content-sm-center text-center border-bottom border-2 my-2 bg-light p-2 rounded-3">
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">324516AD</h1>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">03/02/2021 22:45:44:999</h1>
+        </div>
+        <div class="col-md-3 text-sm-center text-md-start align-self-center my-2">
+            <h1 class="h6">Jessy Koper Fauer</h1>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2">
+            <p>100000000000</p>
+        </div>
+        <div class="col-md-2 text-sm-center text-md-start align-self-center my-2"><a
+                class="btn btn-outline-dark w-100" href="#">Details</a></div>
+
+    </div>
+</div>

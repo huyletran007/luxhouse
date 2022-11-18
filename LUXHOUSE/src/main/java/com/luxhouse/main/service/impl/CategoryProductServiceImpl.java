@@ -138,5 +138,11 @@ public class CategoryProductServiceImpl implements CategoryProductService {
         return categoryProductRepository.exists(example);
     }
 
+    @Override
+    public List<CategoryProducts> selectByCategoryId() {
+        // TODO Auto-generated method stub
+        return categoryProductRepository.selectByCategoryId();
+    }
+
 
 }

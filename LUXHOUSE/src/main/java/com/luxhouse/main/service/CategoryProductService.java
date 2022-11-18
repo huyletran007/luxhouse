@@ -38,6 +38,8 @@ public interface CategoryProductService {
     <S extends CategoryProducts> S save(S s);
 
     Optional<CategoryProducts> findById(Integer id);
+    
+    List<CategoryProducts> selectByCategoryId();
 
     boolean existsById(Integer id);
 

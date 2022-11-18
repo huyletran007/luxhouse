@@ -1,0 +1,139 @@
+<div class="sub-menu">
+                                
+                                <!-- item -->
+                                <div class="sub-menu-item">
+                                    <h4>top categories</h4>
+                                    <ul>
+                                        <li><a href="#">cell phones & accessories</a></li>
+                                        <li><a href="#">smart tv</a></li>
+                                        <li><a href="#">computer & laptops</a></li>
+                                        <li><a href="#">digital cameras</a></li>
+                                        <li><a href="#">video games & accessories</a></li>
+                                    </ul>
+                                </div>
+                                <!-- end of item -->
+                                <!-- item -->
+                                <div class="sub-menu-item">
+                                    <h4>other categories</h4>
+                                    <ul>
+                                        <li><a href="#">iphones</a></li>
+                                        <li><a href="#">speakers</a></li>
+                                        <li><a href="#">samsung devices</a></li>
+                                        <li><a href="#">audio & headphones</a></li>
+                                        <li><a href="#">vehicles electronics & GPS</a></li>
+                                    </ul>
+                                </div>
+                                <!-- end of item -->
+                                <!-- item -->
+                                <div class="sub-menu-item">
+                                    <h2>all essential devices and tools for home</h2>
+                                    <button type="button" class="btn">shop here</button>
+                                </div>
+                                <!-- end of item -->
+                                <!-- item -->
+                                <div class="sub-menu-item">
+                                    <img src="images/car.png" alt="product image">
+                                </div>
+                                <!-- end of item -->
+                            </div>
+
+
+
+
+                            <li>
+                                <a href="/home">home</a>
+                            </li>
+    
+                            <li class="drop-header">
+                                <!-- data-bs-toggle="dropdown" -->
+                                <a href="#" class="menu-link dropdown-toggle" id="dropdownMenuButtonId" data-toggle="dropdown" aria-expanded="false">
+                                    TEST
+                                    <span class="drop-icon">
+                                            <!-- <i class="fas fa-chevron-down"></i> -->
+                                        </span>
+                                    </a>
+    
+                                
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonId">
+    
+                                        <!-- item -->
+                                        <div class="sub-menu-item">
+                                            <h4>top categories</h4>
+                                            <ul>
+                                                <li><a href="#">cell phones & accessories</a></li>
+                                                <li><a href="#">smart tv</a></li>
+                                                <li><a href="#">computer & laptops</a></li>
+                                                <li><a href="#">digital cameras</a></li>
+                                                <li><a href="#">video games & accessories</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- end of item -->
+                                        <!-- item -->
+                                        <div class="sub-menu-item">
+                                            <h4>other categories</h4>
+                                            <ul>
+                                                <li><a href="#">iphones</a></li>
+                                                <li><a href="#">speakers</a></li>
+                                                <li><a href="#">samsung devices</a></li>
+                                                <li><a href="#">audio & headphones</a></li>
+                                                <li><a href="#">vehicles electronics & GPS</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- end of item -->
+                                        <!-- item -->
+                                        <div class="sub-menu-item">
+                                            <h2>all essential devices and tools for home</h2>
+                                            <button type="button" class="btn">shop here</button>
+                                        </div>
+                                        <!-- end of item -->
+                                        <!-- item -->
+                                        <div class="sub-menu-item">
+                                            <img src="https://www.serenaandlily.com/on/demandware.static/-/Sites-SerenaLily-Library/default/dw4229402b/topnav/2022/fall_d3/20221101_PillowsThrows.jpg" alt="product image" class="responsive navbar-collapse">
+                                        </div>
+                                        <!-- end of item -->
+                                </ul>
+                                
+                            </li>
+    
+                            <li>
+                                <a href="#">deals</a>
+                            </li>
+
+                            <div style="display: none;">${e.id}</div>
+
+
+                            <!-- item -->
+                <div class="sub-menu-item">
+                    <h4>top categories</h4>
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">smart tv</a></li>
+                        <li><a href="#">computer & laptops</a></li>
+                        <li><a href="#">digital cameras</a></li>
+                        <li><a href="#">video games & accessories</a></li>
+                    </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="sub-menu-item">
+                    <h4>other categories</h4>
+                    <ul>
+                        <li><a href="#">iphones</a></li>
+                        <li><a href="#">speakers</a></li>
+                        <li><a href="#">samsung devices</a></li>
+                        <li><a href="#">audio & headphones</a></li>
+                        <li><a href="#">vehicles electronics & GPS</a></li>
+                    </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="sub-menu-item">
+                    <h2>all essential devices and tools for home</h2>
+                    <button type="button" class="btn">shop here</button>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="sub-menu-item">
+                    <img src="https://www.serenaandlily.com/on/demandware.static/-/Sites-SerenaLily-Library/default/dw4229402b/topnav/2022/fall_d3/20221101_PillowsThrows.jpg" alt="product image" class="responsive navbar-collapse">
+                </div>
+                <!-- end of item -->

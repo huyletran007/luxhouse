@@ -2,10 +2,12 @@ package com.luxhouse.main.controller.rest;
 
 
 import com.luxhouse.main.domain.CategoryProducts;
+import com.luxhouse.main.domain.ProductImages;
 import com.luxhouse.main.service.CategoryProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -73,6 +75,16 @@ public class CategoryProductController {
         }
 
         return null;
+    }
+    
+    @GetMapping("/get/cate")
+    public List<CategoryProducts> getCate() {
+        List<CategoryProducts> itemCate = categoryProductService.selectByCategoryId();
+        if(!itemCate.isEmpty()) {
+            return itemCate;
+        } 
+
+        return Arrays.asList(new CategoryProducts());
     }
 
     /**

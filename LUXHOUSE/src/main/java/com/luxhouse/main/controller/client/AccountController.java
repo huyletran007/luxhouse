@@ -32,6 +32,21 @@ public class AccountController extends com.luxhouse.main.controller.Controller{
         return clientLayout;
     }
     
+    
+    @GetMapping("/order")
+    public String userOrder(Model model) {
+        dataLayoutMaster.setView("client/order/order");
+//        dataLayoutMaster.setJsList(Arrays.asList("/js/cart/cart-detail.js","/js/detail-cart.js"));
+
+        objsDataLayout.put("key", "value");
+
+        dataLayoutMaster.setObjs(objsDataLayout);
+
+        model.addAttribute(__CONTENT__, dataLayoutMaster);
+
+        return clientLayout;
+    }
+    
     @GetMapping("/logout")
     public String logout() {
         
