@@ -1,36 +1,103 @@
 <!-- Start Main -->
-    <!-- Start PRODUCT -->
-    <div class="product-text">
-        TEN DOANH MUC
-    </div>
-    <div class="product-form container">
-        <div class="row">
-            <div class="cot-1 col-3">
-                <div th:each="c:${cates}">
-                    <button class="accordion1 product-cate-1">[[${c.categoryName}]]</button>
-                    <div class="panel product-cate-2">
-                        <ul>
-                            <li><a href="#">Category-2</a></li>
-                            <li><a href="#">Category-2</a></li>
-                            <li><a href="#">Category-2</a></li>
-                        </ul>
-                    </div>
-                </div>
+<!-- Start PRODUCT -->
+<div class="product-text">
+    TEN DOANH MUC
+</div>
+<div class="product-form container">
+    <div class="row">
+        <div class="cot-1 col-3">
+            <div >
+                <div id="accordion" class="loadCate-js">
 
+                    <!-- <div class="card1">
+                        <a class="card-link acd" data-toggle="collapse" href="#collapseOne">
+                          Collapsible Group Item #1
+                        </a>
+
+                      <div id="collapseOne" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="#">Category-2</a></li>
+                                <li><a href="#">Category-2</a></li>
+                                <li><a href="#">Category-2</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card1">
+                        <a class="card-link acd" data-toggle="collapse" href="#collapseTwo">
+                          Collapsible Group Item #2
+                        </a>
+
+                      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                          Lorem ipsum..
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card1">
+                        <a class="card-link acd" data-toggle="collapse" href="#collapseThree">
+                          Collapsible Group Item #3
+                        </a>
+
+                      <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                          Lorem ipsum..
+                        </div>
+                      </div>
+                    </div> -->
+                  
+                  </div>
+                <!-- <button class="accordion1 product-cate-1">Caterogies Name</button>
+                <div class="panel product-cate-2">
+                    <ul>
+                        <li><a href="#">Category-2</a></li>
+                        <li><a href="#">Category-2</a></li>
+                        <li><a href="#">Category-2</a></li>
+                    </ul>
+                </div> -->
+                <style>
+
+
+                </style>
+
+                <script>
+                    let acc = $('.accordion1');
+                    let i;
+                    for (i = 0; i < acc.length; i++) {
+                        acc[i].addEventListener("click", function () {
+                            /* Toggle between adding and removing the "active" class,
+                            to highlight the button that controls the panel */
+                            this.classList.toggle("active");
+
+                            /* Toggle between hiding and showing the active panel */
+                            let panel = this.nextElementSibling;
+                            if (panel.style.maxHeight) {
+                                panel.style.maxHeight = null;
+                            } else {
+                                panel.style.maxHeight = panel.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
             </div>
 
+        </div>
 
 
-            <div class="cot-2 col-9">
-                <select class="select_product form-select w-25" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">Theo tên</option>
-                    <option value="2">Theo giá tăng</option>
-                    <option value="3">Theo giá giảm</option>
-                    <option value="4">Theo sản phẩm mới</option>
-                </select>
-                <div class="product-items d-flex flex-wrap" id="productlist-js">
-                    <!-- <div class="product-items-list mx-auto">
+
+        <div class="cot-2 col-9">
+            <select class="select_product form-select w-25" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">Theo tên</option>
+                <option value="2">Theo giá tăng</option>
+                <option value="3">Theo giá giảm</option>
+                <option value="4">Theo sản phẩm mới</option>
+            </select>
+            <div class="product-items d-flex flex-wrap" id="productlist-js">
+                <!-- <div class="product-items-list mx-auto">
                         <a href="#" class="product-item">
                             <img src="/src/main/resources/static/image/Sectionals_Desktop.jpg" class="img-fluid" alt="">
                             <div class="text-left product_name">TEN DOANH MUC</div>
@@ -93,21 +160,21 @@
                             <div class="text-left product_price">$100-$200</div>
                         </a>
                     </div> -->
-                </div>
-                <div class="pagin pagin-product" aria-label="Page navigation example">
+            </div>
+            <div class="pagin pagin-product" aria-label="Page navigation example">
 
-                    <ul class="pagination paginationP">
-                        <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <ul class="pagination paginationP">
+                    <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
-                    </ul>
+                </ul>
 
-                </div>
             </div>
         </div>
     </div>
-    <!-- End PRODUCT -->
-    <!-- End Main -->
+</div>
+<!-- End PRODUCT -->
+<!-- End Main -->

@@ -4,6 +4,59 @@ let pagePrev, pageNext
 let htmlPagePrev, htmlPageNext
 let total_page, total_product
 
+http.get("http://localhost:8080/Categories/get")
+    .then(data => setDateCate(data, 0))
+    .catch(err => console.log(err))
+
+http.get(`http://localhost:8080/CategoryProduct/get/cate`)
+    .then(data => setDateCate(data, 1))
+    .catch(err => console.log(err))
+
+var dataCate = []
+
+var setDateCate = (data, i) => {
+    dataCate[i] = data
+}
+
+const loadCategories = (data) => {
+    let [ct0, ct1] = data
+
+    let html = ``
+
+    ct0.forEach(e0 => {
+        let loadDetail = ``
+        ct1.forEach(e1 => {
+            if (e0.id == e1.categories.id) {
+                loadDetail += `<li><a href="/products/${e1.categoryProductCode}">${e1.categoryProductName}</a></li>`
+            }
+        })
+
+        html += `<div class="card cr">
+        <a class="card-link acd" data-toggle="collapse" href="#collapse${e0.id}">
+          ${e0.categoryName}
+        </a>
+
+      <div id="collapse${e0.id}" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <ul>
+                ${loadDetail}
+            </ul>
+        </div>
+      </div>
+    </div>`
+    })
+
+
+    let warpCate = _$('.loadCate-js')
+    warpCate.innerHTML = html
+}
+
+setTimeout(() => {
+    loadCategories(dataCate)
+}, 1000)
+
+
+
 const loadProduct = (data) => {
     let wrapProduct = _$('#productlist-js')
     let html = ``
@@ -16,8 +69,8 @@ const loadProduct = (data) => {
         </a>
     </div>`
     })
-    if(data.length > 0){
-        
+    if (data.length > 0) {
+
 
         wrapProduct.innerHTML = html
     }

@@ -205,7 +205,7 @@ body {
     margin-right: 20px;
 }
 
-.cateChild{
+.cateChild {
     font-size: 18x !important;
 }
 
@@ -265,7 +265,8 @@ body {
     left: 0;
 }
 
-.drop-header,.dropdown-menu {
+.drop-header,
+.dropdown-menu {
     transition: all 0.5s ease;
 
 }
@@ -277,7 +278,7 @@ body {
     border: none;
 }
 
-.drop-header:hover .dropdown-menu .sub-menu-item ul{
+.drop-header:hover .dropdown-menu .sub-menu-item ul {
     padding: 0 40px !important;
     margin: 0 0 !important;
     align-items: center;
@@ -747,7 +748,7 @@ body {
 /* SLIDE */
 .index_slide {
     position: relative;
-    height: 200px;
+    height: 180px;
     margin-bottom: 350px;
     z-index: 2 !important;
 }
@@ -1898,6 +1899,68 @@ footer p {
 /* According */
 .right-according {
     margin-top: 10px;
+}
+
+.acd {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid black !important;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    text-decoration: none !important;
+}
+
+.acd:hover {
+    color: rgb(63, 63, 63);
+    background-color: rgb(222, 222, 222);
+}
+
+/* Add a symbol to each button to indicate whether the collapsible content is open or closed */
+.acd:after {
+    content: "\02795";
+    /* Unicode character for "plus" sign (+) */
+    font-size: 10px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.click:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.card-body li {
+    transition: all 0.2s linear 0s;
+    text-decoration: none;
+    padding: 3px 0;
+}
+
+.collapse {
+    transition: max-height 0.5s ease-out;
+}
+
+.cr {
+    transition: max-height 0.5s ease-out;
+    margin: 0 !important;
+    background-color: white;
+}
+
+.card-body li a {
+    transition: all 0.2s linear 0s;
+    text-decoration: none;
+    color: black;
+
+}
+
+.card-body li a:hover {
+    padding-left: 10px;
 }
 
 .accordion1 {

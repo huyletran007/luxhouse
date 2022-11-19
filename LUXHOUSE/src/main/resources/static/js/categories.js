@@ -2,7 +2,6 @@ http.get("http://localhost:8080/Categories/get")
     .then(data => setDataCategories(data, 0))
     .catch(err => console.log(err))
 
-// let CateId = _$('#idCate').innerHTML
 http.get(`http://localhost:8080/CategoryProduct/get/cate`)
     .then(data => setDataCategories(data, 1))
     .catch(err => console.log(err))

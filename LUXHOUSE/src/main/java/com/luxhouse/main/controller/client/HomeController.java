@@ -13,7 +13,7 @@ public class HomeController extends com.luxhouse.main.controller.Controller {
     @GetMapping({ "/", "home" })
     public String layout(Model model) {
         dataLayoutMaster.setView("client/home/home");
-        dataLayoutMaster.setJsList(Arrays.asList(""));
+        dataLayoutMaster.setJsList(Arrays.asList("/js/home/home.js"));
 
         objsDataLayout.put("key", "value");
 
