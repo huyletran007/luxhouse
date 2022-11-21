@@ -1,16 +1,89 @@
-<div class="page-content page-container container" id="page-content">
-  <div class="padding-profile">
-    <div class="row container d-flex justify-content-center">
+<div class="profile-user-main">
+  <div class="profile-user-main-tilte">
+      <div>HỒ SƠ CỦA TÔI</div>
+  </div>
+  <div class="profile-user-main-body">
+      <div class="row">
+          <div class="col-8">
+              <form>
+                  <div class="form-group row">
+                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Tên đăng nhập</label>
+                      <div class="col-sm-9">
+                          <input type="text" readonly class="form-control-plaintext" id="staticEmail"
+                              value="email@example.com">
+                      </div>
+                  </div>
 
-      <div class="profile container">
-        <div class="card user-card-full">
-          <div class="userProfile-js" style="display: none;">[[${#request.remoteUser}]]</div>
-          <div class="row m-l-0 m-r-0 profile-js" id="profile-js">
+                  <div class="form-group row">
+                      <label class="col-sm-3 col-form-label ten">Tên</label>
+                      <div class="col-sm-8">
+                          <input type="text" class="form-control" style="border-radius: 0;">
+                      </div>
+                  </div>
 
-            
+                  <div class="form-group row">
+                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Email</label>
+                      <div class="col-sm-9">
+                          <input type="text" readonly class="form-control-plaintext" id="staticEmail"
+                              value="email@example.com">
+                      </div>
+                  </div>
+
+                  <div class="form-group row">
+                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Số điện thoại</label>
+                      <div class="col-sm-9">
+                          <input type="text" readonly class="form-control-plaintext" id="staticEmail"
+                              value="email@example.com">
+                      </div>
+                  </div>
+
+                  <div class="form-group row">
+                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Giới tính</label>
+                      <div class="col-sm-9" style="margin-top: 8px;">
+                          <input type="radio" id="Nam" name="fav_language" value="Nam">
+                          <label for="html">Nam</label>
+                          <input type="radio" id="Nữ" name="fav_language" value="Nữ">
+                          <label for="css">Nữ</label>
+                      </div>
+                  </div>
+
+                  <div class="form-group row">
+                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Số điện thoại</label>
+                      <div class="col-sm-9" style="margin-top: 5px;">
+                          <div class="select-date dataU">
+                              <select id="select-day"></select>
+                              <select id="select-month">
+                                  <option value="0">January
+                                  <option value="1">February
+                                  <option value="2">March
+                                  <option value="3">April
+                                  <option value="4">May
+                                  <option value="5">June
+                                  <option value="6">July
+                                  <option value="7">August
+                                  <option value="8">September
+                                  <option value="9">October
+                                  <option value="10">November
+                                  <option value="11">December
+                              </select>
+                              <select id="select-year"></select>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+
+              <button type="button" class="btn btn-primary btnU">Lưu</button>
           </div>
-        </div>
+          <div class="col-4 userleft">
+              <div class="profile-main-img">
+                  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
+                      alt="">
+
+              </div>
+              <div class="btnIO">
+                  <button type="button" class="btn btn-primary btnI">Chọn ảnh</button>
+              </div>
+          </div>
       </div>
-    </div>
   </div>
 </div>

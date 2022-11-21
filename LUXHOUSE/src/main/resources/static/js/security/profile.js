@@ -54,7 +54,7 @@ const loadProfile = (data) => {
           </ul>
         </div>
       </div>`
-    wrapProfile.innerHTML = html
+    wrapProfile.innerHTML = html1
 }
 
 let userProfile = _$('.userProfile-js').innerHTML
