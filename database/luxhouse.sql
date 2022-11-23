@@ -28,6 +28,25 @@ CREATE TABLE users (
   [updated_at] datetime NULL DEFAULT GETDATE(),
   CONSTRAINT username UNIQUE (username),
   CONSTRAINT phone UNIQUE (phone),
+  CONSTRAINT email UNIQUE (email)
+)
+
+CREATE TABLE user_images (
+  id bigint CHECK ([id] > 0) IDENTITY NOT NULL PRIMARY KEY,
+  username varchar(50) NOT NULL,
+  [password] varchar(MAX) NOT NULL,
+  fullname nvarchar(100) NOT NULL,
+  gender bit NULL DEFAULT 0,
+  email nvarchar(100) NOT NULL,
+  dob datetime DEFAULT NULL,
+  avartar nvarchar(500) DEFAULT NULL,
+  phone varchar(15) NOT NULL,
+  [address] nvarchar(500) DEFAULT NULL,
+  [status] bit DEFAULT 1 NULL,
+  [created_at] datetime NULL DEFAULT GETDATE(),
+  [updated_at] datetime NULL DEFAULT GETDATE(),
+  CONSTRAINT username UNIQUE (username),
+  CONSTRAINT phone UNIQUE (phone),
   CONSTRAINT email UNIQUE (email),
 )
 

@@ -1,94 +1,111 @@
 <div class="profile-user-main">
-  <div class="profile-user-main-tilte">
-      <div>HỒ SƠ CỦA TÔI</div>
-  </div>
-  <div class="profile-user-main-body">
-      <div class="row" id="profile-js">
-          <div class="col-8">
-              <form>
-                  <div class="form-group row">
-                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Tên đăng nhập</label>
-                      <div class="col-sm-9">
-                          <input type="text" readonly class="form-control-plaintext" id="staticTDN"
-                              value="">
-                              <div id="staticPas" style="display: none;"></div>
-                      </div>
-                  </div>
+    <div class="profile-user-main-tilte">
+        <div>HỒ SƠ CỦA TÔI</div>
+    </div>
+    <div class="profile-user-main-body">
+        <div class="row" id="profile-js">
+            <div class="col-8">
+                <form>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Tên đăng nhập</label>
+                        <div class="col-sm-9">
+                            <input type="text" readonly class="form-control-plaintext" id="staticTDN" value="">
+                            <div id="staticPas" style="display: none;"></div>
+                        </div>
+                    </div>
 
-                  <div class="form-group row">
-                      <label class="col-sm-3 col-form-label ten">Tên</label>
-                      <div class="col-sm-8">
-                          <input type="text" class="form-control" style="border-radius: 0;" id="staticT">
-                      </div>
-                  </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label ten">Tên</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="border-radius: 0;" id="staticT">
+                        </div>
+                    </div>
 
-                  <div class="form-group row">
-                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Email</label>
-                      <div class="col-sm-9">
-                          <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                              value="">
-                      </div>
-                  </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="">
+                        </div>
+                    </div>
 
-                  <div class="form-group row">
-                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Số điện thoại</label>
-                      <div class="col-sm-9">
-                          <input type="text" readonly class="form-control-plaintext" id="staticSDT"
-                              value="">
-                      </div>
-                  </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Số điện thoại</label>
+                        <div class="col-sm-9">
+                            <input type="text" readonly class="form-control-plaintext" id="staticSDT" value="">
+                        </div>
+                    </div>
 
-                  <div class="form-group row">
-                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Giới tính</label>
-                      <div class="col-sm-9" style="margin-top: 8px;" id="staticGT">
-                          <input type="radio" id="Nam" name="fav_language" value="Nam">
-                          <label for="html">Nam</label>
-                          <input type="radio" id="Nu" name="fav_language" value="Nu">
-                          <label for="css">Nữ</label>
-                          <input type="radio" id="Khac" name="fav_language" value="Khac">
-                          <label for="css">Khác</label>
-                      </div>
-                  </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Giới tính</label>
+                        <div class="col-sm-9" style="margin-top: 8px;" id="staticGT">
+                            <input type="radio" id="Nam" name="fav_language" value="Nam">
+                            <label for="html">Nam</label>
+                            <input type="radio" id="Nu" name="fav_language" value="Nu">
+                            <label for="css">Nữ</label>
+                            <input type="radio" id="Khac" name="fav_language" value="Khac">
+                            <label for="css">Khác</label>
+                        </div>
+                    </div>
 
-                  <div class="form-group row">
-                      <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Ngày sinh</label>
-                      <div class="col-sm-9" style="margin-top: 5px;">
-                          <div class="select-date dataU">
-                              <select id="select-day"></select>
-                              <select id="select-month">
-                                  <option value="0">January
-                                  <option value="1">February
-                                  <option value="2">March
-                                  <option value="3">April
-                                  <option value="4">May
-                                  <option value="5">June
-                                  <option value="6">July
-                                  <option value="7">August
-                                  <option value="8">September
-                                  <option value="9">October
-                                  <option value="10">November
-                                  <option value="11">December
-                              </select>
-                              <select id="select-year"></select>
-                          </div>
-                      </div>
-                  </div>
-              </form>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label tenDN">Ngày sinh</label>
+                        <div class="col-sm-9" style="margin-top: 5px;">
+                            <div class="select-date dataU">
+                                <select id="select-day"></select>
+                                <select id="select-month">
+                                    <option value="0">January
+                                    <option value="1">February
+                                    <option value="2">March
+                                    <option value="3">April
+                                    <option value="4">May
+                                    <option value="5">June
+                                    <option value="6">July
+                                    <option value="7">August
+                                    <option value="8">September
+                                    <option value="9">October
+                                    <option value="10">November
+                                    <option value="11">December
+                                </select>
+                                <select id="select-year"></select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
 
-              <button type="button" class="btn btn-primary btnU" onclick="luuProfile()">Lưu</button>
-          </div>
-          <div class="col-4 userleft">
-              <div class="profile-main-img">
-                  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
-                      alt="" id="staticIMG">
+                <button type="button" class="btn btn-primary btnU" onclick="luuProfile()">Lưu</button>
+            </div>
+            <div class="col-4 userleft">
+                <div class="profile-main-img">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
+                        alt="" id="staticIMG">
 
-              </div>
-              <div class="btnIO">
-                  <button type="button" class="btn btn-primary btnI">Chọn ảnh</button>
-              </div>
-          </div>
-      </div>
+                </div>
+                <div class="btnIO1">
+                    <input type="file" class="btnIn" name="fileImg" id="fileImg"
+                        accept="image/png, image/jpg, image/jpeg" />
+                </div>
 
-      
-  </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#fileImg').change(function () {
+                            showImageThunbnail(this);
+                        });
+
+                    });
+
+                    function showImageThunbnail(fileInput) {
+                        file = fileInput.files[0];
+                        reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            $('#staticIMG').attr('src', e.target.result);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                </script>
+            </div>
+        </div>
+
+
+    </div>
 </div>

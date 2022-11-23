@@ -23,7 +23,7 @@ const login = () => {
         // Swal.fire("Oke", 'Đăng nhập thành công', "success")
         .then(
             data => {
-            Swal.fire("Oke", 'Đăng nhập thành công', "success")
+            Swal.fire("Oke", 'Đăng nhập thành công' , "success")
             .then(rs => {
                 if (rs.isConfirmed) window.location.href = 'http://localhost:8080/account/profile'
             })
