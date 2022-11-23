@@ -12,6 +12,9 @@ import com.luxhouse.main.domain.Users;
 public interface UserRepository extends JpaRepository<Users, Long> {
 //    @Query("SELECT u FROM Users u WHERE u.username = ?1")
 //    Users findByUsername(String username);
+    
+//  @Query("SELECT u FROM Users u WHERE u.username = ?1")
+//  Users updateFullname(String username);
 
     Optional<Users> findByEmail(String email);
 
@@ -22,4 +25,9 @@ public interface UserRepository extends JpaRepository<Users, Long> {
     Boolean existsByUsername(String username);
 
     Boolean existsByEmail(String email);
+    
+    Boolean existsByPhone(String phone);
+    
+    
+    
 }

@@ -12,9 +12,13 @@ import org.springframework.stereotype.Service;
 
 import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.domain.Users;
+import com.luxhouse.main.exception.NotFoundEx;
 import com.luxhouse.main.repository.UserRepository;
 import com.luxhouse.main.service.UserService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class UserServiceImpl implements UserService{
  
@@ -153,7 +157,28 @@ public class UserServiceImpl implements UserService{
         // TODO Auto-generated method stub
         return userRepository.findById(id);
     }
-
-
     
+    public boolean partialUpdate(Long id, String key, String value)
+            throws NotFoundEx {
+          log.info("Search id={}", id);
+          Optional<Users> optional = userRepository.findById(id);
+          if (optional.isPresent()) {
+              Users user = optional.get();
+
+            if (key.equalsIgnoreCase("fullname")) {
+              log.info("Updating full name");
+              user.setFullname(value);
+            }
+//            if (key.equalsIgnoreCase("age")) {
+//              log.info("Updating age");
+//              user.setAge(Integer.parseInt(value));
+//            }
+
+            userRepository.save(user);
+            return true;
+          } else {
+            throw new NotFoundEx("RESOURCE_NOT_FOUND");
+          }
+        }
+ 
 }

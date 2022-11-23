@@ -3,10 +3,14 @@ package com.luxhouse.main.controller.rest;
 import java.util.List;
 import java.util.Optional;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -14,8 +18,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.domain.Users;
+import com.luxhouse.main.exception.NotFoundEx;
+import com.luxhouse.main.exception.NotYetImplementedEx;
+import com.luxhouse.main.model.PatchDTO;
 import com.luxhouse.main.service.UserService;
 
 @RestController
@@ -71,6 +79,13 @@ public class UsersController {
         }
 
         return null;
+    }
+    
+    @GetMapping("/get/{id}/fullname")
+    public String getOneFullName(@PathVariable Long id) {
+        Users idUserId = usersService.getOne(id);
+        
+        return idUserId.getFullname();
     }
 
     /**
@@ -150,6 +165,20 @@ public class UsersController {
 
         return usersService.findById(Users.getId()).get();
     }
+    
+    
+    @PatchMapping("/update/{id}")
+    public ResponseEntity<Boolean> updatePartially(@PathVariable(name = "id") Long id,
+        @RequestBody PatchDTO dto) throws NotYetImplementedEx, NotFoundEx {
+      // skipping validations for brevity
+      if (dto.getOp().equalsIgnoreCase("update")) {
+        boolean result = usersService.partialUpdate(id, dto.getKey(), dto.getValue());
+        return new ResponseEntity<>(result, HttpStatus.ACCEPTED);
+      } else {
+        throw new NotYetImplementedEx("NOT_YET_IMPLEMENTED");
+      }
+    }
+
 
     /**
      * Api delete item

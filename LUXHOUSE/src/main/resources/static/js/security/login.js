@@ -24,7 +24,9 @@ const login = () => {
         .then(
             data => {
             Swal.fire("Oke", 'Đăng nhập thành công', "success")
-            window.location.href = 'http://localhost:8080/account/profile'
+            .then(rs => {
+                if (rs.isConfirmed) window.location.href = 'http://localhost:8080/account/profile'
+            })
         })
         .catch(err => {
             Swal.fire("Message", 'Đăng nhập thất bại (Sai tài khoản và mật khẩu)', "error")

@@ -29,14 +29,14 @@ public class AccountController extends com.luxhouse.main.controller.Controller{
 
         model.addAttribute(__CONTENT__, dataLayoutMaster);
 
-        return clientLayout;
+        return clientLayoutForProfile;
     }
     
     
     @GetMapping("/order")
     public String userOrder(Model model) {
-        dataLayoutMaster.setView("client/order/order");
-//        dataLayoutMaster.setJsList(Arrays.asList("/js/cart/cart-detail.js","/js/detail-cart.js"));
+        dataLayoutMaster.setView("client/account/order");
+        dataLayoutMaster.setJsList(Arrays.asList("/js/security/order.js"));
 
         objsDataLayout.put("key", "value");
 
@@ -44,7 +44,35 @@ public class AccountController extends com.luxhouse.main.controller.Controller{
 
         model.addAttribute(__CONTENT__, dataLayoutMaster);
 
-        return clientLayout;
+        return clientLayoutForProfile;
+    }
+    
+    @GetMapping("/doimatkhau")
+    public String userDoiMatKhau(Model model) {
+        dataLayoutMaster.setView("client/account/doimatkhau");
+        dataLayoutMaster.setJsList(Arrays.asList("/js/security/profile.js"));
+
+        objsDataLayout.put("key", "value");
+
+        dataLayoutMaster.setObjs(objsDataLayout);
+
+        model.addAttribute(__CONTENT__, dataLayoutMaster);
+
+        return clientLayoutForProfile;
+    }
+    
+    @GetMapping("/xemdonhang")
+    public String userXemDonHang(Model model) {
+        dataLayoutMaster.setView("client/account/kiemtradonhang");
+        dataLayoutMaster.setJsList(Arrays.asList("/js/security/order.js"));
+
+        objsDataLayout.put("key", "value");
+
+        dataLayoutMaster.setObjs(objsDataLayout);
+
+        model.addAttribute(__CONTENT__, dataLayoutMaster);
+
+        return clientLayoutForProfile;
     }
     
     @GetMapping("/logout")

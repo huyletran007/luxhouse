@@ -13,6 +13,8 @@ public abstract class Controller {
     
     protected String clientLayout = "client/client_layout";
     
+    protected String clientLayoutForProfile = "client/account/layout_profile";
+    
     protected String adminLayout = "admin/admin_layout";
     
     protected String __CONTENT__ = "content";

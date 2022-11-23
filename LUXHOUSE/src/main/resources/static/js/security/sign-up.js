@@ -43,11 +43,21 @@ const signUp = () => {
         email,
         phone
     }
-
     http.post('http://localhost:8080/api/auth/signup', data)
-    Swal.fire("Oke", 'Đăng ký thành công', "success")
         .then(data => {
-            window.location.href = 'http://localhost:8080/users/login'
+            handleRegister(data)
         })
         .catch(err => console.log(err))
+
+    let handleRegister = (data) => {
+        if (data.success == "User signed-in successfully!") {
+            Swal.fire("Oke", data.success , "success")
+                .then(rs => {
+                    if (rs.isConfirmed) window.location.href = 'http://localhost:8080/users/login'
+                })
+        } else {
+            Swal.fire("Message", data.error, "error")
+        }
+    }
+
 }

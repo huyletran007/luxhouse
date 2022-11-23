@@ -10,6 +10,7 @@ import org.springframework.data.domain.Sort;
 
 import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.domain.Users;
+import com.luxhouse.main.exception.NotFoundEx;
 
 public interface UserService {
 
@@ -64,6 +65,7 @@ public interface UserService {
     <S extends Users> Optional<S> findOne(Example<S> example);
 
     <S extends Users> S save(S entity);
-
+    
+    boolean partialUpdate(Long id, String key, String value)throws NotFoundEx;
     
 }

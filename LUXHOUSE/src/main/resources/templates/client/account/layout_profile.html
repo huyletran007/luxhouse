@@ -1,0 +1,20 @@
+<!-- head block -->
+<div th:replace="/client/blocks/head"></div>
+
+<!-- Header block -->
+<div th:replace="/client/blocks/header"></div>
+
+<!-- Header block -->
+<div th:replace="./client/account/block"></div>
+
+<!-- main block -->
+<div th:replace="${'./' + content.view}"></div>
+
+<!-- Header block -->
+<div th:replace="./client/account/foot"></div>
+
+<!-- Footer block -->
+<div th:replace="/client/blocks/footer"></div>
+
+<!-- foot block -->
+<div th:replace="/client/blocks/foot"></div>

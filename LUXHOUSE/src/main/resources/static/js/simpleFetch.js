@@ -46,6 +46,21 @@ let httpRequest = class simpleFETCH {
         return resData;
     }
 
+    // Make PUT Request
+    async patch(url, data, headers) {
+        const response = await fetch(url, {
+            method: "PATCH",
+            headers: {
+                "Content-type": "application/json",
+                ...headers
+            },
+            body: JSON.stringify(data)
+        });
+
+        const resData = await response.json();
+        return resData;
+    }
+
     // Make DELETE Request
     async delete(url, headers) {
         const _ = await fetch(url, {

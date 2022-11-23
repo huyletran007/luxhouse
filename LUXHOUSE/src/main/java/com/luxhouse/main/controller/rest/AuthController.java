@@ -45,7 +45,7 @@ public class AuthController {
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
         Map<String, String> map = new HashMap<>();
-        map.put("data", "User signed-in successfully!");
+        map.put("success", "User signed-in successfully!");
         return map;
         // {"data":""}
     }
@@ -57,7 +57,7 @@ public class AuthController {
         if (userRepository.existsByUsername(signUpDto.getUsername())) {
 //            return new ResponseEntity<>("Username is already taken!", HttpStatus.BAD_REQUEST);
             Map<String, String> map = new HashMap<>();
-            map.put("data", "Username is already taken!.");
+            map.put("error", "Username đã tồn tại!.");
             return map;
         }
 
@@ -65,7 +65,15 @@ public class AuthController {
         if (userRepository.existsByEmail(signUpDto.getEmail())) {
 //            return new ResponseEntity<>("Email is already taken!", HttpStatus.BAD_REQUEST);
             Map<String, String> map = new HashMap<>();
-            map.put("data", "Email is already taken!.");
+            map.put("error", "Email đã tồn tại!.");
+            return map;
+        }
+        
+     // add check for phone exists in DB
+        if (userRepository.existsByPhone(signUpDto.getPhone())) {
+//            return new ResponseEntity<>("Email is already taken!", HttpStatus.BAD_REQUEST);
+            Map<String, String> map = new HashMap<>();
+            map.put("error", "Số điện thoại đã tồn tại!.");
             return map;
         }
 
@@ -84,7 +92,7 @@ public class AuthController {
 
 //        return new ResponseEntity<>("User registered successfully", HttpStatus.OK);
         Map<String, String> map = new HashMap<>();
-        map.put("data", "User signed-in successfully!");
+        map.put("success", "User signed-in successfully!");
         return map;
 
     }

@@ -1,63 +1,69 @@
-const loadProfile = (data) => {
-    let wrapProfile = _$('#profile-js')
-    let html = /*html*/ `<div class="col-sm-4 bg-c-lite-green user-profile">
-        <div class="card-block text-center text-white">
-          <div class="m-b-25">
-            <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius"
-                 alt="User-Profile-Image">
-          </div>
-          <h6 class="f-w-600">Chào</h6>
-          <p>${data.fullname}</p>
-          <i class="fa fa-edit" aria-hidden="true"></i>
-        </div>
-      </div>
-      <div class="col-sm-8">
-        <div class="card-block">
-          <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
-          <div class="row">
-            <div class="col-sm-6">
-              <p class="m-b-10 f-w-600">Họ và tên</p>
-              <h6 class="text-muted f-w-400">${data.fullname}</h6>
-            </div>
-            <div class="col-sm-6">
-              <p class="m-b-10 f-w-600">Username</p>
-              <h6 class="text-muted f-w-400">${data.username}</h6>
-            </div>
-            <div class="col-sm-6">
-              <p class="m-b-10 f-w-600">Email</p>
-              <h6 class="text-muted f-w-400">${data.email}</h6>
-            </div>
-            <div class="col-sm-6">
-              <p class="m-b-10 f-w-600">Gender</p>
-              <h6 class="text-muted f-w-400">${data.gender? 'Nam' : 'Nữ'}</h6>
-            </div>
-            <div class="col-sm-6">
-              <p class="m-b-10 f-w-600">Phone</p>
-              <h6 class="text-muted f-w-400">${data.phone}</h6>
-            </div>
-          </div>
-          <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Address</h6>
-          <div class="row">
-            <div class="col-sm-6">
-              <p class="m-b-10 f-w-600">${data.address}</p>
+const luuProfile = () => {
+    const username = _$('#staticTDN').value
+    const fullname = _$('#staticT').value
+    const email = _$('#staticEmail').value
+    const phone = _$('#staticSDT').value
+    const password = _$('#staticPas').value
+    let userPro1 = _$('#userId').innerHTML
 
-            </div>
 
-          </div>
-          <ul class="social-link list-unstyled m-t-40 m-b-10">
-            <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title=""
-                   data-original-title="facebook" data-abc="true"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title=""
-                   data-original-title="twitter" data-abc="true"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title=""
-                   data-original-title="instagram" data-abc="true"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-          </ul>
-        </div>
-      </div>`
-    wrapProfile.innerHTML = html1
+    let data = {
+        "op": "update",
+        "key": "fullname",
+        "value": fullname
+    }
+
+    http.patch(`http://localhost:8080/Users/update/${userPro1}`, data)
+        .then(
+            Swal.fire("Oke", 'Lưu thành công', "success"),
+            location.reload()
+        )
+        .catch(err => console.log(err))
 }
 
-let userProfile = _$('.userProfile-js').innerHTML
+const loadProfile = (data) => {
+    document.getElementById("staticTDN").value = `${data.username}`;
+    document.getElementById("staticT").value = `${data.fullname}`;
+    document.getElementById("staticEmail").value = `${data.email}`;
+    document.getElementById("staticSDT").value = `${data.phone}`;
+    document.getElementById("staticPas").value = `${data.password}`;
+    if (data.gender == true) {
+        document.getElementById("Nam").checked = true;
+    } else if (data.gender == false) {
+        document.getElementById("Nu").checked = true;
+    } else {
+        document.getElementById("Khac").checked = true;
+    }
+    // document.getElementById("myDate").value = "2014-02-09";
+    if (data.avartar.innerHTML == 'NULL' && data.avartar.innerHTML == 'null') {
+        document.getElementById("staticIMG").src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png";
+    } else {
+        document.getElementById("staticIMG").src = `/admin/img/${data.avartar}`;
+    }
+
+}
+
+const loadcea = (data) => {
+    let nameP = _$('.name')
+
+    nameP.innerHTML = `${data.username}`
+    if (data.avartar.innerHTML == 'NULL' && data.avartar.innerHTML == 'null') {
+        document.getElementById("staticIMGB").src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png";
+    } else {
+        document.getElementById("staticIMGB").src = `/admin/img/${data.avartar}`;
+    }
+
+}
+
+let userPro = _$('#userId').innerHTML
+http.get(`http://localhost:8080/Users/get/${userPro}`)
+    .then(data => loadcea(data))
+    .catch(err => console.log(err))
+
+
+let userProfile = _$('#userId').innerHTML
 http.get(`http://localhost:8080/Users/get/${userProfile}`)
-    .then(data => loadProfile(data))
+    .then(data => {
+        loadProfile(data)
+    })
     .catch(err => console.log(err))
