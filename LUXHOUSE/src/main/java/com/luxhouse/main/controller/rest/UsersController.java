@@ -1,5 +1,6 @@
 package com.luxhouse.main.controller.rest;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.luxhouse.main.domain.Categories;
 import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.domain.Users;
 import com.luxhouse.main.exception.NotFoundEx;
@@ -45,6 +46,23 @@ public class UsersController {
     public List<Users> getAllUsers() {
 
         return usersService.findAll();
+    }
+    
+    @GetMapping("/get/{start}/{total}") // api get all Products
+    public List<Users> getPageUsers(@PathVariable int start, @PathVariable int total) {
+        
+        List<Users> list = usersService.findAll();
+        Collections.reverse(list);
+        int toStart = start*total;
+        // 12
+        // start-total
+        // 0-5 : toStart = 0*5, toIndex = toStart+total = 5 
+        // 1-5 : toStart = 1*5, toIndex = toStart+total = 10
+        // 2-5 : toStart = 2*5, toIndex = toStart+total = 15 => 12
+        int toIndex = total + toStart;
+        toIndex = toIndex > list.size() ? list.size() : toIndex;
+        
+        return list.subList(toStart, toIndex);
     }
     
     /**
