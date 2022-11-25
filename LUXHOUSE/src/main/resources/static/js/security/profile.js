@@ -15,8 +15,10 @@ const luuProfile = () => {
 
     http.patch(`http://localhost:8080/Users/update/${userPro1}`, data)
         .then(
-            Swal.fire("Oke", 'Lưu thành công', "success"),
-            location.reload()
+            Swal.fire("Oke", 'Lưu thành công', "success")
+            .then(rs => {
+                location.reload()
+            })
         )
         .catch(err => console.log(err))
 }
