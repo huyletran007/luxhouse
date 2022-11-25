@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.luxhouse.main.domain.PaymentTypes;
+import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.service.PaymentTypesService;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,6 +34,24 @@ public class PaymentTypeController {
         return paymentTypesService.findAll();
     }
 
+    
+    @GetMapping("/get/{start}/{total}") // api get all Products
+    public List<PaymentTypes> getPagePayment(@PathVariable int start, @PathVariable int total) {
+        
+        List<PaymentTypes> list = paymentTypesService.findAll();
+        Collections.reverse(list);
+        int toStart = start*total;
+        // 12
+        // start-total
+        // 0-5 : toStart = 0*5, toIndex = toStart+total = 5 
+        // 1-5 : toStart = 1*5, toIndex = toStart+total = 10
+        // 2-5 : toStart = 2*5, toIndex = toStart+total = 15 => 12
+        int toIndex = total + toStart;
+        toIndex = toIndex > list.size() ? list.size() : toIndex;
+        
+        return list.subList(toStart, toIndex);
+    }
+    
     /**
      * Api get last item in PaymentTypes
      * 
