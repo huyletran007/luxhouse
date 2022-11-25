@@ -23,11 +23,11 @@ INSERT INTO payment_types(payment_code, payment_name, [description]) VALUES
 ('COD','Ship cod',N'Chuyển hàng và thu tiền'),
 ('MOMO',N'Chuyển Tiền qua MOMO','0765230162')
 
-INSERT INTO categories(category_code, category_name) VALUES
-('D-ROM','Dining room'),
-('L-ROOM','Living room'),
-('B-ROOM','Bed room'),
-('OUTDOOR','Outdoor')
+INSERT INTO categories(category_code, category_name, image) VALUES
+('D-ROM','Dining room','dining.png'),
+('L-ROOM','Living room','living.png'),
+('B-ROOM','Bed room','bedding.png'),
+('OUTDOOR','Outdoor','outdoor.png')
 
 INSERT INTO category_products(category_product_code, category_product_name, category_id) VALUES
 ('D-TABLES',N'Dining Tables',1),

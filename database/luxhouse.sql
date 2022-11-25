@@ -20,7 +20,9 @@ CREATE TABLE users (
   gender bit NULL DEFAULT 0,
   email nvarchar(100) NOT NULL,
   dob datetime DEFAULT NULL,
+  file_path_img varchar(MAX) NULL,
   avartar nvarchar(500) DEFAULT NULL,
+  type_img varchar(50) null,
   phone varchar(15) NOT NULL,
   [address] nvarchar(500) DEFAULT NULL,
   [status] bit DEFAULT 1 NULL,
@@ -29,25 +31,6 @@ CREATE TABLE users (
   CONSTRAINT username UNIQUE (username),
   CONSTRAINT phone UNIQUE (phone),
   CONSTRAINT email UNIQUE (email)
-)
-
-CREATE TABLE user_images (
-  id bigint CHECK ([id] > 0) IDENTITY NOT NULL PRIMARY KEY,
-  username varchar(50) NOT NULL,
-  [password] varchar(MAX) NOT NULL,
-  fullname nvarchar(100) NOT NULL,
-  gender bit NULL DEFAULT 0,
-  email nvarchar(100) NOT NULL,
-  dob datetime DEFAULT NULL,
-  avartar nvarchar(500) DEFAULT NULL,
-  phone varchar(15) NOT NULL,
-  [address] nvarchar(500) DEFAULT NULL,
-  [status] bit DEFAULT 1 NULL,
-  [created_at] datetime NULL DEFAULT GETDATE(),
-  [updated_at] datetime NULL DEFAULT GETDATE(),
-  CONSTRAINT username UNIQUE (username),
-  CONSTRAINT phone UNIQUE (phone),
-  CONSTRAINT email UNIQUE (email),
 )
 
 CREATE TABLE roles (
@@ -124,7 +107,9 @@ CREATE TABLE products (
 CREATE TABLE product_images (
   id bigint CHECK ([id] > 0) NOT NULL IDENTITY PRIMARY KEY,
   product_id bigint CHECK (product_id > 0) NOT NULL,
+  file_path_img varchar(MAX) NULL,
   [image] nvarchar(500) NOT NULL,
+  type_img varchar(50) null,
   [created_at] datetime NULL DEFAULT GETDATE(),
   [updated_at] datetime NULL DEFAULT GETDATE(),
   CONSTRAINT [FK_product_images_products] FOREIGN KEY (product_id) REFERENCES products ([id])
@@ -161,6 +146,7 @@ CREATE TABLE orders (
   ship_address nvarchar(500) NOT NULL,
   ship_city nvarchar(150) NOT NULL,
   ship_district nvarchar(150) NOT NULL,
+  ship_phuong nvarchar(150) NOT NULL,
   shipping_fee decimal(18, 4) NOT NULL DEFAULT 0.0000,
   [payment_type_id] int CHECK ([payment_type_id] > 0) NOT NULL DEFAULT 0,
   [paid_date] datetime DEFAULT NULL,
