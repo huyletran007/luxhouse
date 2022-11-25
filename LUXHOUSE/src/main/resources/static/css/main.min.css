@@ -1831,7 +1831,10 @@ footer p {
     user-select: none;
     background-color: black;
 }
-
+.container-comment{
+    margin-left: 25%;
+    
+}
 /* BTN */
 .btn1 {
     display: inline-block;
@@ -1895,7 +1898,9 @@ footer p {
     border-color: #000000;
     transition: border 0.1s linear 0s;
 }
-
+.btn-comment{
+    color: #0a53be;
+}
 /* According */
 .right-according {
     margin-top: 10px;
