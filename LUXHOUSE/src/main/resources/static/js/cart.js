@@ -6,6 +6,10 @@
     });
 })();
 
+const checkout = () => {
+    window.location.href = 'http://localhost:8080/check-out'
+}
+
 let cartCount = 3;
 const addToCartBtn = document.getElementById("add-btn");
 const removeBtn = document.getElementById("remove-btn");

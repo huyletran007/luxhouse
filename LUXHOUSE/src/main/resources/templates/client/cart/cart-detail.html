@@ -99,10 +99,15 @@
             </div>
 
             <div class="summary-paypal-main">
-                <button class="summary-paypal-checkout" onclick="removeCart()">CHECKOUT NOW</button>
+                <button class="summary-paypal-checkout" onclick="checkout1()">CHECKOUT NOW</button>
                 <div class="orSum">or</div>
                 <button class="summary-paypal-paypal">PAYPAL</button>
             </div>
+            <script>
+                const checkout1 = () => {
+                    window.location.href = 'http://localhost:8080/check-out'
+                }
+            </script>
         </div>
     </div>
 </div>

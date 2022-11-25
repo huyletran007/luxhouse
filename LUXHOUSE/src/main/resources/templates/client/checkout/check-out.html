@@ -1,10 +1,203 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<!-- Start main -->
+<div class="cart-detail-title container">
 
-</body>
-</html>
+    <!-- breadcrumd -->
+    <div>CHECK OUT</div>
+    <div class="container d-flex flex-wrap justify-content-center">
+        <div class="checkout-progress-indicator">
+            <div class="step-1 active">
+                <span>1.</span>
+                Shipping
+            </div><!-- END: step1 -->
+            <div class="step-2 inactive">
+                <span>2.</span>
+                Billing
+            </div><!-- END: step2 -->
+            <div class="step-3 inactive">
+                <span>3.</span>
+                Review Order
+            </div><!-- END: step3 -->
+
+        </div>
+    </div>
+</div>
+<!-- Start PRODUCT-DETAIL -->
+<div class="cart-detail-form container d-flex flex-wrap justify-content-center">
+    <!-- LEFT -->
+    <div class="cart-detail-left">
+        <div class="form-check-out">
+            <form>
+                <div class="ship-address-title">Ship address</div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group input-checkout">
+                            <label for="exampleInputEmail1">Fullname</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter Fullname">
+                        </div>
+                        <div class="form-group input-checkout">
+                            <label for="exampleInputEmail1">Phone</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter Phone">
+                        </div>
+                        <div class="form-group input-checkout">
+                            <label for="exampleInputEmail1">Address</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter Address">
+                        </div>
+
+                        <div class="form-group input-checkout">
+                            <label for="exampleInputEmail1">Payment type</label>
+                            <select class="form-select form-select-sm mb-3" id="loadPM">
+                                <!-- <option value="" selected>Chọn</option>
+                                <option value="250">Nhanh - 10$</option>
+                                <option value="500">Hỏa tốc - 20$</option> -->
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group input-checkout">
+                            <label for="exampleInputEmail1">Shipp address</label>
+                            <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
+                                <option value="" selected>Chọn tỉnh thành</option>
+                            </select>
+
+                            <select class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
+                                <option value="" selected>Chọn quận huyện</option>
+                            </select>
+
+                            <select class="form-select form-select-sm" id="ward" aria-label=".form-select-sm">
+                                <option value="" selected>Chọn phường xã</option>
+                            </select>
+                        </div>
+                        <div class="form-group input-checkout">
+                            <label for="exampleInputEmail1">Shipping fee</label>
+                            <select class="form-select form-select-sm mb-3">
+                                <option value="" selected>Chọn</option>
+                                <option value="250">Nhanh - 10$</option>
+                                <option value="500">Hỏa tốc - 20$</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary" onclick="checkout_js()">Submit</button>
+            </form>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between">
+            <div class="cart-left-title float-left">DETAIL</div>
+            <div class="cart-left-title float-right"><button onclick="editGioHang()" class="btn-edit-co">Edit giỏ hàng</button></div>
+        </div>
+
+        <!-- <div id="loadDataCart-js"></div> -->
+        <!-- <style>
+            .cart-product-mota-name {
+                width: 130px;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+        </style> -->
+
+        <!-- Start -->
+        <div id="loadGH">
+
+        </div>
+        <!-- <div class="cart-left-form">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align: left;">PRODUCT</th>
+                        <th style="text-align: center;">PRICE</th>
+                        <th style="text-align: center;">QTY</th>
+                        <th style="text-align: right;">TOTALL PRICE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="row d-flex flex-wrap row-cols-auto cart-product-left">
+                                <div class="col"><img
+                                        src="https://www.serenaandlily.com/dw/image/v2/AASD_PRD/on/demandware.static/-/Sites-masterCatalog_SerenaandLily/default/dw5478edb1/hi-res/Rug_Tulum_Rug_8x10_Detail_MV_0244_Crop_SH.jpg?sw=100&sh=125&sm=fit&strip=false"
+                                        alt="" height="125px" width="100px"></div>
+                                <div class="col cart-product-mota">
+                                    <div class="cart-product-mota-name">name</div>
+                                    <div class="cart-product-mota-id">id-product</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="cart-product-price" style="text-align: center;">$1000</td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                </span>
+                                <input type="text" id="quantity" name="quantity"
+                                    class="form-control input-number quantity-cart" value="3" min="1" max="100">
+                                <span class="input-group-btn">
+                                </span>
+                            </div>
+                        </td>
+                        <td style="text-align: right;">$1000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
+
+        <!-- End -->
+
+
+
+
+
+    </div>
+    <!-- RIGHT -->
+    <div class="cart-detail-right">
+        <div class="cart-summary">
+            <div class="summary-title">SUMMARY</div>
+            <div class="summary-subtotal-main">
+                <div class="summary-subtotal d-flex flex-wrap justify-content-between">
+                    <div class="summary-subtotal-name float-left">SUBTOTAL:</div>
+                    <div class="summary-subtotal-price float-right" id="subTotalCO">0</div>
+                </div>
+                <div class="summary-ship d-flex flex-wrap justify-content-between">
+                    <div class="summary-ship-name float-left">SHIP:</div>
+                    <div class="summary-ship-price float-right">--</div>
+                </div>
+                <div class="summary-tax d-flex flex-wrap justify-content-between">
+                    <div class="summary-tax-name float-left">TAX:</div>
+                    <div class="summary-tax-price float-right">--</div>
+                </div>
+            </div>
+
+            <div class="summary-total-main">
+                <div class="summary-total d-flex flex-wrap justify-content-between">
+                    <div class="summary-total-name float-left">ESTIMATED TOTAL:</div>
+                    <div class="summary-total-price float-right" id="estiameTotalCO">0</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-title">NEED HEPLP ?</div>
+            <div class="summary-subtotal-main">
+                <div class="summary-subtotal d-flex flex-wrap">
+                    <div class="summary-subtotal-name float-left">CAll-</div>
+                    <div class="summary-subtotal-price float-left callCO" id="subTotal">076523162</div>
+                </div>
+                <div class="summary-ship d-flex flex-wrap justify-content-between">
+                    <div class="summary-ship-name float-left">Return</div>
+                    <div class="summary-ship-price float-right">--</div>
+                </div>
+                <div class="summary-tax d-flex flex-wrap justify-content-between">
+                    <div class="summary-tax-name float-left">POLICE</div>
+                    <div class="summary-tax-price float-right">--</div>
+                </div>
+                <div class="container"><a class="continue-shop" href="/products">
+                        < CONTINUE SHOPPING</a> </div> </div> </div> </div> </div> <!-- End PRODUCT-DETAIL -->
+                            <!-- End main -->

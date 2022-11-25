@@ -2600,6 +2600,7 @@ th {
 
 .cart-summary {
     padding: 10px 20px;
+    margin-bottom: 10px;
 }
 
 .summary-subtotal-main {
@@ -2625,6 +2626,10 @@ th {
 .summary-total-price,
 .summary-subtotal-price {
     font-size: 14px;
+}
+
+.callCO{
+    font-size: 15px;
 }
 
 .summary-total-main {
@@ -2681,6 +2686,9 @@ th {
 
 /* END CART DETAIL */
 
+/*  */
+
+/*  */
 /*START PROFILE*/
 /* @media (min-width: 1200px){
     .container {

@@ -1,0 +1,65 @@
+/*  */
+.form-check-out {
+    width: 100%;
+    border: 1px solid red;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.checkout-progress-indicator {
+    overflow: hidden;
+    text-align: right;
+    font-size: 12px;
+    width: 97%;
+    margin: 30px 0;
+}
+
+
+.checkout-progress-indicator div.active {
+    background: #efefef;
+    color: #383838;
+}
+
+.checkout-progress-indicator div {
+    width: 33%;
+    text-align: center;
+    float: left;
+    padding: 6px 0;
+    font-size: 12px;
+    font-family: proxima-nova, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #767676;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    box-sizing: border-box;
+    border: 1px solid #cbcaca;
+
+}
+
+.ship-address-title {
+    letter-spacing: 2px;
+    padding: 10px;
+    color: rgb(133, 121, 121);
+}
+
+.input-checkout {
+    margin: 5px;
+    width: 360px;
+}
+
+.btn-edit-co {
+    transition: all 0.2s ease-in-out;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.btn-edit-co:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+
+}
+
+/*  */

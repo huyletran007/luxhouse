@@ -31,6 +31,9 @@ function addProductToCart() {
         http.post(`http://localhost:8080/cartuser/add`, dataCart)
             .then(data => {
                 Swal.fire("Oke", 'Đặt hàng thành công', "success")
+                    .then(rs => {
+                        if (rs.isConfirmed) location.reload()
+                    })
             })
             .catch(err => console.log(err))
         loadCart()
@@ -89,7 +92,7 @@ const loadCart = (data) => {
                      </li>
                 `
             }
-            
+
             if (i % 3 == 2) {
                 html += `</li>`
             }

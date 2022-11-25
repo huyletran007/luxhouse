@@ -37,7 +37,7 @@ public class Orders implements Serializable {
     private Users users;
 
     @Temporal(TemporalType.DATE)
-    private Date order_date;
+    private Date order_date = new Date();
 
     @Temporal(TemporalType.DATE)
     private Date shipped_date;
@@ -53,6 +53,9 @@ public class Orders implements Serializable {
 
     @Column(name = "ship_district", columnDefinition = "nvarchar(150) not null")
     private String shipDistrict;
+    
+    @Column(name = "ship_phuong", columnDefinition = "nvarchar(150) not null")
+    private String shipPhuong;
 
     @Column(name = "shipping_fee", columnDefinition = "decimal(18,4) not null")
     private Double shipFee;	
@@ -71,7 +74,7 @@ public class Orders implements Serializable {
     private Date created_at = new Date();
 
     @Temporal(TemporalType.DATE)
-    private Date updated_at = new Date();
+    private Date updated_at;
     
     @JsonIgnore
     @OneToMany(mappedBy = "orders")

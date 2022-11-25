@@ -10,6 +10,7 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -18,6 +19,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
+@Builder
 public class Users implements Serializable {
 
     @Id
@@ -41,9 +43,15 @@ public class Users implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dob;
 
+    @Column(name = "file_path_img",columnDefinition = "varchar(MAX) null")
+    private String filePath;
+    
     @Column(columnDefinition = "nvarchar(500) null")
     private String avartar;
 
+    @Column(name = "type_img",columnDefinition = "varchar(50) null")
+    private String typeImg;
+    
     @Column(columnDefinition = "varchar(15) not null")
     private String phone;
 
@@ -56,7 +64,7 @@ public class Users implements Serializable {
     private Date created_at = new Date();
 
     @Temporal(TemporalType.DATE)
-    private Date updated_at = new Date();
+    private Date updated_at;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "authorities", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
