@@ -1,12 +1,59 @@
 const addProduct = () => {
 
-    let newProduct = productInvalid()
+    const product_name = _$('#product_name')
+    const product_code = _$('#product_code')
+    const image = _$('#image')
+    const price = _$('#price')
+    const quantity = _$('#quantity')
+    const discontinued = false
+    const category_id = _$('#categories')
+    const is_featured = false
+    const is_new = false
+    const status = true
 
-    if (!newProduct) {
+
+    if (!product_name || product_name.value.replaceAll(' ', '') == '') {
+        Swal.fire('Message', 'Vui lòng nhập tên sản phẩm', 'info')
         return false
     }
 
-    http.post("http:/localhost:8080/Product/add", newProduct)
+    if (!product_code || product_code.value.replaceAll(' ', '') == '') {
+        Swal.fire('Message', 'Vui lòng nhập mã sản phẩm (slug)', 'info')
+        return false
+    }
+
+    if (!image || image.value.replaceAll(' ', '') == '') {
+        Swal.fire('Message', 'Vui lòng nhập hình ảnh chính của sản phẩm', 'info')
+        return false
+    }
+
+    if (!price || price.value.replaceAll(' ', '') == '') {
+        Swal.fire('Message', 'Vui lòng nhập giá niêm yết sản phẩm', 'info')
+        return false
+    }
+
+    if (!quantity || quantity.value.replaceAll(' ', '') == '') {
+        Swal.fire('Message', 'Vui lòng nhập số lượng trên mỗi đơn vị', 'info')
+        return false
+    }
+
+    let data = {
+        "productCode": product_code.value,
+        "productName": product_name.value,
+        "image": image.value,
+        "price": price.value,
+        "quantity": quantity.value,
+        "discontinued": false,
+        "is_featured": false,
+        "is_new": false,
+        "status": true,
+        "categoryProducts": {
+            "id": category_id.value
+        }
+    }
+
+
+    http.post("http://localhost:8080/Product/add", data)
         .then(data => {
             Swal.fire('Success', 'Thêm sản phẩm thành công', 'success')
                 .then(rs => window.location.href = "http://localhost:8080/admin/productManager/table")
@@ -22,10 +69,10 @@ const editProduct = () => {
         return false
     }
 
-    http.put("http:/localhost:8080/Product/update", productEdit)
+    http.put("http://localhost:8080/Product/update", productEdit)
         .then(data => {
             Swal.fire('Success', 'Chỉnh sửa sản phẩm thành công', 'success')
-                .then(rs => window.location.href = `http:/localhost:8080/admin/productManager/edit/product/${data.id}`)
+                .then(rs => window.location.href = `http://localhost:8080/admin/productManager/table`)
         })
 }
 
@@ -61,12 +108,6 @@ function productInvalid(type = 0) {
         return false
     }
 
-    // if(!image_list || image_list.value.replaceAll(' ', '') == '') {
-    //     Swal.fire('Message', 'Vui lòng nhập list hình ảnh sản phẩm', 'info')
-    //     return false
-    // }
-
-
     if (!price || price.value.replaceAll(' ', '') == '') {
         Swal.fire('Message', 'Vui lòng nhập giá niêm yết sản phẩm', 'info')
         return false
@@ -78,17 +119,17 @@ function productInvalid(type = 0) {
     }
 
     let result = {
-        productCode: product_code.value,
-        productName: product_name.value,
-        image: image.value,
-        price: price.value * 1,
-        quantity: quantity.value,
-        discontinued,
-        is_featured,
-        is_new,
-        status,
-        categoryProducts: {
-            id: category_id.value
+        "productCode": product_code,
+        "productName": product_name,
+        "image": image,
+        "price": price,
+        "quantity": quantity,
+        "discontinued": false,
+        "is_featured": false,
+        "is_new": false,
+        "status": true,
+        "categoryProducts": {
+            "id": category_id
         }
     }
 
