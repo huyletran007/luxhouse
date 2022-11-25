@@ -1,13 +1,25 @@
 package com.luxhouse.main.controller.rest;
 
 import com.luxhouse.main.domain.Orders;
+import com.luxhouse.main.domain.ProductImages;
+import com.luxhouse.main.domain.Roles;
+import com.luxhouse.main.domain.Users;
+import com.luxhouse.main.model.OrderDTO;
+import com.luxhouse.main.model.SignUpDTO;
+import com.luxhouse.main.repository.OrdersRespository;
 import com.luxhouse.main.service.OrdersService;
 import com.luxhouse.main.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.management.relation.Role;
+
+import java.util.Arrays;
+import java.util.Collections;
+
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -17,6 +29,9 @@ public class OrdersController {
 
     @Autowired
     OrdersService ordersService;
+
+    @Autowired
+    OrdersRespository ordersRespository;
 
     /**
      * Api get all Orders
@@ -76,6 +91,16 @@ public class OrdersController {
 
         return null;
     }
+    
+    @GetMapping("/get/user/{id}")
+    public List<Orders> getOrderUser(@PathVariable Long id) {
+        List<Orders> itemOrders = ordersService.selectsByUserId(id);
+        if (itemOrders.isEmpty()) {
+            return itemOrders;
+        }
+
+        return Arrays.asList(new Orders());
+    }
 
     /**
      * Api add item to Orders
@@ -90,6 +115,14 @@ public class OrdersController {
 
         ordersService.save(Orders);
 
+        return getLastOrders();
+    }
+
+    @PostMapping("/addOrder")
+    public Orders addOrderss(@RequestBody Orders Orders) {
+
+        ordersService.save(Orders);
+        
         return getLastOrders();
     }
 
@@ -124,4 +157,5 @@ public class OrdersController {
         ordersService.delete(item);
 
         return item;
-    }}
+    }
+}

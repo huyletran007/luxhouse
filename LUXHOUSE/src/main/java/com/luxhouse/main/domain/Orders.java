@@ -60,6 +60,9 @@ public class Orders implements Serializable {
     @Column(name = "shipping_fee", columnDefinition = "decimal(18,4) not null")
     private Double shipFee;	
     
+    @Column(name = "total_order", columnDefinition = "decimal(18,4) not null")
+    private Double totalOrder; 
+    
     @ManyToOne
     @JoinColumn(name = "payment_type_id")
     private PaymentTypes paymentTypes;

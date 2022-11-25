@@ -140,7 +140,8 @@ CREATE TABLE payment_types (
 CREATE TABLE orders (
   id bigint CHECK ([id] > 0) NOT NULL IDENTITY PRIMARY KEY,
   [user_id] bigint CHECK ([user_id] > 0) NOT NULL,
-  order_date datetime NOT NULL,
+  order_date datetime NULL,
+  total_order decimal(18, 4) NOT NULL DEFAULT 0.0000, 
   shipped_date datetime DEFAULT NULL,
   ship_name nvarchar(50) NOT NULL,
   ship_address nvarchar(500) NOT NULL,

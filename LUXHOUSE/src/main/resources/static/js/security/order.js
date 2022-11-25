@@ -1,3 +1,22 @@
+let userPro = _$('#userId').innerHTML
+
+http.get(`http://localhost:8080/Users/get/${userPro}`)
+    .then(data => loadcea(data))
+    .catch(err => console.log(err))
+
+http.get(`http://localhost:8080/Users/get/${userPro}`)
+    .then(data => loadcea(data))
+    .catch(err => console.log(err))
+// ORDER
+
+//END ORDER
+
+//XEMDONHANG
+
+// END XEM DON HANG
+const viewOrderDetail = () => {
+window.location.href = "http://localhost:8080/account/order"
+}
 var loadcea = (data) => {
     let nameP = _$('.name')
 
@@ -8,8 +27,3 @@ var loadcea = (data) => {
         document.getElementById("staticIMGB").src = `/admin/img/${data.avartar}`;
     }
 }
-
-let userPro = _$('#userId').innerHTML
-http.get(`http://localhost:8080/Users/get/${userPro}`)
-    .then(data => loadcea(data))
-    .catch(err => console.log(err))

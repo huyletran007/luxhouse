@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import com.luxhouse.main.domain.Orders;
+import com.luxhouse.main.domain.ProductImages;
 
 public interface OrdersService {
 
@@ -59,5 +60,7 @@ public interface OrdersService {
 	<S extends Orders> Optional<S> findOne(Example<S> example);
 
 	<S extends Orders> S save(S entity);
+	
+	List<Orders> selectsByUserId(Long id);
 
 }

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.luxhouse.main.domain.CartUsers;
 import com.luxhouse.main.domain.ProductImages;
 import com.luxhouse.main.service.CartUserService;
@@ -25,7 +24,6 @@ import com.luxhouse.main.service.CartUserService;
 public class CartUserController {
     @Autowired
     CartUserService cartUserService;
-
 
     /**
      * Api get all CartUsers
@@ -85,18 +83,16 @@ public class CartUserController {
 
         return null;
     }
-    
+
     @GetMapping("/get/users/{id}")
     public List<CartUsers> getUserId(@PathVariable Long id) {
         List<CartUsers> itemUserId = cartUserService.findByUserId(id);
-        if(!itemUserId.isEmpty()) {
+        if (!itemUserId.isEmpty()) {
             return itemUserId;
-        } 
-        
+        }
+
         return Arrays.asList(new CartUsers());
     }
-    
-   
 
     /**
      * Api add item to CartUsers
@@ -145,5 +141,25 @@ public class CartUserController {
         cartUserService.delete(item);
 
         return item;
+    }
+
+    @DeleteMapping("/delete/user/{id}")
+    public List<CartUsers> deleteCartUsersName(@PathVariable Long id) {
+
+        List<CartUsers> itemUserId = cartUserService.findByUserId(id);
+
+        for (CartUsers item : itemUserId) {
+
+            cartUserService.delete(item);
+
+        }
+
+        return itemUserId;
+
+//        CartUsers item = cartUserService.findById(id).get();
+//
+//        cartUserService.delete(item);
+//
+//        return item;
     }
 }

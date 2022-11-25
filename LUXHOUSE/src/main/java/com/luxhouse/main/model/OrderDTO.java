@@ -1,18 +1,21 @@
 package com.luxhouse.main.model;
 
-import java.util.Date;
+
+import com.luxhouse.main.domain.PaymentTypes;
+import com.luxhouse.main.domain.Users;
 
 import lombok.Data;
 
 @Data
 public class OrderDTO {
-    private Long userId;
+    private Users userId;
     private String shipName;
     private String shipAddress;
     private String shipCity;
     private String shipDistrict;
     private String shipPhuong;
-    private String shipFee;
-    private Date shipped_date;
-    private Integer paymentTypeId;
+    private Double shipFee;
+    private PaymentTypes paymentTypeId;
+    private String orderStatus;
+    
 }

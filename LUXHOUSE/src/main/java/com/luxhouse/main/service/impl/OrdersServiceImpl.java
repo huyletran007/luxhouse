@@ -138,4 +138,10 @@ public class OrdersServiceImpl implements OrdersService {
 	public void deleteAll() {
 		ordersRespository.deleteAll();
 	}
+
+    @Override
+    public List<Orders> selectsByUserId(Long id) {
+        // TODO Auto-generated method stub
+        return ordersRespository.selectsByUserId(id);
+    }
 }

@@ -1725,6 +1725,11 @@ footer p {
     width: 100%;
 }
 
+/* product-detail-form */
+.product-detail-form {
+
+}
+
 /* LEFT */
 .detail-left {
     /* border: 1px solid blue; */
@@ -2777,7 +2782,7 @@ th {
 .main-profile {
     /* border: 1px solid blue; */
     width: 900px;
-    height: 600px;
+    height: 1000px;
 
 }
 
