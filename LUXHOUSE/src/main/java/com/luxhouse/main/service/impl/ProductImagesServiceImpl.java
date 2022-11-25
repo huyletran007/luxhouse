@@ -150,6 +150,4 @@ public class ProductImagesServiceImpl implements ProductImagesService{
         return productImagesRepository.selectsByProductId(id);
     }
 
-    
-    
 }

@@ -1,25 +1,21 @@
 package com.luxhouse.main.controller.rest;
 
 import com.luxhouse.main.domain.Orders;
-import com.luxhouse.main.domain.ProductImages;
-import com.luxhouse.main.domain.Roles;
-import com.luxhouse.main.domain.Users;
-import com.luxhouse.main.model.OrderDTO;
-import com.luxhouse.main.model.SignUpDTO;
 import com.luxhouse.main.repository.OrdersRespository;
 import com.luxhouse.main.service.OrdersService;
-import com.luxhouse.main.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import javax.management.relation.Role;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
-import java.util.Collections;
-
 import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -92,11 +88,11 @@ public class OrdersController {
         return null;
     }
     
-    @GetMapping("/get/user/{id}")
-    public List<Orders> getOrderUser(@PathVariable Long id) {
-        List<Orders> itemOrders = ordersService.selectsByUserId(id);
-        if (itemOrders.isEmpty()) {
-            return itemOrders;
+    @GetMapping("/get/userid/{userId}")
+    public List<Orders> getOrderUser(@PathVariable Long userId) {
+        List<Orders> itemOrdersUser = ordersService.selectsByUserIdHi(userId);
+        if (!itemOrdersUser.isEmpty()) {
+            return itemOrdersUser;
         }
 
         return Arrays.asList(new Orders());

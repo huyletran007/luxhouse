@@ -140,8 +140,8 @@ public class OrdersServiceImpl implements OrdersService {
 	}
 
     @Override
-    public List<Orders> selectsByUserId(Long id) {
+    public List<Orders> selectsByUserIdHi(Long userId) {
         // TODO Auto-generated method stub
-        return ordersRespository.selectsByUserId(id);
+        return ordersRespository.selectsByUserIdHi(userId);
     }
 }

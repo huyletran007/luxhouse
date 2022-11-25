@@ -446,6 +446,61 @@ body {
     background-color: white;
 }
 
+
+.searchProduct {
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 620px;
+    width: 100%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: 0.3s;
+    height: 60px;
+}
+
+.searchProduct>* {
+    border: none;
+    outline: none;
+}
+
+.search__input {
+    padding: 0 15px;
+    height: 100%;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.search__input:not(:placeholder-shown)+.search__button {
+    transform: translateY(0px);
+}
+
+.search__input:placeholder-shown+.search__button {
+    transform: translateY(60px);
+}
+
+.search__button {
+    background: #333;
+    color: #feffd4;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100px;
+    height: calc(100% - 20px);
+    transition: 0.3s;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.searchProduct:focus-within {
+    transform: translateY(-4px);
+    border-color: #bbb;
+    box-shadow: 4px 4px 0 #ddd, 8px 8px 0 #fcff88;
+}
+
 /* ACCOUNT */
 .dropdown-user {
     display: inline-block;
@@ -1726,9 +1781,7 @@ footer p {
 }
 
 /* product-detail-form */
-.product-detail-form {
-
-}
+.product-detail-form {}
 
 /* LEFT */
 .detail-left {
@@ -1836,10 +1889,12 @@ footer p {
     user-select: none;
     background-color: black;
 }
-.container-comment{
+
+.container-comment {
     margin-left: 25%;
-    
+
 }
+
 /* BTN */
 .btn1 {
     display: inline-block;
@@ -1903,9 +1958,11 @@ footer p {
     border-color: #000000;
     transition: border 0.1s linear 0s;
 }
-.btn-comment{
+
+.btn-comment {
     color: #0a53be;
 }
+
 /* According */
 .right-according {
     margin-top: 10px;
@@ -2638,7 +2695,7 @@ th {
     font-size: 14px;
 }
 
-.callCO{
+.callCO {
     font-size: 15px;
 }
 
@@ -2859,11 +2916,13 @@ th {
 
 .btnIn {
     color: transparent;
-  }
-  .btnIn::-webkit-file-upload-button {
+}
+
+.btnIn::-webkit-file-upload-button {
     visibility: hidden;
-  }
-  .btnIn::before {
+}
+
+.btnIn::before {
     content: 'Select some files';
     color: black;
     display: inline-block;
@@ -2878,16 +2937,19 @@ th {
     text-shadow: 1px 1px #fff;
     font-weight: 700;
     font-size: 10pt;
-  }
-  .btnIn:hover::before {
+}
+
+.btnIn:hover::before {
     border-color: black;
-  }
-  .btnIn:active {
+}
+
+.btnIn:active {
     outline: 0;
-  }
-  .btnIn:active::before {
-    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
-  }
+}
+
+.btnIn:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
 
 .doiMK,
 .doiMK1,

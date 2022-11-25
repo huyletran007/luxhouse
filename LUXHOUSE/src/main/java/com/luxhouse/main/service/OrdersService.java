@@ -61,6 +61,6 @@ public interface OrdersService {
 
 	<S extends Orders> S save(S entity);
 	
-	List<Orders> selectsByUserId(Long id);
+	List<Orders> selectsByUserIdHi(Long userId);
 
 }

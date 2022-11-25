@@ -20,13 +20,12 @@ const loadProductAd = (data) => {
         <td>${e.quantity}</td>
         <td>
             <div class="form-button-action">
-                <button type="button" data-toggle="tooltip" title=""
+                <a href="./edit/product/${e.id}" data-toggle="tooltip" title=""
                     class="btn btn-link btn-primary btn-lg"
                     data-original-title="Edit ${e.id}">
                     <i class="fa fa-edit"></i>
-                </button>
-                <button type="button" data-toggle="tooltip" title=""
-                    class="btn btn-link btn-danger" data-original-title="Remove${e.id}">
+                </a>
+                <button type="button" class="btn btn-link btn-danger"  onclick="deleteProduct(${e.id})">
                     <i class="fa fa-times"></i>
                 </button>
             </div>
@@ -94,3 +93,24 @@ const genderProduct = (page) => {
         .catch(err => console.log(err))
 }
 genderProduct(currentPage)
+
+function deleteProduct(id) {
+    Swal.fire({
+        title: "Are you sure ?",
+        text: "Xóa sản phẩm đúng hong?",
+        icon: "info",
+        showCancelButton: true,
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Oke'
+    }).then(isDeleted => {
+        if (isDeleted.isConfirmed) {
+            http.delete(`http://localhost:8080/ProductImages/delete/product/${id}`)
+            http.delete(`http://localhost:8080/Product/delete/${id}`)
+                .then(data => {
+                    Swal.fire('Success', 'Xóa sản phẩm thành công', 'success')
+                    window.location.reload()
+                })
+                .catch(err => Swal.fire('Message', 'Đã có lỗi xãy ra, vui lòng thử lại', 'info'))
+        }
+    })
+}

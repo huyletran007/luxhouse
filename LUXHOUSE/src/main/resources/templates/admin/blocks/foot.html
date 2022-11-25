@@ -18,7 +18,8 @@
 
 <!-- Chart Circle -->
 <script src="/admin/js/plugin/chart-circle/circles.min.js"></script>
-
+<!-- sweetalert2  -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2"></script>
 <!-- Datatables -->
 <!-- <script src="/admin/js/plugin/datatables/datatables.min.js"></script> -->
 
@@ -40,48 +41,48 @@
 <script src="/admin/js/demo.js"></script>
 <script>
     Circles.create({
-        id:'circles-1',
-        radius:45,
-        value:60,
-        maxValue:100,
-        width:7,
+        id: 'circles-1',
+        radius: 45,
+        value: 60,
+        maxValue: 100,
+        width: 7,
         text: 5,
-        colors:['#f1f1f1', '#FF9E27'],
-        duration:400,
-        wrpClass:'circles-wrp',
-        textClass:'circles-text',
-        styleWrapper:true,
-        styleText:true
+        colors: ['#f1f1f1', '#FF9E27'],
+        duration: 400,
+        wrpClass: 'circles-wrp',
+        textClass: 'circles-text',
+        styleWrapper: true,
+        styleText: true
     })
 
     Circles.create({
-        id:'circles-2',
-        radius:45,
-        value:70,
-        maxValue:100,
-        width:7,
+        id: 'circles-2',
+        radius: 45,
+        value: 70,
+        maxValue: 100,
+        width: 7,
         text: 36,
-        colors:['#f1f1f1', '#2BB930'],
-        duration:400,
-        wrpClass:'circles-wrp',
-        textClass:'circles-text',
-        styleWrapper:true,
-        styleText:true
+        colors: ['#f1f1f1', '#2BB930'],
+        duration: 400,
+        wrpClass: 'circles-wrp',
+        textClass: 'circles-text',
+        styleWrapper: true,
+        styleText: true
     })
 
     Circles.create({
-        id:'circles-3',
-        radius:45,
-        value:40,
-        maxValue:100,
-        width:7,
+        id: 'circles-3',
+        radius: 45,
+        value: 40,
+        maxValue: 100,
+        width: 7,
         text: 12,
-        colors:['#f1f1f1', '#F25961'],
-        duration:400,
-        wrpClass:'circles-wrp',
-        textClass:'circles-text',
-        styleWrapper:true,
-        styleText:true
+        colors: ['#f1f1f1', '#F25961'],
+        duration: 400,
+        wrpClass: 'circles-wrp',
+        textClass: 'circles-text',
+        styleWrapper: true,
+        styleText: true
     })
 
     var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
@@ -90,7 +91,7 @@
         type: 'bar',
         data: {
             labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
-            datasets : [{
+            datasets: [{
                 label: "Total Income",
                 backgroundColor: '#ff9e27',
                 borderColor: 'rgb(23, 125, 255)',
@@ -108,22 +109,22 @@
                     ticks: {
                         display: false //this will remove only the label
                     },
-                    gridLines : {
+                    gridLines: {
                         drawBorder: false,
-                        display : false
+                        display: false
                     }
                 }],
-                xAxes : [ {
-                    gridLines : {
+                xAxes: [{
+                    gridLines: {
                         drawBorder: false,
-                        display : false
+                        display: false
                     }
                 }]
             },
         }
     });
 
-    $('#lineChart').sparkline([105,103,123,100,95,105,115], {
+    $('#lineChart').sparkline([105, 103, 123, 100, 95, 105, 115], {
         type: 'line',
         height: '70',
         width: '100%',
@@ -132,34 +133,37 @@
         fillColor: 'rgba(255, 165, 52, .14)'
     });
 </script>
-<script >
-    $(document).ready(function() {
+<script>
+    $(document).ready(function () {
         $('#basic-datatables').DataTable({
-            
-            
+
+
         });
 
-        $('#multi-filter-select').DataTable( {
+        $('#multi-filter-select').DataTable({
             "pageLength": 5,
             initComplete: function () {
-                this.api().columns().every( function () {
+                this.api().columns().every(function () {
                     var column = this;
-                    var select = $('<select class="form-control"><option value=""></option></select>')
-                    .appendTo( $(column.footer()).empty() )
-                    .on( 'change', function () {
-                        var val = $.fn.dataTable.util.escapeRegex(
-                            $(this).val()
+                    var select = $(
+                            '<select class="form-control"><option value=""></option></select>'
+                            )
+                        .appendTo($(column.footer()).empty())
+                        .on('change', function () {
+                            var val = $.fn.dataTable.util.escapeRegex(
+                                $(this).val()
                             );
 
-                        column
-                        .search( val ? '^'+val+'$' : '', true, false )
-                        .draw();
-                    } );
+                            column
+                                .search(val ? '^' + val + '$' : '', true, false)
+                                .draw();
+                        });
 
-                    column.data().unique().sort().each( function ( d, j ) {
-                        select.append( '<option value="'+d+'">'+d+'</option>' )
-                    } );
-                } );
+                    column.data().unique().sort().each(function (d, j) {
+                        select.append('<option value="' + d + '">' + d +
+                            '</option>')
+                    });
+                });
             }
         });
 
@@ -168,15 +172,16 @@
             "pageLength": 5,
         });
 
-        var action = '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
+        var action =
+            '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
 
-        $('#addRowButton').click(function() {
+        $('#addRowButton').click(function () {
             $('#add-row').dataTable().fnAddData([
                 $("#addName").val(),
                 $("#addPosition").val(),
                 $("#addOffice").val(),
                 action
-                ]);
+            ]);
             $('#addRowModal').modal('hide');
 
         });
@@ -187,4 +192,5 @@
 
 
 </body>
+
 </html>

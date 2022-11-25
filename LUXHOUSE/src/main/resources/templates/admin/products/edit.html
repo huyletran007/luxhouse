@@ -29,50 +29,64 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="card-title">Form Elements</div>
+                            <input type="hidden" id="product_id" th:if="${content.objs.product.id > 0}"
+                                th:value="${content.objs.product.id}">
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6 col-lg-6">
                                     <div class="form-group form-floating-label">
-                                        <select class="form-control input-border-bottom"
-                                            id="selectFloatingLabel" required>
-                                            <option value="">&nbsp;</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                        <select class="form-control input-border-bottom" id="categories" required>
+                                            <option th:if="${content.objs.product.categoryProducts.id != null}"
+                                                th:value="${content.objs.product.categoryProducts.id}"
+                                                th:text="${content.objs.product.categoryProducts.categoryProductName}">
+                                                &nbsp;</option>
+                                            <option value="1">Dining Tables</option>
+                                            <option value="2">Dining Chairs</option>
+                                            <option value="3">Seat Cushions</option>
+                                            <option value="4">Living Room Sofa</option>
+                                            <option value="5">Tea Table</option>
+                                            <option value="6">Living Room Racks</option>
+                                            <option value="7">Living Room Armchair</option>
+                                            <option value="8">Bed</option>
+                                            <option value="9">Children Bed</option>
+                                            <option value="10">Daybeds</option>
+                                            <option value="11">Bedside Cabinet</option>
+                                            <option value="12">Outdoor Sofas</option>
+                                            <option value="13">Outdoor Chairs</option>
+                                            <option value="14">Outdoor Coffee & Side Tables</option>
+                                            <option value="15">Sun Lounger</option>
                                         </select>
                                         <label for="selectFloatingLabel" class="placeholder">Categories</label>
                                     </div>
 
                                     <div class="form-group form-floating-label">
-                                        <input id="inputFloatingLabel" type="text"
-                                            class="form-control input-border-bottom" required>
+                                        <input id="product_code" type="text" class="form-control input-border-bottom"
+                                            required th:value="${content.objs.product.productCode}">
                                         <label for="inputFloatingLabel" class="placeholder">Product code</label>
                                     </div>
 
                                     <div class="form-group form-floating-label">
-                                        <input id="inputFloatingLabel" type="text"
-                                            class="form-control input-border-bottom" required>
+                                        <input id="product_name" type="text" class="form-control input-border-bottom"
+                                            required th:value="${content.objs.product.productName}">
                                         <label for="inputFloatingLabel" class="placeholder">Product Name</label>
                                     </div>
 
                                     <div class="form-group form-floating-label">
-                                        <input id="inputFloatingLabel" type="number"
-                                            class="form-control input-border-bottom" required>
+                                        <input id="price" type="text" class="form-control input-border-bottom" required
+                                            th:value="${content.objs.product.price}">
                                         <label for="inputFloatingLabel" class="placeholder">Price</label>
                                     </div>
 
                                     <div class="form-group form-floating-label">
-                                        <input id="inputFloatingLabel" type="number"
-                                            class="form-control input-border-bottom" required>
+                                        <input id="quantity" type="number" class="form-control input-border-bottom"
+                                            required th:value="${content.objs.product.quantity}">
                                         <label for="inputFloatingLabel" class="placeholder">Quantity</label>
                                     </div>
 
                                     <div class="form-group form-floating-label">
                                         <label for="inputFloatingLabel" class="">Discription</label>
-                                        <div id="summernote"></div>
+                                        <div id="summernote">[(${content.objs.product.discription})]</div>
                                         <script>
                                             $('#summernote').summernote({
                                                 placeholder: 'Discription',
@@ -82,7 +96,7 @@
                                         </script>
                                     </div>
 
-                                    
+
 
 
                                 </div>
@@ -92,26 +106,30 @@
                                         <label>New</label><br />
                                         <label class="form-radio-label">
                                             <input class="form-radio-input" type="radio" name="optionsRadiosNew"
-                                                value="" checked="">
+                                                value="1"
+                                                th:checked="${content.objs.product.discontinued} ? 'checked' : 'unchecked'" id="is_new">
                                             <span class="form-radio-sign">True</span>
                                         </label>
                                         <label class="form-radio-label ml-3">
                                             <input class="form-radio-input" type="radio" name="optionsRadiosNew"
-                                                value="">
+                                                value="0"
+                                                th:checked="${content.objs.product.discontinued} ? 'checked' : 'unchecked'" id="is_new">
                                             <span class="form-radio-sign">False</span>
                                         </label>
                                     </div>
 
                                     <div class="form-check">
                                         <label>Featured</label><br />
+                                        <!-- <input th:checked="${content.objs.product.discontinued}" type="checkbox"  id="discontinued"> -->
                                         <label class="form-radio-label">
-                                            <input class="form-radio-input" type="radio"
-                                                name="optionsRadiosFeatured" value="" checked="">
+                                            <input class="form-radio-input" type="radio" name="optionsRadiosFeatured"
+                                                value="1" checked id="is_featured">
                                             <span class="form-radio-sign">True</span>
                                         </label>
                                         <label class="form-radio-label ml-3">
-                                            <input class="form-radio-input" type="radio"
-                                                name="optionsRadiosFeatured" value="">
+                                            <input class="form-radio-input" type="radio" name="optionsRadiosFeatured"
+                                                value="0" id="is_featured"
+                                                th:checked="${content.objs.product.is_featured} ? 'checked' : 'unchecked'">
                                             <span class="form-radio-sign">False</span>
                                         </label>
                                     </div>
@@ -119,13 +137,15 @@
                                     <div class="form-check">
                                         <label>Status</label><br />
                                         <label class="form-radio-label">
-                                            <input class="form-radio-input" type="radio"
-                                                name="optionsRadiosStatus" value="" checked="">
+                                            <input class="form-radio-input" type="radio" name="optionsRadiosStatus"
+                                                value="1"
+                                                th:checked="${content.objs.product.status} ? 'checked' : 'unchecked'">
                                             <span class="form-radio-sign">True</span>
                                         </label>
                                         <label class="form-radio-label ml-3">
-                                            <input class="form-radio-input" type="radio"
-                                                name="optionsRadiosStatus" value="">
+                                            <input class="form-radio-input" type="radio" name="optionsRadiosStatus"
+                                                value="0"
+                                                th:checked="${content.objs.product.status} ? 'checked' : 'unchecked'">
                                             <span class="form-radio-sign">False</span>
                                         </label>
                                     </div>
@@ -134,32 +154,39 @@
                                         <label>Discontinued</label><br />
                                         <label class="form-radio-label">
                                             <input class="form-radio-input" type="radio"
-                                                name="optionsRadiosDiscontinued" value="" checked="">
+                                                name="optionsRadiosDiscontinued" value="1"
+                                                th:checked="${content.objs.product.discontinued} ? 'checked' : 'unchecked'"
+                                                id="discontinued">
                                             <span class="form-radio-sign">True</span>
                                         </label>
                                         <label class="form-radio-label ml-3">
                                             <input class="form-radio-input" type="radio"
-                                                name="optionsRadiosDiscontinued" value="">
+                                                name="optionsRadiosDiscontinued" value="0"
+                                                th:checked="${content.objs.product.discontinued} ? 'checked' : 'unchecked'"
+                                                id="discontinued">
                                             <span class="form-radio-sign">False</span>
                                         </label>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleFormControlFile1">Example file input</label>
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        <label for="exampleFormControlFile1">Img main</label>
+                                        <input type="file" class="form-control-file" id="image"
+                                            th:value="${content.objs.product.image}">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleFormControlFile1">Example file input</label>
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        <label for="exampleFormControlFile1">list img</label>
+                                        <input type="file" class="form-control-file" id="image_list">
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                         <div class="card-action label-align-center">
-                            <button class="btn btn-success">Submit</button>
-                            <button class="btn btn-danger">Cancel</button>
+                            <button class="btn btn-success" th:if="${content.objs.product.id < 0}"
+                                onclick="addProduct()">Add</button>
+                            <button class="btn btn-danger" th:if="${content.objs.product.id > 0}"
+                                onclick="editProduct()">Edit</button>
                         </div>
                     </div>
                 </div>

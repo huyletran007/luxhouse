@@ -148,6 +148,16 @@ public class ProductImagesController {
 
         return item;
     }
+    
+    @DeleteMapping("/delete/product/{id}")
+    public List<ProductImages> deleteProductImagesId(@PathVariable Long id) {
+
+        List<ProductImages> item = productImagesService.selectsByProductId(id);
+
+        productImagesService.deleteAll(item);
+
+        return item;
+    }
 
     /**
      * Api upload, download and save in file system

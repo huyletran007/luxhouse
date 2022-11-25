@@ -1,5 +1,6 @@
 package com.luxhouse.main.controller.rest;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.luxhouse.main.domain.Orders;
 import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.domain.Products;
 import com.luxhouse.main.service.ProductsService;
@@ -25,7 +27,7 @@ import com.luxhouse.main.service.ProductsService;
 public class ProductsController {
     @Autowired
     ProductsService productsService;
-    
+
     /**
      * Api get all Products
      * 
@@ -38,27 +40,28 @@ public class ProductsController {
 
         return productsService.findAll();
     }
-    
-    /** Api get all Products 
+
+    /**
+     * Api get all Products
      * 
      * - GET Method: __/get
      * - Return(JSON): item
      * 
-     * */
+     */
     @GetMapping("/get/{start}/{total}") // api get all Products
     public List<Products> getPageProducts(@PathVariable int start, @PathVariable int total) {
-        
+
         List<Products> list = productsService.findAll();
         Collections.reverse(list);
-        int toStart = start*total;
+        int toStart = start * total;
         // 12
         // start-total
-        // 0-5 : toStart = 0*5, toIndex = toStart+total = 5 
+        // 0-5 : toStart = 0*5, toIndex = toStart+total = 5
         // 1-5 : toStart = 1*5, toIndex = toStart+total = 10
         // 2-5 : toStart = 2*5, toIndex = toStart+total = 15 => 12
         int toIndex = total + toStart;
         toIndex = toIndex > list.size() ? list.size() : toIndex;
-        
+
         return list.subList(toStart, toIndex);
     }
 
@@ -106,6 +109,36 @@ public class ProductsController {
         }
 
         return null;
+    }
+
+    @GetMapping("/getName/{name}")
+    public List<Products> getOrderUser(@PathVariable String name) {
+        List<Products> itemOrdersUser = productsService.selectsByProductName(name);
+        if (!itemOrdersUser.isEmpty()) {
+            return itemOrdersUser;
+        }
+
+        return Arrays.asList(new Products());
+    }
+
+    @GetMapping("/getCagegoryProduct/{code}")
+    public List<Products> getCategoryProduct(@PathVariable String code) {
+        List<Products> itemOrdersUser = productsService.selectsByCategoryProductCode(code);
+        if (!itemOrdersUser.isEmpty()) {
+            return itemOrdersUser;
+        }
+
+        return Arrays.asList(new Products());
+    }
+
+    @GetMapping("/getCagegoryM/{code}")
+    public List<Products> getCategoryM(@PathVariable String code) {
+        List<Products> itemOrdersUser = productsService.selectsByCategoryMCode(code);
+        if (!itemOrdersUser.isEmpty()) {
+            return itemOrdersUser;
+        }
+
+        return Arrays.asList(new Products());
     }
 
     /**

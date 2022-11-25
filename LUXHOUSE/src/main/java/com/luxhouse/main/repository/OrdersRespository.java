@@ -11,6 +11,6 @@ import com.luxhouse.main.domain.ProductImages;
 
 @Repository
 public interface OrdersRespository extends JpaRepository<Orders, Long> {
-    @Query("SELECT p FROM Orders p WHERE p.users.id = ?1")
-    List<Orders> selectsByUserId(Long id);
+    @Query("SELECT o FROM Orders o WHERE o.users.id = ?1")
+    List<Orders> selectsByUserIdHi(Long userId);
 }

@@ -8,6 +8,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.luxhouse.main.domain.Products;
@@ -21,6 +22,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Service
 public class UserServiceImpl implements UserService{
+    @Autowired
+    private PasswordEncoder passwordEncoder;
  
     @Autowired
     UserRepository userRepository;
@@ -169,6 +172,11 @@ public class UserServiceImpl implements UserService{
               log.info("Updating full name");
               user.setFullname(value);
             }
+            
+            if (key.equalsIgnoreCase("password")) {
+                log.info("Updating password");
+                user.setPassword(passwordEncoder.encode(value));
+              }
 //            if (key.equalsIgnoreCase("age")) {
 //              log.info("Updating age");
 //              user.setAge(Integer.parseInt(value));

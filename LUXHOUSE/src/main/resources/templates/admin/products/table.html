@@ -1,4 +1,5 @@
 <div class="main-panel">
+    <input type="hidden" id="product_id" th:if="${content.objs.product.id > 0}" th:value="${content.objs.product.id}">
     <div class="content">
         <div class="page-inner">
             <div class="page-header">
@@ -162,7 +163,7 @@
 
                                     </tbody>
                                     <style>
-                                        #loadPr-js td{
+                                        #loadPr-js td {
                                             border-left: 2px solid white !important;
                                         }
                                     </style>

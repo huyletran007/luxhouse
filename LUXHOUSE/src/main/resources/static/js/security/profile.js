@@ -1,3 +1,63 @@
+var dataUser = {};
+
+let userProfile = _$('#userId').innerHTML
+http.get(`http://localhost:8080/Users/get/${userProfile}`)
+    .then(data => {
+        loadProfile(data),
+            data.forEach(e => {
+                dataUser.push(e)
+            })
+    })
+    .catch(err => console.log(err))
+
+let runApp = setInterval(() => {
+    if (dataUser.length > 0) {
+        clearInterval(runApp)
+        loadMK(dataUser)
+    }
+}, 100)
+
+const loadMK = (data) => {
+
+}
+
+function doiMatKhau() {
+    const mkm1 = _$('#doimkmoi1').value
+    const mkm2 = _$('#doimkmoi2').value
+
+    if (mkm1.replaceAll(' ', '') == '') {
+        Swal.fire("Message", 'Vui lòng nhập mật khẩu mới', "error")
+        return
+    }
+
+    if (mkm2.replaceAll(' ', '') == '') {
+        Swal.fire("Message", 'Vui lòng nhập mật khẩu mới lại', "error")
+        return
+    }
+
+    if (mkm1 != mkm2) {
+        Swal.fire("Message", 'Nhập sai mã xác nhận', "error")
+        return
+    }
+
+    let data2 = {
+        "op": "update",
+        "key": "password",
+        "value": mkm1
+    }
+
+    http.patch(`http://localhost:8080/Users/update/${userProfile}`, data2)
+        .then(
+            Swal.fire("Oke", 'Đổi mật khẩu thành công bạn sẽ về trang login', "success")
+            .then(rs => {
+                if (rs.isConfirmed) window.location.href = 'http://localhost:8080/account/logout'
+            })
+        )
+        .catch(err => console.log(err))
+}
+
+
+
 const luuProfile = () => {
     const username = _$('#staticTDN').value
     const fullname = _$('#staticT').value
@@ -60,12 +120,4 @@ const loadcea = (data) => {
 let userPro = _$('#userId').innerHTML
 http.get(`http://localhost:8080/Users/get/${userPro}`)
     .then(data => loadcea(data))
-    .catch(err => console.log(err))
-
-
-let userProfile = _$('#userId').innerHTML
-http.get(`http://localhost:8080/Users/get/${userProfile}`)
-    .then(data => {
-        loadProfile(data)
-    })
     .catch(err => console.log(err))

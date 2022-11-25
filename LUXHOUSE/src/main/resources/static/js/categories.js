@@ -29,7 +29,7 @@ const loadCategoryJs = (data) => {
         let htmlChild = ``
         data1.forEach(e1 => {
             if(e.id == e1.categories.id){
-                htmlChild += `<li><a href="/products/${e1.categoryProductCode}" class="cateChild">${e1.categoryProductName}</a></li>`
+                htmlChild += `<li><a href="/products/CateP/${e1.categoryProductCode}" class="cateChild">${e1.categoryProductName}</a></li>`
             }
             
         })
@@ -60,7 +60,7 @@ const loadCategoryJs = (data) => {
         <!-- item -->
         <div class="sub-menu-item">
             <h2>all essential devices and tools for home</h2>
-            <a href="/products/${e.categoryCode}" type="button" class="btn">SHOW ALL</a>
+            <a href="/products/CateM/${e.categoryCode}" type="button" class="btn">SHOW ALL</a>
         </div>
         <!-- end of item -->
         

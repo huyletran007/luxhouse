@@ -150,7 +150,7 @@ function checkoutjs() {
         "paymentTypes": {
             "id": PaymentType
         },
-        "orderStatus": "Đang chờ duyệt"
+        "orderStatus": "Chờ xác nhận"
     }
 
     if (fullname.replaceAll(' ', '') == '') {

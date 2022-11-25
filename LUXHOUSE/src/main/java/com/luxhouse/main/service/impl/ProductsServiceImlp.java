@@ -138,6 +138,24 @@ public class ProductsServiceImlp implements ProductsService{
     public void deleteAll() {
         productsRepository.deleteAll();
     }
+
+    @Override
+    public List<Products> selectsByProductName(String name) {
+        // TODO Auto-generated method stub
+        return productsRepository.selectsByProductName(name);
+    }
+
+    @Override
+    public List<Products> selectsByCategoryProductCode(String code) {
+        // TODO Auto-generated method stub
+        return productsRepository.selectsByCategoryProductCode(code);
+    }
+
+    @Override
+    public List<Products> selectsByCategoryMCode(String code) {
+        // TODO Auto-generated method stub
+        return productsRepository.selectsByCategoryMCode(code);
+    }
     
     
 }

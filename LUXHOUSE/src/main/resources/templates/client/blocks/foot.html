@@ -3,12 +3,15 @@
 <script src="/js/main.min.js"></script>
 <script src="/js/simpleFetch.js"></script>
 <script src="/js/product-detail.js"></script>
+<script src="/js/Date.js"></script>
 <script src="/js/base.js"></script>
 <script src="/js/config.js"></script>
 <script src="/js/cart/cart.js"></script>
 <script src="/js/detail-cart.js"></script>
 <script src="/js/order.js"></script>
 <script src="/js/categories.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
@@ -29,7 +32,14 @@
 	.active:after {
 		content: '' !important;
 	}
+
 </style>
+
+<script>
+	function searchPDM(){
+		window.location.href = "http://localhost:8080/products/search"
+	}
+</script>
 
 <script>
 	var citis = document.getElementById("city");

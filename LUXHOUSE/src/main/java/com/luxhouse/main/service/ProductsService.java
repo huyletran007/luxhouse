@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
+import com.luxhouse.main.domain.Orders;
 import com.luxhouse.main.domain.Products;
 
 public interface ProductsService {
@@ -59,5 +60,11 @@ public interface ProductsService {
     <S extends Products> Optional<S> findOne(Example<S> example);
 
     <S extends Products> S save(S entity);
+    
+    List<Products> selectsByProductName(String name);
+    
+    List<Products> selectsByCategoryProductCode(String code);
+    
+    List<Products> selectsByCategoryMCode(String code);
 
 }
